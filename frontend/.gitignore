@@ -24,6 +24,8 @@
 .DS_Store
 *.pem
 
+*tifier
+
 # debug
 npm-debug.log*
 yarn-debug.log*
