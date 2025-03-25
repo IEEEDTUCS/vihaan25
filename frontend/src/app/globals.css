@@ -24,3 +24,44 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@font-face {
+  font-family: "Orbitron";
+  src: url("/fonts/Orbitron-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Orbitron";
+  src: url("/fonts/Orbitron-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "KHInterference";
+  src: url("/fonts/KHInterference-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PPRightGrotesk";
+  src: url("/fonts/PPRightGroteskText-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Utility Classes */
+.font-orbitron {
+  font-family: "Orbitron", sans-serif;
+}
+
+.font-khinterference {
+  font-family: "KHInterference", sans-serif;
+}
+
+.font-pprightgrotesk {
+  font-family: "PPRightGrotesk", sans-serif;
+}

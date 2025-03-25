@@ -2,7 +2,7 @@ import React from 'react'
 
 const EventSchedule = () => {
   return (
-    <text>EventSchedule hai bhai EventSchedule</text>
+    <p className="font-khinterference text-[54px]">Event Schedule</p>
   )
 }
 
