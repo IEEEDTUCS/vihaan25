@@ -121,7 +121,7 @@ export default function TechTimeline() {
               </div>
 
               {/* Diamond node - centered on the timeline */}
-              <div className="relative z-20 group">
+              <div className="relative z-20 group backdrop-blur-2xl">
                 <svg width="61" height="60" viewBox="0 0 61 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="13.0941" y="12.6604" width="34.8108" height="34.8108" stroke="#A59188"/>
                 <rect x="30.6254" y="15.2547" width="21.0356" height="21.0356" transform="rotate(45 30.6254 15.2547)" stroke="#A59188"/>
