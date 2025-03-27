@@ -53,28 +53,28 @@ const Countdown = ({ targetTime }) => {
         `}
       </style>
       <div className="grid grid-flow-col gap-5 justify-center text-center auto-cols-max">
-        <div className="flex flex-col countdown-box font-normal h-[132px] font-['Orbitron'] items-center justify-center">
+        <div className="flex flex-col countdown-box font-normal h-[132px] w-[108px] font-['Orbitron'] items-center justify-center">
           <span className="countdown font-mono text-5xl">
             <span style={{"--value": Math.floor(timeLeft / 86400)}} className="font-normal font-['Orbitron']" aria-live="polite" aria-label={`Days left: ${Math.floor(timeLeft / 86400)}`}>{Math.floor(timeLeft / 86400)}</span>
           </span>
           days
         </div>
         <div className="dotted-line"></div>
-        <div className="flex flex-col countdown-box font-normal h-[132px] font-['Orbitron'] items-center justify-center">
+        <div className="flex flex-col countdown-box font-normal h-[132px] w-[108px] font-['Orbitron'] items-center justify-center">
           <span className="countdown font-mono text-5xl">
             <span style={{"--value": Math.floor((timeLeft % 86400) / 3600)}} className="font-normal font-['Orbitron']" aria-live="polite" aria-label={`Hours left: ${Math.floor((timeLeft % 86400) / 3600)}`}>{Math.floor((timeLeft % 86400) / 3600)}</span>
           </span>
           hours
         </div>
         <div className="dotted-line"></div>
-        <div className="flex flex-col countdown-box font-normal h-[132px] font-['Orbitron'] items-center justify-center">
+        <div className="flex flex-col countdown-box font-normal h-[132px] w-[108px] font-['Orbitron'] items-center justify-center">
           <span className="countdown font-mono text-5xl">
             <span style={{"--value": Math.floor((timeLeft % 3600) / 60)}} className="font-normal font-['Orbitron']" aria-live="polite" aria-label={`Minutes left: ${Math.floor((timeLeft % 3600) / 60)}`}>{Math.floor((timeLeft % 3600) / 60)}</span>
           </span>
           min
         </div>
         <div className="dotted-line"></div>
-        <div className="flex flex-col countdown-box font-normal h-[132px] font-['Orbitron'] items-center justify-center">
+        <div className="flex flex-col countdown-box font-normal h-[132px] w-[108px] font-['Orbitron'] items-center justify-center">
           <span className="countdown font-mono text-5xl">
             <span style={{"--value": timeLeft % 60}} aria-live="polite" className="font-normal font-['Orbitron']" aria-label={`Seconds left: ${timeLeft % 60}`}>{timeLeft % 60}</span>
           </span>
