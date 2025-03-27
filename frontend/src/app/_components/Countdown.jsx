@@ -41,6 +41,7 @@ const Countdown = ({ targetTime }) => {
             border-left: 2px dotted #ccc;
             height: 100%;
             margin: 0 10px;
+            color: '#A59188';
           }
           .countdown-box {
             background: rgba(217, 217, 217, 0.22);
