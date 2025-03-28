@@ -4,8 +4,8 @@ import FAQ from "./_components/FAQ's/faq";
 
 export default async function Home() {
   return (
-      // <HomePage/>
+      <HomePage/>
       // <EventSchedule/>
-      <FAQ/>
+      // <FAQ/>
   );
 }
