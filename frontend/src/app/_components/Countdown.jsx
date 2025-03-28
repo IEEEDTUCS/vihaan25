@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const Countdown = ({ targetTime }) => {
-  const [timeLeft, setTimeLeft] = useState(targetTime || Math.floor((new Date('2025-03-28T00:00:00Z') - new Date()) / 1000));
+  const [timeLeft, setTimeLeft] = useState(targetTime || Math.floor((new Date('2025-03-29T00:00:00Z') - new Date()) / 1000));
 
   useEffect(() => {
     // If no target time is provided, default to 8 hours
@@ -52,7 +52,7 @@ const Countdown = ({ targetTime }) => {
           }
         `}
       </style>
-      <div className="grid grid-flow-col gap-5 justify-center text-center auto-cols-max">
+      <div className="grid grid-flow-col gap-5 justify-center text-center xl:scale-100 scale-50 sm:scale-50 md:scale-75 lg:scale-90 auto-cols-max">
         <div className="flex flex-col countdown-box font-normal h-[132px] w-[108px] font-['Orbitron'] items-center justify-center">
           <span className="countdown font-mono text-5xl">
             <span style={{"--value": Math.floor(timeLeft / 86400)}} className="font-normal font-['Orbitron']" aria-live="polite" aria-label={`Days left: ${Math.floor(timeLeft / 86400)}`}>{Math.floor(timeLeft / 86400)}</span>
