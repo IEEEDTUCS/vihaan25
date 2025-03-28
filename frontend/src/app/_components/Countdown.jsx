@@ -55,7 +55,7 @@ const Countdown = ({ targetTime }) => {
           }
         `}
       </style>
-      <div className="grid grid-flow-col gap-5 justify-center text-center auto-cols-max">
+      <div className="grid grid-flow-col gap-5 justify-center text-center xl:scale-100 scale-50 sm:scale-50 md:scale-75 lg:scale-90 auto-cols-max">
         <div className="flex flex-col countdown-box font-normal h-[132px] w-[108px] font-['Orbitron'] items-center justify-center">
           <span className="countdown font-mono text-5xl">
             <span
