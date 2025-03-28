@@ -13,9 +13,12 @@
 }
 
 body {
-  background: var(--background);;
+  background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; 
 }
 
 @font-face {
@@ -57,4 +60,86 @@ body {
 
 .font-pprightgrotesk {
   font-family: "PPRightGrotesk", sans-serif;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-size: cover; 
+    background-position: center center; 
+  }
+}
+
+@keyframes clockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes anticlockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotateX {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(360deg);
+  }
+}
+
+@keyframes rotateY {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes clockHand {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes clockHand {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-clockwise {
+  animation: clockwise 20s linear infinite;
+}
+
+.animate-anticlockwise {
+  animation: anticlockwise 40s linear infinite;
+}
+
+.animate-rotateX {
+  animation: rotateX 30s linear infinite;
+}
+
+.animate-rotateY {
+  animation: rotateY 40s linear infinite;
+}
+
+
+.animate-clockHand {
+  animation: clockHand 60s linear infinite;
 }
