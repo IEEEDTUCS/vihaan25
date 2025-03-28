@@ -45,6 +45,12 @@ const FAQ = () => {
 
   return (
     <>
+      <p className="text-[#8F7E77] text-7xl lg:block hidden font-khinterference font-bold mt-32 px-20">
+        Frequently Asked Questions
+      </p>
+      <p className="text-[#8F7E77] text-7xl lg:hidden font-khinterference font-bold  px-10">
+        FAQ's{" "}
+      </p>
       <div className="container sm:mx-auto max-sm:mx-0 pb-10 pt-2 ">
         <div className="h-fit ">
           {tabs.map((tab, index) => (
