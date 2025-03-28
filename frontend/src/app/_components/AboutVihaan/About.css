@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
+    --color-*: initial;
+    --color-para: #A59188;
+
+  }
+
+@theme {
+    --animate-wiggle: wiggle 1s ease-in-out forwards;
+    @keyframes wiggle {
+        0% {
+            transform: translate(0, 0);
+            opacity: 1;
+        }
+        50% {
+            transform: translate(-70px, -60px) scale(1.1);
+            opacity: 0.75;
+        }
+        100% {
+            transform: translate(-70px, -60px) scale(1.1);
+            opacity: 0.4;
+        }
+    }
+}
+
+body{
+    overflow: hidden;
+}
+
+svg path {
+    fill: transparent;
+    stroke: #8F7E77;
+    stroke-width: 0.1;
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    animation: textAnimation 4s ease-in-out 1 forwards;
+  }
+  @keyframes textAnimation {
+    0% {
+      stroke-dashoffset: 50;
+    }
+    80% {
+      fill: transparent;
+    }
+    100% {
+      fill: #8F7E77;
+      stroke-dashoffset: 0;
+    }
+  }
+
+  

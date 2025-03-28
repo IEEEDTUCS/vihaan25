@@ -1,11 +1,13 @@
 import HomePage from "./(pages)/Home";
 import EventSchedule from "./_components/EventSchedule/EventSchedule";
-import FAQ from "./_components/FAQ's/faq";
+// import FAQ from "./FAQs/FAQ"; // Commented out for now
 
-export default async function Home() {
+export default function Home() {
   return (
-      <HomePage/>
-      // <EventSchedule/>
-      // <FAQ/>
+    <>
+      <HomePage />
+      <EventSchedule />
+      {/* <FAQ /> */}
+    </>
   );
 }

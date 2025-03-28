@@ -10,6 +10,8 @@ import MovingHand from "@/app/assets/MovingHand.svg";
 import HorizontalVectors from "@/app/assets/HorizontalVectors.svg";
 import VerticleLines from "@/app/assets/VerticleLines.svg";
 import Logo from "@/app/assets/Logo.svg";
+import Navigation_links from "../_components/Navigation_links";
+import Countdown from "../_components/Countdown";
 
 const HomePage = () => {
    React.useEffect(() => {
@@ -111,6 +113,9 @@ const HomePage = () => {
                </h5>
             </div>
          </div>
+         {/* <Navbar /> */}
+         <Navigation_links />
+         <Countdown />
       </>
    );
 };
