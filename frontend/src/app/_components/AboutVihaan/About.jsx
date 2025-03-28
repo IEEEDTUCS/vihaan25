@@ -13,7 +13,7 @@ const About = () => {
         className="absolute left-0 top-30 w-auto h-180 object-cover opacity-85"
       />
 
-      <div className="absolute top-[21%] z-10 w-[190%] pl-[3%] ">
+      <div className="absolute top-[21%] z-10 w-full pl-[3%] ">
         <img
           src="/Images-Abt-IEEE/Head.svg"
           alt="Heading"
@@ -22,7 +22,7 @@ const About = () => {
         <h1 className="text-7xl tracking-widest text-heading font-khinterference w-[60%] max-[600px]:text-[300%] max-[600px]:font-bold max-[600px]:tracking-[0rem] ">
           VIHAAN 8.0
         </h1>
-        <h2 className="text-6xl w-[30%] font-medium text-heading mt-2 max-[600px]:text-[300%] ;">
+        <h2 className="text-6xl w-[30%] font-medium text-heading font-khinterference mt-2 max-[600px]:text-[300%] ;">
           PRESENTED BY IEEE DTU
         </h2>
         <p className="text-para mt-4 tracking-[3] w-[30%] font-orbitron font-normal text-lg tracking-[90%] max-[600px]:w-[40%] max-[600px]:text-base">
@@ -32,7 +32,7 @@ const About = () => {
           add to the experience and learning quotient, teams that make it past
           the hackathon are awarded various cash prizes and goodies.
         </p>
-        <div className="mt-6">
+        <div className="mt-6 w-fit">
           <Button href="https://www.ieeedtu.in/" children={"About IEEE DTU"} />
         </div>
 

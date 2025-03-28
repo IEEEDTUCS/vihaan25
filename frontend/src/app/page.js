@@ -9,7 +9,7 @@ export default async function Home() {
     <>
       <HomePage/>
       <About/>
-       <EventSchedule/>
+       {/* <EventSchedule/> */}
       <FAQ/>
       <Footer/> 
     </>

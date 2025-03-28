@@ -1,6 +1,6 @@
 const AboutSVG = () => {
   return (
-    <div className="height-500 width-300 relative -right-40 bottom-25 max-[1280px]:collapse xl:visible">
+    <div className="h-80 w-80 relative -right-40 bottom-25 max-[1280px]:collapse xl:visible">
       <svg
         width="350"
         height="350"
