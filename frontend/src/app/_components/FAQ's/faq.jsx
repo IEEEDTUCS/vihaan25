@@ -2,28 +2,34 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 //import { Plus } from "lucide-react";
-import Image from 'next/image'
+import Image from "next/image";
 
 const tabs = [
   {
-    title: "What is DSSYWLC?",
+    title: "What is Vihaan 8.0?",
     description:
-      "DSSYWLC'24 is IEEE Delhi Section's annual flagship event which aims to strike a spark in the attendee's imagination with its diverse and inclusive presentations, expert sessions, and panel discussions hosted by distinguished speakers from all walks of life.",
+      "Vihaan 8.0 is the 8th edition of IEEE DTU’s 24-hour hackathon meant to challenge your creative potential and build innovative solutions to pressing problems. Every year for the last seven years, we see participation from students across India.",
   },
   {
-    title: "What is its Objective?",
+    title: "Hackathon? What's that?",
     description:
-      "Ideas that shape the future are conceived by millions but implemented by tens. However, when Academicians, Technologists, Scientists, Doctors, Students, and Young Professionals from the IEEE Delhi Section join forces, those numbers multiply manyfold. \n\nWith the same goal in mind, the IEEE Delhi Section hosts DSSYWLC'24, a forum where experts from various fields may exchange ideas with keynote speakers from diverse fields and witness an intuitive manifest for greeting, discussing, previewing, debating, and creating ideas for abetter future. ",
+      "In general, It is a 2-3 days long competition where programmers and enthusiasts brainstorm to come up with solutions to diverse problems faced by people and communities across the globe. They then have to code their solutions into a usable form. ",
   },
   {
-    title: "Where will DSSYWLC'24 be held?",
+    title:
+      "Wait so am I required to know coding? I don't know if I'm skilled enough.",
     description:
-      "DSSYWLC 2024 is being conducted in offline mode at Delhi Technological University on 09th and 10th November, 2024.",
+      "Participation is the essential part, learning is the goal. You might need a basic idea of development. Vihaan serves as the perfect beginner hackathon for you to set your foot right into the world of development!",
   },
   {
-    title: "What is the theme of the Congress?",
+    title: "I'm interested, How do I register?",
     description:
-      "The theme of the Congress revolves around coming up with innovation, networking with people and taking inspiration from the fellow IEEE members. INNOVATE, CONNECT, INSPIRE.",
+      "We’ll soon be putting up registration links on our website. Stay tuned! Registration details only require basic details. Follow us on Instagram and LinkedIn for regular updates.",
+  },
+  {
+    title: "What's the prize if you end up winning?Give me some Incentive.",
+    description:
+      "We have loads of cash prizes and swags up for grabs. Further details will be released soon. Follow us on Instagram and LinkedIn for regular updates.",
   },
 ];
 
@@ -51,11 +57,17 @@ const FAQ = () => {
                 className={`p-3 px-4 w-full cursor-pointer items-center justify-between transition-all font-semibold text-[#8F7E77] font-khinterference flex gap-2 border border-dashed border-[#8F7E77] bg-[#090A0E]`}
               >
                 {tab.title}
-                { <Image  src="/svg/faqIcon.svg" width="512" height="512"
-                  className={`${
-                    activeIndex === index ? "rotate-45" : "rotate-0"
-                  } transition-transform ease-in-out w-5 h-5 text-gray-200 mr-4 w-8 h-8`}
-                /> }
+                {
+                  <Image
+                    src="/svg/faqIcon.svg"
+                    width="512"
+                    height="512"
+                    alt="faqIcon"
+                    className={`${
+                      activeIndex === index ? "rotate-45" : "rotate-0"
+                    } transition-transform ease-in-out w-5 h-5 text-gray-200 mr-4 w-8 h-8`}
+                  />
+                }
               </button>
               <AnimatePresence mode="sync">
                 {activeIndex === index && (
