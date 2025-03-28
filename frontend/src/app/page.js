@@ -4,7 +4,7 @@ import EventSchedule from "./_components/EventSchedule/EventSchedule";
 import FAQ from "./_components/FAQ's/faq";
 import Footer from "./_components/Footer/Footer";
 
-export default async function Home() {
+export default function Home() {
   return (
     <>
       <HomePage/>
