@@ -1,11 +1,14 @@
-"use client"
-import React, { useState, useEffect } from 'react';
+"use client";
+import React, { useState, useEffect } from "react";
 // import '../../app/'; // Importing global CSS
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const Countdown = ({ targetTime }) => {
-  const [timeLeft, setTimeLeft] = useState(targetTime || Math.floor((new Date('2025-03-29T00:00:00Z') - new Date()) / 1000));
+  const [timeLeft, setTimeLeft] = useState(
+    targetTime ||
+      Math.floor((new Date("2025-04-17T00:00:00Z") - new Date()) / 1000)
+  );
 
   useEffect(() => {
     // If no target time is provided, default to 8 hours
@@ -29,9 +32,9 @@ const Countdown = ({ targetTime }) => {
   const minutes = Math.floor((timeLeft % 3600) / 60);
   const seconds = timeLeft % 60;
 
-  const paddedHours = hours.toString().padStart(2, '0');
-  const paddedMinutes = minutes.toString().padStart(2, '0');
-  const paddedSeconds = seconds.toString().padStart(2, '0');
+  const paddedHours = hours.toString().padStart(2, "0");
+  const paddedMinutes = minutes.toString().padStart(2, "0");
+  const paddedSeconds = seconds.toString().padStart(2, "0");
 
   return (
     <div>
@@ -55,28 +58,58 @@ const Countdown = ({ targetTime }) => {
       <div className="grid grid-flow-col gap-5 justify-center text-center xl:scale-100 scale-50 sm:scale-50 md:scale-75 lg:scale-90 auto-cols-max">
         <div className="flex flex-col countdown-box font-normal h-[132px] w-[108px] font-['Orbitron'] items-center justify-center">
           <span className="countdown font-mono text-5xl">
-            <span style={{"--value": Math.floor(timeLeft / 86400)}} className="font-normal font-['Orbitron']" aria-live="polite" aria-label={`Days left: ${Math.floor(timeLeft / 86400)}`}>{Math.floor(timeLeft / 86400)}</span>
+            <span
+              style={{ "--value": Math.floor(timeLeft / 86400) }}
+              className="font-normal font-['Orbitron']"
+              aria-live="polite"
+              aria-label={`Days left: ${Math.floor(timeLeft / 86400)}`}
+            >
+              {Math.floor(timeLeft / 86400)}
+            </span>
           </span>
           days
         </div>
         <div className="dotted-line"></div>
         <div className="flex flex-col countdown-box font-normal h-[132px] w-[108px] font-['Orbitron'] items-center justify-center">
           <span className="countdown font-mono text-5xl">
-            <span style={{"--value": Math.floor((timeLeft % 86400) / 3600)}} className="font-normal font-['Orbitron']" aria-live="polite" aria-label={`Hours left: ${Math.floor((timeLeft % 86400) / 3600)}`}>{Math.floor((timeLeft % 86400) / 3600)}</span>
+            <span
+              style={{ "--value": Math.floor((timeLeft % 86400) / 3600) }}
+              className="font-normal font-['Orbitron']"
+              aria-live="polite"
+              aria-label={`Hours left: ${Math.floor(
+                (timeLeft % 86400) / 3600
+              )}`}
+            >
+              {Math.floor((timeLeft % 86400) / 3600)}
+            </span>
           </span>
           hours
         </div>
         <div className="dotted-line"></div>
         <div className="flex flex-col countdown-box font-normal h-[132px] w-[108px] font-['Orbitron'] items-center justify-center">
           <span className="countdown font-mono text-5xl">
-            <span style={{"--value": Math.floor((timeLeft % 3600) / 60)}} className="font-normal font-['Orbitron']" aria-live="polite" aria-label={`Minutes left: ${Math.floor((timeLeft % 3600) / 60)}`}>{Math.floor((timeLeft % 3600) / 60)}</span>
+            <span
+              style={{ "--value": Math.floor((timeLeft % 3600) / 60) }}
+              className="font-normal font-['Orbitron']"
+              aria-live="polite"
+              aria-label={`Minutes left: ${Math.floor((timeLeft % 3600) / 60)}`}
+            >
+              {Math.floor((timeLeft % 3600) / 60)}
+            </span>
           </span>
           min
         </div>
         <div className="dotted-line"></div>
         <div className="flex flex-col countdown-box font-normal h-[132px] w-[108px] font-['Orbitron'] items-center justify-center">
           <span className="countdown font-mono text-5xl">
-            <span style={{"--value": timeLeft % 60}} aria-live="polite" className="font-normal font-['Orbitron']" aria-label={`Seconds left: ${timeLeft % 60}`}>{timeLeft % 60}</span>
+            <span
+              style={{ "--value": timeLeft % 60 }}
+              aria-live="polite"
+              className="font-normal font-['Orbitron']"
+              aria-label={`Seconds left: ${timeLeft % 60}`}
+            >
+              {timeLeft % 60}
+            </span>
           </span>
           sec
         </div>
@@ -86,4 +119,3 @@ const Countdown = ({ targetTime }) => {
 };
 
 export default Countdown;
-
