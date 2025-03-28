@@ -5,7 +5,7 @@ import "@/app/globals.css";
 
 const About = () => {
   return (
-    <div className="relative flex items-center justify-between min-h-screen w-full px-20 py-16 pr-0 overflow-x-hidden ">
+    <div className="relative flex items-center justify-between min-h-screen w-full px-20 py-16 pr-0 overflow-x-hidden max-[1280px]:p-[10%]">
     
       <img
         src="/Images-Abt-IEEE/svg1.svg"
@@ -14,17 +14,15 @@ const About = () => {
       />
 
     
-      <div className="absolute top-[21%] z-10 w-[190%] pl-[3%]">
-        <img src="/Images-Abt-IEEE/Head.svg" alt="Heading" className="mb-10 mr-10 w-150" />
-        <h1 className="text-7xl tracking-widest text-heading font-khinterference ">
+      <div className="absolute top-[21%] z-10 w-[190%] pl-[3%] ">
+        <img src="/Images-Abt-IEEE/Head.svg" alt="Heading" className="mb-10 mr-10 w-150 max-[750px]:w-[50%] max-[750px]:relative right-[5%]" />
+        <h1 className="text-7xl tracking-widest text-heading font-khinterference w-[60%] max-[600px]:text-[300%] max-[600px]:font-bold max-[600px]:tracking-[0rem] ">
           VIHAAN 8.0
         </h1>
-        <h2 className="text-6xl w-[30%] font-medium text-heading mt-2 ;
-">
+        <h2 className="text-6xl w-[30%] font-medium text-heading mt-2 max-[600px]:text-[300%] ;">
           PRESENTED BY IEEE DTU
         </h2>
-        <p className="text-para mt-4 tracking-[3] w-[30%] font-orbitron font-normal text-lg tracking-[90%]
-">
+        <p className="text-para mt-4 tracking-[3] w-[30%] font-orbitron font-normal text-lg tracking-[90%] max-[600px]:w-[40%] max-[600px]:text-base">
           VIHAAN is a 24-hour long hackathon that provides a platform for budding
           programmers to come up with solutions to real-world problems using
           technology. Students participate in teams of up to 4 members. To add to
