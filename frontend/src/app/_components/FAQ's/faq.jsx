@@ -1,7 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-// import { Plus } from "lucide-react";
+//import { Plus } from "lucide-react";
+import Image from 'next/image'
 
 const tabs = [
   {
@@ -47,14 +48,14 @@ const FAQ = () => {
               onClick={() => handleClick(index)}
             >
               <button
-                className={`p-3 px-2 w-full cursor-pointer items-center transition-all font-semibold text-[#8F7E77] font-khinterference flex gap-2 border border-dashed border-[#8F7E77] bg-[#090A0E]`}
+                className={`p-3 px-4 w-full cursor-pointer items-center justify-between transition-all font-semibold text-[#8F7E77] font-khinterference flex gap-2 border border-dashed border-[#8F7E77] bg-[#090A0E]`}
               >
-                {/* <Plus
+                {tab.title}
+                { <Image  src="/svg/faqIcon.svg" width="512" height="512"
                   className={`${
                     activeIndex === index ? "rotate-45" : "rotate-0"
-                  } transition-transform ease-in-out w-5 h-5 text-gray-200`}
-                /> */}
-                {tab.title}
+                  } transition-transform ease-in-out w-5 h-5 text-gray-200 mr-4 w-8 h-8`}
+                /> }
               </button>
               <AnimatePresence mode="sync">
                 {activeIndex === index && (
