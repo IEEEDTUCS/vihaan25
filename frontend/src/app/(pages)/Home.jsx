@@ -108,8 +108,10 @@ const HomePage = () => {
             WELCOME CODER
           </h4>
           <h5 className="w-56 mt-2 font-light font-khinterference text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint hic
-            vero debitis.
+            8 Hours of coding,
+            <br /> 8 Hours of fun, <br />8 Hours of learning
+            <br />
+            <br /> 24 hours Hackathon
           </h5>
         </div>
       </div>

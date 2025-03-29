@@ -17,7 +17,7 @@ const About = () => {
         <img
           src="/Images-Abt-IEEE/Head.svg"
           alt="Heading"
-          className="mb-10 mr-10 w-150 max-[750px]:w-[50%] max-[750px]:relative right-[5%]"
+          className="mb-10 mr-10 w-150 max-[750px]:h-28 max-[750px]:relative right-[5%]"
         />
         <h1 className="text-7xl tracking-widest text-heading font-khinterference xl:w-[60%] w-full max-[600px]:text-[300%] max-[600px]:font-bold max-[600px]:tracking-[0rem] ">
           VIHAAN 8.0

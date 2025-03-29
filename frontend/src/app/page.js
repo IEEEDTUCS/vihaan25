@@ -9,7 +9,8 @@ export default function Home() {
     <>
       <HomePage/>
       <About/>
-       {/* <EventSchedule/> */}
+       <EventSchedule/>
+{/* Event schedule is also comming soon */}      
       <FAQ/>
       <Footer/> 
     </>

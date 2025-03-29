@@ -20,7 +20,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-size: cover;
   background-position: center center;
-  background-attachment: fixed; 
+  background-attachment: fixed;
+  background-repeat: repeat-y; 
 }
 
 @font-face {
