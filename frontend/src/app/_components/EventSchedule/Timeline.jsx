@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import DotButton from "../Button";
+import DotButton from "../ui/Button";
 
 export default function TechTimeline() {
   const [mounted, setMounted] = useState(false);

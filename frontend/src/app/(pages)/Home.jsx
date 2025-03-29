@@ -10,7 +10,7 @@ import MovingHand from "@/app/assets/MovingHand.svg";
 import HorizontalVectors from "@/app/assets/HorizontalVectors.svg";
 import VerticleLines from "@/app/assets/VerticleLines.svg";
 import Logo from "@/app/assets/Logo.svg";
-import Navigation_links from "../_components/Navigation_links";
+import Navigation_links from "../_components/NavBar/Navigation_links";
 import Countdown from "../_components/Countdown";
 
 const HomePage = () => {

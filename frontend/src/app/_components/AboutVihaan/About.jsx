@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "@components/Button";
+import Button from "@/app/_components/ui/Button";
 import "./About.css";
 import "@/app/globals.css";
 import AboutSVG from "./AboutSvg";

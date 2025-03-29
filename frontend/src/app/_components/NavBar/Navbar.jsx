@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import GridLayout from "./GridLayout";
 
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [songPlaying, setSongPlaying] = useState(false);
