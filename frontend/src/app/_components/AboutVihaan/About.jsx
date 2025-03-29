@@ -35,22 +35,23 @@ const About = () => {
         <div className="mt-6 w-fit">
           <Button href="https://www.ieeedtu.in/" children={"About IEEE DTU"} />
         </div>
-
+        <div className="ml-[50%] relative -top-20">
         <AboutSVG />
+        </div>
       </div>
 
-      <div className="flex justify-end items-center w-1/2 collapse lg:visible ">
-        <div className="relative w-full h-[80%] max-[600px]:hidden flex flex-col items-center justify-center">
-          {/* <div className="trackbtn absolute -z-1 top-90 right-70 h-100 w-50"> */}
-          {/* <p className="text-para trackbtn -z-1 mt-1 w-[100%] h-10 font-bold font-orbitron xl:text-xl absolute text-center text-base">
-            COMING SOON!
-          </p> */}
-          {/* </div> */}
+      <div className="flex items-center w-4/5 max-[1280px]:collapse lg:visible ">
+        <div className="relative w-full h-[80%] max-[600px]:hidden ">
+         
           <img
             src="/Images-Abt-IEEE/svgglass.svg"
             alt="Magnifying Glass"
-            className="w-[100%] h-auto hover:animate-wiggle z-10"
+            className="w-full h-[120%] hover:animate-wiggle z-10"
           />
+
+           <div className="text-para-z-1 mt-1 w-[100%] h-10 font-bold font-orbitron xl:text-xl flex justify-center absolute top-[27%] -z-3 ">
+            COMING SOON!
+          </div>
         </div>
 
         <img

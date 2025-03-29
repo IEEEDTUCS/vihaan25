@@ -1,3 +1,4 @@
+@import "tailwindcss";
 
 @theme {
     --animate-wiggle: wiggle 1s ease-in-out forwards;
@@ -24,6 +25,7 @@ svg path {
     stroke-dasharray: 50;
     stroke-dashoffset: 50;
     animation: textAnimation 4s ease-in-out 1 forwards;
+    animation-timeline: view(75% 5%);
   }
   @keyframes textAnimation {
     0% {
