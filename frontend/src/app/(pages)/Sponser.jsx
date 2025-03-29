@@ -9,10 +9,13 @@ const Sponsor = () => {
   };
 
   const sponsorList = [
-    { title: "Devfolio", image: "/images/sponsor/Devfolio.png" },
+    {
+      title: "“DEVFOLIO LOGO”",
+      image: "/images/sponsor/Devfolio_Logo-Colored.svg",
+    },
     { title: "GitHub", image: "/images/sponsor/GitHub.png" },
     { title: "Polygon", image: "/images/sponsor/Polygon.png" },
-    { title: "ETHIndia", image: "/images/sponsor/ETHIndia.png" },
+    { title: "ETHINDIA LOGO", image: "/images/sponsor/ethindia-light.png" },
     { title: "Wolfram", image: "/images/sponsor/Wolfram.png" },
     { title: "NoticeBard", image: "/images/sponsor/NoticeBard.png" },
     { title: "Fanstore", image: "/images/sponsor/Fanstore.png" },
