@@ -9,7 +9,7 @@ const EventSchedule = () => {
         Event Schedule
       </p>
       {/* <TechTimeline /> */}
-      <div className="flex  flex-col justify-center items-center mt-20 text-4xl font-khinterference text-center">
+      <div className="flex   flex-col justify-center font-extrabold items-center mt-20 text-4xl font-orbitron text-center">
         <RandomizedTextEffect text="Coming Soon" />
         {/* <div className=" w-full h-8 mx-auto">
           <div className="absolute left-1/5 w-full md:w-3/5 h-8 bg-gradient-to-b from-[#8f7d7652] to-[#8f7d7600]  border-t border-[#8f7d76]"></div>

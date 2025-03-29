@@ -40,7 +40,7 @@ export function RandomizedTextEffect({ text }) {
     animateText();
   }, [text, animateText]);
   return (
-    <div className="relative inline-block lg:tracking-[2em] tracking-[.5em] ">
+    <div className="relative inline-block  xl:scale-100 lg:scale-90 md:scale-75 scale-50 tracking-[2em]">
       {animatedText}
     </div>
   );
