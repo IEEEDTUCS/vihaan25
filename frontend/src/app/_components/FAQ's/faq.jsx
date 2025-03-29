@@ -24,12 +24,12 @@ const tabs = [
   {
     title: "I'm interested, How do I register?",
     description:
-      "We’ll soon be putting up registration links on our website. Stay tuned! Registration details only require basic details. Follow us on Instagram and LinkedIn for regular updates.",
+      "We’ll soon be putting up registration links on our website. Stay tuned! Registration details only require basic details. Follow us on Instagram <></> and LinkedIn for regular updates.",
   },
   {
     title: "What's the prize if you end up winning?Give me some Incentive.",
     description:
-      "We have loads of cash prizes and swags up for grabs. Further details will be released soon. Follow us on Instagram and LinkedIn for regular updates.",
+      <>We have loads of cash prizes and swags up for grabs. Further details will be released soon. Follow us on Instagram and LinkedIn for regular updates.</>
   },
 ];
 

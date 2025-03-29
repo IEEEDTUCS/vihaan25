@@ -21,7 +21,7 @@ export default function TechTimeline() {
   if (!mounted) return null;
 
   return (
-    <div className="w-full px-12  ">
+    <div className="w-full px-12 ">
       {/* Grid overlay */}
       <div className="relative flex max-lg:flex-col justify-center items-center lg:min-h-[300px] min-h-screen mx-12">
         {/* Timeline container */}
