@@ -27,7 +27,7 @@ const HomePage = () => {
 
   return (
     <>
-      <div className="relative flex h-screen flex-col items-center justify-start overflow-y-hidden">
+      <div className="relative flex h-screen flex-col items-center justify-start overflow-hidden">
         <div className="absolute inset-0 flex items-center justify-center">
           <Image
             src={Logo}

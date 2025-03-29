@@ -6,7 +6,7 @@ import AboutSVG from "./AboutSvg";
 
 const About = () => {
   return (
-    <div className="relative flex items-center justify-between min-h-screen w-full md:px-20 py-16 pr-0">
+    <div className="relative flex items-center justify-between min-h-screen w-full py-16 pr-0">
       <img
         src="/Images-Abt-IEEE/svg1.svg"
         alt="Background Design"
@@ -25,7 +25,7 @@ const About = () => {
         <h2 className="text-6xl xl:w-[30%]  font-medium text-heading font-khinterference mt-2 max-[600px]:text-[300%] ;">
           PRESENTED BY IEEE DTU
         </h2>
-        <p className="text-para mt-4  xl:w-[40%] w-full font-orbitron font-normal text-lg tracking-[90%] max-[600px]:w-[40%] max-[600px]:text-base">
+        <p className="text-para mt-4  xl:w-[40%] w-full font-orbitron font-normal text-lg tracking-[90%] max-[600px]:w-full max-[600px]:text-base">
           VIHAAN is a 24-hour long hackathon that provides a platform for
           budding programmers to come up with solutions to real-world problems
           using technology. Students participate in teams of up to 4 members. To
@@ -39,17 +39,17 @@ const About = () => {
         <AboutSVG />
       </div>
 
-      <div className="flex justify-end items-center w-1/2 max-[1280px]:collapse xl:visible ">
-        <div className="absolute right-0 top-0 z-10">
-          <div className="trackbtn absolute -z-1 top-90 right-70 h-100 w-50">
-            <p className="text-para mt-1 w-[100%] h-10 font-bold font-black font-orbitron text-xl">
-              COMING SOON!
-            </p>
-          </div>
+      <div className="flex justify-end items-center w-1/2 collapse lg:visible ">
+        <div className="relative w-full h-[80%] max-[600px]:hidden flex flex-col items-center justify-center">
+          {/* <div className="trackbtn absolute -z-1 top-90 right-70 h-100 w-50"> */}
+          {/* <p className="text-para trackbtn -z-1 mt-1 w-[100%] h-10 font-bold font-orbitron xl:text-xl absolute text-center text-base">
+            COMING SOON!
+          </p> */}
+          {/* </div> */}
           <img
             src="/Images-Abt-IEEE/svgglass.svg"
             alt="Magnifying Glass"
-            className="w-[100%] h-auto hover:animate-wiggle"
+            className="w-[100%] h-auto hover:animate-wiggle z-10"
           />
         </div>
 
