@@ -6,14 +6,14 @@ import AboutSVG from "./AboutSvg";
 
 const About = () => {
   return (
-    <div className="relative mb-0 flex items-center justify-between w-full mt-16 pr-0">
+    <div className="relative mb-0 flex items-center justify-between w-full mt-16 pr-0 ">
       <img
         src="/Images-Abt-IEEE/svg1.svg"
         alt="Background Design"
         className="absolute left-0 top-30 w-auto h-180 object-cover opacity-85"
       />
 
-      <div className="z-10 w-full mx-20">
+      <div className="z-10 w-full mx-20 max-[1280px]:relative max-[1280px]:w-190">
         <img
           src="/Images-Abt-IEEE/head.svg"
           alt="Heading"
@@ -40,7 +40,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="flex items-center w-4/5 max-[1280px]:collapse lg:visible ">
+      <div className="flex items-center w-4/5 max-[1280px]:hidden lg:visible ">
         <div className="relative w-full h-[80%] max-[600px]:hidden ">
           <img
             src="/Images-Abt-IEEE/svgglass.svg"
