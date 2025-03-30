@@ -13,7 +13,7 @@ const About = () => {
         className="absolute left-0 top-30 w-auto h-180 object-cover opacity-85"
       />
 
-      <div className="z-10 w-full mx-20 max-[1280px]:relative max-[1280px]:w-190">
+      <div className="z-10 w-full mx-20 max-[1280px]:relative max-[1280px]:w-full">
         <img
           src="/Images-Abt-IEEE/head.svg"
           alt="Heading"

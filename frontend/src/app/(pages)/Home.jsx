@@ -27,7 +27,7 @@ const HomePage = () => {
 
   return (
     <>
-      <div className="relative flex h-screen flex-col items-center justify-start ">
+      <div className="relative flex h-screen flex-col items-center justify-start overflow-y-hidden">
         {/* this div contains all the svg and images of the landing */}
         <div className="absolute inset-0 flex items-center justify-center">
           <Image
@@ -116,7 +116,6 @@ const HomePage = () => {
       </div>
       {/* <Navbar /> */}
       <Navigation_links />
-      <Countdown />
     </>
   );
 };
