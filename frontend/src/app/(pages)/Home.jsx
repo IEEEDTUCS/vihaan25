@@ -8,7 +8,7 @@ import RotateZ from "@/app/assets/RotateZ.svg";
 import CompleteClock from "@/app/assets/CompleteClock.svg";
 import MovingHand from "@/app/assets/MovingHand.svg";
 import HorizontalVectors from "@/app/assets/HorizontalVectors.svg";
-import VerticleLines from "@/app/assets/VerticleLines.svg";
+
 import Logo from "@/app/assets/Logo.svg";
 import Navigation_links from "../_components/NavBar/Navigation_links";
 import Countdown from "../_components/Countdown";
@@ -28,19 +28,21 @@ const HomePage = () => {
   return (
     <>
       <div className="relative flex h-screen flex-col items-center justify-start overflow-hidden">
+        {/* this div contains all the svg and images of the landing */}
         <div className="absolute inset-0 flex items-center justify-center">
           <Image
             src={Logo}
             alt="Vihaan Logo"
             width={100}
             height={100}
-            className="absolute top-8"
+            className="absolute top-6 xl:top-8 lg:top-0 z-10"
           />
           <Image
             src={FixedAroundClock}
             alt="FixedAroundClock"
             className="absolute"
           />
+          {/* 70vh */}
           <Image
             src={Clockwise}
             alt="FixedAroundClock"
@@ -51,21 +53,19 @@ const HomePage = () => {
             alt="FixedAroundClock"
             className="absolute animate-anticlockwise"
           />
+          {/* circle with less opacity outermost */}
           <Image
             src={RotateZ}
             alt="RotateZ-alongx"
-            className="absolute w-[1100px] opacity-30 -rotateX z-10"
+            className="absolute w-[1100px] opacity-30"
           />
+          {/* circle with full opacity -- 2nd last */}
           <Image
             src={RotateZ}
             alt="RotateZ-alongy"
-            className="absolute w-[1000px] -rotateY z-10"
+            className="absolute w-[1000px]"
           />
-          <Image
-            src={VerticleLines}
-            alt="Verticle Lines"
-            className="absolute top-[50] z-10 Verticle Lines"
-          />
+
           {/* Complete Clock & Moving Hand */}
           <div className="relative flex items-center justify-center top-6 lg:top-12 w-full">
             {/* Clock Face */}
@@ -79,19 +79,19 @@ const HomePage = () => {
             <Image
               src={MovingHand}
               alt="MovingHand"
-              className="relative hidden md:block lg:h-full opacity-30 top-4 right-2 origin-top animate-clockHand"
+              className="relative h-15 md:block lg:h-full opacity-30 top-2.5 right-1 md:top-4 md:right-2 origin-top animate-clockHand"
             />
           </div>
         </div>
-        <div className="text-content font-extrabold relative flex items-center flex-col jusitfy-center top-60 md:top-90 lg:top-90 z-10">
-          <h1 className="text-6xl md:text-8xl lg:text-[9rem] font-khinterference ">
+        <div className="text-content font-extrabold relative flex items-center flex-col jusitfy-center top-60 md:top-90 lg:top-40 z-10">
+          <p className="max-[450px]:text-[42px] text-7xl md:text-8xl lg:text-[9rem] font-khinterference ">
             VIHAAN 8.0
-          </h1>
-          <h2 className="text-white text-3xl md:mt-4 lg:mt-0 font-khinterference relative">
+          </p>
+          <h2 className="text-white text-xl md:text-3xl md:mt-4 lg:mt-0 font-khinterference relative">
             AWAITS YOU
           </h2>
-          <h2 className="text-white mt-40 md:mt-0 font-pprightGrotesk text-[10px]">
-            REGISTER AT
+          <h2 className="text-white mt-4 md:mt-0 font-pprightGrotesk text-[10px]">
+            REGISTRATION COMING SOON
           </h2>
           <div
             className="apply-button"
@@ -107,7 +107,7 @@ const HomePage = () => {
           <h4 className="mt-15 text-xl md:text-2xl font-khinterference text-bold tracking-wider">
             WELCOME CODER
           </h4>
-          <h5 className="w-56 font-light font-khinterference text-center">
+          <h5 className="w-56 font-light font-khinterference text-center text-base">
             8 Hours of coding,
             <br /> 8 Hours of fun, <br />8 Hours of learning
             <br /> 24 hours Hackathon
