@@ -29,57 +29,23 @@ const HomePage = () => {
       <>
          <div className="relative flex min-h-screen flex-col items-center justify-start overflow-y-scroll">
             <div className="absolute inset-0 flex items-center justify-center">
-               <Image
-                  src={Logo}
-                  alt="Vihaan Logo"
-                  width={100}
-                  height={100}
-                  className="absolute top-8"
-               />
-               <Image
-                  src={FixedAroundClock}
-                  alt="FixedAroundClock"
-                  className="absolute"
-               />
-               <Image
-                  src={Clockwise}
-                  alt="FixedAroundClock"
-                  className="absolute animate-clockwise"
-               />
-               <Image
-                  src={AntiClockwise}
-                  alt="FixedAroundClock"
-                  className="absolute animate-anticlockwise"
-               />
-               <Image
-                  src={RotateZ}
-                  alt="RotateZ-alongx"
-                  className="absolute w-[1100px] opacity-30 -rotateX z-10"
-               />
-               <Image
-                  src={RotateZ}
-                  alt="RotateZ-alongy"
-                  className="absolute w-[1000px] -rotateY z-10"
-               />
-               <Image
-                  src={VerticleLines}
-                  alt="Verticle Lines"
-                  className="absolute top-[50] z-10 Verticle Lines"
-               />
+               <Image src={Logo} alt="Vihaan Logo" width={100} height={100} className="absolute top-8"/>
+               <Image src={FixedAroundClock} alt="FixedAroundClock" className="absolute"/>
+               <Image src={Clockwise} alt="FixedAroundClock" className="absolute md:w- animate-clockwise" />
+               <Image src={AntiClockwise} alt="FixedAroundClock" className="absolute animate-anticlockwise"/>
+               <Image src={RotateZ} alt="RotateZ-alongx" className="absolute w-[1100px] opacity-30 -rotateX z-10" />
+               <Image src={RotateZ} alt="RotateZ-alongy" className="absolute w-[1000px] -rotateY z-10" />
+               <Image src={VerticleLines} alt="Verticle Lines" className="absolute top-[50] z-10  VerticleLines" />
                {/* Complete Clock & Moving Hand */}
                <div className="relative flex items-center justify-center top-6 lg:top-12 w-full">
                   {/* Clock Face */}
-                  <Image
-                     src={CompleteClock}
-                     alt="CompleteClock"
-                     className="absolute w-[1000px]"
-                  />
+                  <Image src={CompleteClock} alt="CompleteClock" className="absolute w-[1000px]" />
 
                   {/* Clock Hand - Centered */}
                   <Image
                      src={MovingHand}
                      alt="MovingHand"
-                     className="relative hidden md:block lg:h-full opacity-30 top-4 right-2 origin-top animate-clockHand"
+                     className="relative h-15 md:block lg:h-full opacity-30 top-2.5 right-1 md:top-4 md:right-2 origin-top animate-clockHand"
                   />
                </div>
             </div>
@@ -104,7 +70,7 @@ const HomePage = () => {
                   className="relative top-20 z-10 Verticle Lines"
                />
 
-               <h4 className="mt-15 text-2xl font-light font-khinterference text-bold tracking-wider">
+               <h4 className="mt-15 text-xl md:text-2xl font-khinterference text-bold tracking-wider">
                   WELCOME CODER
                </h4>
                <h5 className="w-56 mt-2 font-light font-khinterference text-center">
@@ -114,8 +80,8 @@ const HomePage = () => {
             </div>
          </div>
          {/* <Navbar /> */}
-         <Navigation_links />
-         <Countdown />
+         {/* <Navigation_links /> */}
+         {/* <Countdown /> */}
       </>
    );
 };
