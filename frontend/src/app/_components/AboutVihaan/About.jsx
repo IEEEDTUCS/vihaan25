@@ -6,7 +6,7 @@ import AboutSVG from "./AboutSvg";
 
 const About = () => {
   return (
-    <div className="relative flex items-center justify-between  w-full mt-16 pr-0">
+    <div className="relative mb-0 flex items-center justify-between w-full mt-16 pr-0">
       <img
         src="/Images-Abt-IEEE/svg1.svg"
         alt="Background Design"
