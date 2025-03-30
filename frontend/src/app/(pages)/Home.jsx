@@ -104,13 +104,12 @@ const HomePage = () => {
             className="relative top-20 z-10 Verticle Lines"
           />
 
-          <h4 className="mt-15 text-2xl font-light font-khinterference text-bold tracking-wider">
+          <h4 className="mt-15 text-xl md:text-2xl font-khinterference text-bold tracking-wider">
             WELCOME CODER
           </h4>
-          <h5 className="w-56 mt-2 font-light font-khinterference text-center">
+          <h5 className="w-56 font-light font-khinterference text-center">
             8 Hours of coding,
             <br /> 8 Hours of fun, <br />8 Hours of learning
-            <br />
             <br /> 24 hours Hackathon
           </h5>
         </div>
