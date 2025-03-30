@@ -24,6 +24,13 @@ body {
   background-repeat: repeat-y; 
 }
 
+@media (max-width: 1028px) {
+  body {
+    width: 100vh;
+  }
+
+}
+
 @font-face {
   font-family: "Orbitron";
   src: url("/fonts/Orbitron-Regular.ttf") format("truetype");
