@@ -38,7 +38,7 @@ const Sponsor = () => {
   ];
 
   return (
-    <div className="relative flex flex-col items-center justify-start overflow-hidden lg:mx-20 md:mx-16 sm:mx-8 mx-4 my-32 font-orbitron">
+    <div className="relative flex flex-col items-center justify-start overflow-hidden lg:mx-20 md:mx-16 sm:mx-8 mx-4 max-sm:-top-10 font-orbitron">
       <p className="font-khinterference md:text-7xl text-4xl tracking-widest mb-6 text-center">
         Our Past Sponsors
       </p>

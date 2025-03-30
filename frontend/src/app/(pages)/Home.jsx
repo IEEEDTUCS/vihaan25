@@ -26,8 +26,9 @@ const HomePage = () => {
   }, []);
 
   return (
+    // overflow-y-clip
     <>
-      <div className="relative flex h-screen flex-col items-center justify-start overflow-y-hidden">
+      <div className="relative flex h-screen   flex-col items-center justify-start  overscroll-x-none">
         {/* this div contains all the svg and images of the landing */}
         <div className="absolute inset-0 flex items-center justify-center">
           <Image
@@ -35,7 +36,7 @@ const HomePage = () => {
             alt="Vihaan Logo"
             width={100}
             height={100}
-            className="absolute top-6 xl:top-8 lg:top-0 z-10"
+            className="absolute top-6 xl:top-8 lg:top-0 z-99999"
           />
           <Image
             src={FixedAroundClock}
