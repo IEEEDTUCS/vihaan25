@@ -39,7 +39,7 @@ const Sponsor = () => {
 
   return (
     <div className="relative flex flex-col items-center justify-start overflow-hidden lg:mx-20 md:mx-16 sm:mx-8 mx-4 my-32 font-orbitron">
-      <p className="font-khinterference md:text-7xl text-4xl tracking-widest mb-6">
+      <p className="font-khinterference md:text-7xl text-4xl tracking-widest mb-6 text-center">
         Our Past Sponsors
       </p>
 
@@ -55,13 +55,13 @@ const Sponsor = () => {
 
       {/* Sponsor List */}
       <p className="text-4xl text-center mb-4">Sponsors</p>
-      <div className="grid grid-cols-2 gap-6 mb-10">
+      <div className="grid grid-cols-2 sm:gap-12 gap-6 mb-10 items-center">
         {sponsorList.map((sponsor, index) => (
           <Image
             key={index}
             src={sponsor.image}
             alt={sponsor.title}
-            width={120}
+            width={160}
             height={120}
           />
         ))}
@@ -69,27 +69,27 @@ const Sponsor = () => {
 
       {/* Technology Partners */}
       <p className="text-4xl text-center mb-4">Technology Partners</p>
-      <div className="grid grid-cols-1 gap-6 mb-10">
+      <div className="grid grid-cols-1 gap-6 mb-10 items-center">
         {technologyPartners.map((sponsor, index) => (
           <Image
             key={index}
             src={sponsor.image}
             alt={sponsor.title}
-            width={120}
-            height={120}
+            width={160}
+            height={160}
           />
         ))}
       </div>
 
       {/* Community Partners */}
       <p className="text-4xl text-center mb-4">Community Partners</p>
-      <div className="grid grid-cols-2 gap-6 mb-10">
+      <div className="grid grid-cols-2 sm:gap-12 gap-6 mb-10 items-center">
         {communityPartners.map((sponsor, index) => (
           <Image
             key={index}
             src={sponsor.image}
             alt={sponsor.title}
-            width={120}
+            width={160}
             height={120}
           />
         ))}
@@ -103,7 +103,7 @@ const Sponsor = () => {
             key={index}
             src={sponsor.image}
             alt={sponsor.title}
-            width={120}
+            width={160}
             height={120}
           />
         ))}

@@ -4,6 +4,23 @@ import { AnimatePresence, motion } from "framer-motion";
 //import { Plus } from "lucide-react";
 import Image from "next/image";
 
+const Instagram = () => (
+  <a
+    href="https://www.instagram.com/vihaan_dtu"
+    className=" text-amber-600 underline"
+  >
+    Instagram
+  </a>
+);
+
+const LinkedIn = () => (
+  <a
+    href="https://www.linkedin.com/company/ieee-dtu/"
+    className="underline text-amber-600"
+  >
+    LinkedIn
+  </a>
+);
 const tabs = [
   {
     title: "What is Vihaan 8.0?",
@@ -23,13 +40,23 @@ const tabs = [
   },
   {
     title: "I'm interested, How do I register?",
-    description:
-      "We’ll soon be putting up registration links on our website. Stay tuned! Registration details only require basic details. Follow us on Instagram <></> and LinkedIn for regular updates.",
+    description: (
+      <>
+        We’ll soon be putting up registration links on our website. Stay tuned!
+        Registration details only require basic details. Follow us on{" "}
+        <Instagram /> and <LinkedIn /> for regular updates.
+      </>
+    ),
   },
   {
     title: "What's the prize if you end up winning?Give me some Incentive.",
-    description:
-      <>We have loads of cash prizes and swags up for grabs. Further details will be released soon. Follow us on Instagram and LinkedIn for regular updates.</>
+    description: (
+      <>
+        We have loads of cash prizes and swags up for grabs. Further details
+        will be released soon. Follow us on <Instagram /> and <LinkedIn /> for
+        regular updates.
+      </>
+    ),
   },
 ];
 
@@ -78,7 +105,7 @@ const FAQ = () => {
               <AnimatePresence mode="sync">
                 {activeIndex === index && (
                   <motion.div
-                    className="bg-[#13151B6E] border-b border-l border-r border-dashed border-[#8F7E77] rounded-md"
+                    className="bg-[#13151B6E] border-b border-l border-r border-dashed border-[#8F7E77] rounded-b-xl"
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
@@ -88,7 +115,7 @@ const FAQ = () => {
                       delay: 0.14,
                     }}
                   >
-                    <pre className="text-[#8F7E77] text-wrap font-sans  p-3 pt-0 w-[90%] font-khinterference ">
+                    <pre className="text-[#8F7E77] text-wrap font-sans  p-3 pt-1 w-[94%] font-khinterference ">
                       {tab.description}
                     </pre>
                   </motion.div>
