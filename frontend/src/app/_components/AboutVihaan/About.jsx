@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "@/app/_components/ui/Button";
-import "./About.css";
+// import "./About.css";
 import "@/app/globals.css";
 import AboutSVG from "./AboutSvg";
 
@@ -36,20 +36,19 @@ const About = () => {
           <Button href="https://www.ieeedtu.in/" children={"About IEEE DTU"} />
         </div>
         <div className="ml-[50%] relative -top-20">
-        <AboutSVG />
+          <AboutSVG />
         </div>
       </div>
 
       <div className="flex items-center w-4/5 max-[1280px]:collapse lg:visible ">
         <div className="relative w-full h-[80%] max-[600px]:hidden ">
-         
           <img
             src="/Images-Abt-IEEE/svgglass.svg"
             alt="Magnifying Glass"
             className="w-full h-[120%] hover:animate-wiggle z-10"
           />
 
-           <div className="text-para-z-1 mt-1 w-[100%] h-10 font-bold font-orbitron xl:text-xl flex justify-center absolute top-[27%] -z-3 ">
+          <div className="text-para-z-1 mt-1 w-[100%] h-10 font-bold font-orbitron xl:text-xl flex justify-center absolute top-[27%] -z-3 ">
             COMING SOON!
           </div>
         </div>
