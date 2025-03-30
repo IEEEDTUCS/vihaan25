@@ -8,12 +8,11 @@ import Footer from "./_components/Footer/Footer";
 export default function Home() {
   return (
     <>
-      <HomePage/>
-      <About/>
-       <EventSchedule/>
-{/* Event schedule is also comming soon */}
-<Sponsor/>      
-      <FAQ/>
+      <div id="home" ><HomePage/></div>
+      <div id="about"><About/></div>
+      <div id="schedule"><EventSchedule/></div>
+      <div id="sponsor"><Sponsor/></div>
+      <div id="faqs"><FAQ id="faqs"/></div>
       <Footer/> 
     </>
   );
