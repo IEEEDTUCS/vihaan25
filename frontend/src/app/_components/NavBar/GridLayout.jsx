@@ -2,7 +2,7 @@ import React from 'react';
 
 const GridLayout = () => {
     return (
-        <div className='md:hidden   top-0 z-30 w-[100vw]   right-auto  ' style={{
+        <div className='md:hidden   -top-0 z-30 w-[100vw]   right-auto  ' style={{
             display: 'grid',
             gridTemplateColumns: '1fr',
             gridTemplateRows: 'repeat(8, 1fr)',
@@ -28,7 +28,7 @@ const GridLayout = () => {
                 }}>
                 <div >
                     {/* logo */}
-                    <img className='absolute top-8 left-1/2 transform -translate-x-1/2 ' src="./Logo.png" alt="" />
+                    <img className='absolute top-5 left-1/2 transform -translate-x-1/2 ' src="./Logo.png" alt="" />
 
                 </div>
             </div>
