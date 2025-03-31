@@ -36,35 +36,35 @@ const HomePage = () => {
             alt="Vihaan Logo"
             width={90}
             height={90}
-            className="absolute top-6 xl:top-8 lg:top-0 z-150"
+            className="absolute top-0 xl:top-8 lg:top-0 z-150"
           />
           <Image
             src={FixedAroundClock}
             alt="FixedAroundClock"
-            className="absolute"
+            className="absolute -z-1"
           />
           {/* 70vh */}
           <Image
             src={Clockwise}
             alt="FixedAroundClock"
-            className="absolute animate-clockwise"
+            className="absolute animate-clockwise -z-1"
           />
           <Image
             src={AntiClockwise}
             alt="FixedAroundClock"
-            className="absolute animate-anticlockwise"
+            className="absolute animate-anticlockwise -z-1"
           />
           {/* circle with less opacity outermost */}
           <Image
             src={RotateZ}
             alt="RotateZ-alongx"
-            className="absolute w-[1100px] opacity-30"
+            className="absolute w-[1100px] opacity-30 -z-1"
           />
           {/* circle with full opacity -- 2nd last */}
           <Image
             src={RotateZ}
             alt="RotateZ-alongy"
-            className="absolute w-[1000px]"
+            className="absolute w-[1000px] -z-1"
           />
 
           {/* Complete Clock & Moving Hand */}
@@ -73,25 +73,25 @@ const HomePage = () => {
             <Image
               src={CompleteClock}
               alt="CompleteClock"
-              className="absolute w-[1000px]"
+              className="absolute -z-1 w-[1000px]"
             />
 
             {/* Clock Hand - Centered */}
             <Image
               src={MovingHand}
               alt="MovingHand"
-              className="relative h-15 md:block lg:h-full opacity-30 top-2.5 right-1 md:top-4 md:right-2 origin-top animate-clockHand"
+              className="relative h-15 -z-1 md:block lg:h-full opacity-30 top-2.5 right-1 md:top-4 md:right-2 origin-top animate-clockHand"
             />
           </div>
         </div>
-        <div className="text-content font-extrabold relative flex items-center flex-col jusitfy-center top-60 md:top-90 lg:top-40 z-1">
-          <p className="max-[450px]:text-[42px] text-7xl md:text-8xl lg:text-[9rem] font-khinterference ">
+        <div className="text-content font-extrabold relative flex items-center flex-col jusitfy-center top-60 md:top-90 lg:top-40 -z-1">
+          <p className="max-[450px]:text-[42px]  text-7xl md:text-8xl lg:text-[9rem] font-khinterference ">
             VIHAAN 8.0
           </p>
-          <h2 className="text-white text-xl md:text-3xl md:mt-4 lg:mt-0 font-khinterference relative">
+          <h2 className="text-white text-xl md:text-3xl md:mt-4 lg:mt-0 font-khinterference relative -z-1">
             AWAITS YOU
           </h2>
-          <h2 className="text-white mt-4 md:mt-0 font-pprightGrotesk text-[10px]">
+          <h2 className="text-white mt-4 md:mt-0 font-pprightGrotesk text-[10px] -z-1">
             REGISTRATION COMING SOON
           </h2>
           <div
@@ -105,10 +105,10 @@ const HomePage = () => {
             className="relative top-20 z-10 Verticle Lines"
           />
 
-          <h4 className="mt-15 text-xl md:text-2xl font-khinterference text-bold tracking-wider">
+          <h4 className="mt-15 text-xl md:text-2xl font-khinterference text-bold tracking-wider -z-1">
             WELCOME CODER
           </h4>
-          <h5 className="w-56 font-light font-khinterference text-center text-base">
+          <h5 className="w-56 font-light font-khinterference text-center text-base -z-1">
             8 Hours of coding,
             <br /> 8 Hours of fun, <br />8 Hours of learning
             <br /> 24 hours Hackathon

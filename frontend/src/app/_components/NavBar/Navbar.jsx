@@ -135,7 +135,7 @@ const Navbar = () => {
       {isOpen && (
         <GridLayout
           className="md:hidden  lg:hidden "
-          style={{ zIndex: 1000 }}
+          style={{ zIndex: 10000 }}
         />
       )}
     </motion.div>

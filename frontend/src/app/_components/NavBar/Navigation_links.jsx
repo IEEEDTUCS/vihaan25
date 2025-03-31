@@ -3,7 +3,7 @@ import { Instagram, Linkedin, Twitter } from "lucide-react";
 
 const Navigation_links = () => {
   return (
-    <div className="flex space-x-4  items-center bottom-[4vh] left-6 absolute  p-4">
+    <div className="flex space-x-4 -z-1 items-center bottom-5 left-0 absolute  p-4">
       <div className="">
         <svg
           xmlns="http://www.w3.org/2000/svg"

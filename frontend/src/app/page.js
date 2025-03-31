@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <div id="home" ><HomePage/></div>
       <Countdown/>
-      <div id="about"><About/></div>
+      {/* <div id="about"><About/></div> */}
       <div id="schedule" className="-mt-44"><EventSchedule/></div>
       <div id="sponsor"><Sponsor/></div>
       <div id="faqs"><FAQ id="faqs"/></div>
