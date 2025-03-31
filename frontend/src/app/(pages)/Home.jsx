@@ -26,9 +26,9 @@ const HomePage = () => {
   }, []);
 
   return (
-    // overflow-y-clip
+    
     <>
-      <div className="relative flex h-screen   flex-col items-center justify-start  overscroll-x-none">
+      <div className="relative flex h-screen flex-col items-center justify-start overflow-hidden">
         {/* this div contains all the svg and images of the landing */}
         <div className="absolute inset-0 flex items-center justify-center">
           <Image
@@ -49,6 +49,7 @@ const HomePage = () => {
             alt="FixedAroundClock"
             className="absolute animate-clockwise"
           />
+
           <Image
             src={AntiClockwise}
             alt="FixedAroundClock"
@@ -58,7 +59,7 @@ const HomePage = () => {
           <Image
             src={RotateZ}
             alt="RotateZ-alongx"
-            className="absolute w-[1100px] opacity-30"
+            className="absolute w-[1100px] opacity-30 overflow-hidden"
           />
           {/* circle with full opacity -- 2nd last */}
           <Image
