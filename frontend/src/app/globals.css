@@ -22,6 +22,7 @@ body {
   background-position: center center;
   background-attachment: fixed;
   background-repeat: repeat-y; 
+  overflow-x: hidden;
 }
 
 
@@ -150,6 +151,7 @@ body {
 
 @theme {
   --animate-wiggle: wiggle 1s ease-in-out forwards;
+  --animate-giggle: giggle 1s ease-in-out infinite; 
   @keyframes wiggle {
       0% {
           transform: translate(0, 0);
@@ -163,6 +165,24 @@ body {
           transform: translate(-70px, -60px) scale(1.1);
           opacity: 0.4;
       }
+  }
+
+  @keyframes giggle {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5px) ;
+    }
+    50% {
+      transform: translateX(5px) ;
+    }
+    75% {
+      transform: translateX(0px) ;
+    }
+    100% {
+      transform: translateX(0) ;
+    }
   }
 }
 
