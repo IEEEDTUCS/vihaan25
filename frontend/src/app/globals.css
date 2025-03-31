@@ -24,12 +24,6 @@ body {
   background-repeat: repeat-y; 
 }
 
-@media (max-width: 1028px) {
-  body {
-    width: 100%;
-  }
-
-}
 
 @font-face {
   font-family: "Orbitron";
