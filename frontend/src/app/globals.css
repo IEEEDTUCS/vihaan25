@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-
-
 :root {
   --background: url("/background.jpg")!important;
   --foreground: #8F7E77;
@@ -23,6 +21,7 @@ body {
   background-attachment: fixed;
   background-repeat: repeat-y; 
   overflow-x: hidden;
+  /* filter: blur(5px); */
 }
 
 
@@ -214,4 +213,18 @@ body {
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+.Button-for-Abt-Section{
+  position: fixed;
+  right: 0;
+  z-index: 10000;
+  transition: 1s ease-in;
+  /* filter: blur(5px); */
+}
+
+.Button-for-Abt-Section-after {
+  position: fixed;
+  right: -15px;
+  transition: 3s ease-in;
 }

@@ -42,7 +42,7 @@ const Navbar = () => {
   useEffect(() => {
     if (isOpen) {
       document.body.classList.add("overflow-hidden");
-    } else {
+    } else {1
       document.body.classList.remove("overflow-hidden");
     }
   }, [isOpen]);
@@ -50,7 +50,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 backdrop-blur-sm right-0 transition-opacity duration-300 opacity-100 ${isOpen ? "bg-transparent " : "bg-transparent"} `}
-      style={{ zIndex: 100 }}
+      style={{ zIndex: 10 }}
     >
       <div className="max-w-7xl  px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">

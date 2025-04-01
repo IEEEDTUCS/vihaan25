@@ -1,11 +1,33 @@
+"use client"
 import React from "react";
 import Button from "@/app/_components/ui/Button";
 // import "./About.css";
 import "@/app/globals.css";
 import AboutSVG from "./AboutSvg";
+import { useState, useEffect } from "react";
+import AbtIEEE from "./About-IEEE-Nav/IEEE"
  
 
 const About = () => {
+
+  let[className, setClassName] = useState("");
+  const [isBlurred, setIsBlurred] = useState(false);
+
+  let popout = () => {
+    setClassName("Button-for-Abt-Section");
+    setIsBlurred(true);
+    console.log(className);
+  }
+
+  useEffect(() => {
+    const allWebsiteWrapper = document.getElementById("AllWebsite");
+    if (isBlurred && allWebsiteWrapper) {
+      allWebsiteWrapper.style.filter = "blur(5px)";
+    } else if (allWebsiteWrapper) {
+      allWebsiteWrapper.style.filter = "none";
+    }
+  }, [isBlurred]);
+
   return (
     <div className="relative mb-0 flex items-center justify-between w-full mt-16 pr-0 ">
       <img
@@ -33,8 +55,11 @@ const About = () => {
           add to the experience and learning quotient, teams that make it past
           the hackathon are awarded various cash prizes and goodies.
         </p>
-        <div className="mt-6 w-fit">
-          <Button href="https://www.ieeedtu.in/" children={"About IEEE DTU"} />
+        <div className="mt-6 w-fit" >
+          <button onClick={popout}>
+          <Button href="" children={"About IEEE DTU"} />
+          </button>
+          <AbtIEEE className={className} setClassName={setClassName} />
         </div>
         <div className="ml-[50%] relative -top-20 max-xl:collapse">
           <AboutSVG />
@@ -46,7 +71,7 @@ const About = () => {
           <img
             src="/Images-Abt-IEEE/svgglass.svg"
             alt="Magnifying Glass"
-            className="w-full relative left-10 h-[120%] animate-giggle hover:animate-wiggle z-10"
+            className="w-full relative left-10 h-[120%] animate-giggle hover:animate-wiggle z-1"
           />
 
           <div className="text-para-z-1 mt-1 w-[100%] h-10 font-bold font-orbitron 2xl:text-xl flex justify-center absolute top-[25%] -z-3 ">
