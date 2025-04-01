@@ -131,6 +131,7 @@ const Navbar = () => {
         <GridLayout
           className="md:hidden  lg:hidden "
           style={{ zIndex: 10000 }}
+          closeMenu={() => toggleMenu()}
         />
       )}
     </motion.div>
