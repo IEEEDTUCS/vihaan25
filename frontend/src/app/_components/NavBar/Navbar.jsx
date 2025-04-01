@@ -48,7 +48,7 @@ const Navbar = () => {
   return (
     <motion.div
       className={`top-0  z-90 left-0 right-0 ${
-        isAtTop ? "bg-transparent" : " fixed backdrop-blur-sm shadow-md"
+        isAtTop ? "bg-transparent fixed" : " fixed backdrop-blur-sm shadow-md"
       }`}
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: isAtTop ? 1 : 1, y: isAtTop ? -10 : 0 }}
@@ -57,7 +57,8 @@ const Navbar = () => {
       <div className="max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo Area */}
-          <div className="flex space-x-1  items-center relative">
+          {/* //todo this part is commented and will be change in future @unnat fix this */}
+          {/* <div className="flex space-x-1  items-center relative">
             <div className="text-center justify-center text-stone-500 text-xs font-normal font-['Orbitron'] tracking-widest">
               VOLUME
             </div>
@@ -65,7 +66,8 @@ const Navbar = () => {
               {songPlaying ? "<ON>" : "<OFF>"}
             </div>
             <Volume_side_svg />
-          </div>
+          </div> */}
+          <div> </div>
 
           {/* Navigation Links */}
           <div className=" md:block z-110 hidden xl:absolute xl:right-8 ">

@@ -28,6 +28,7 @@ const HomePage = () => {
 
   return (
     <>
+      {/* <Navbar /> */}
       <div className="relative flex w-screen  h-[80vh] sm:h-screen flex-col items-center justify-start overscroll-x-none">
         {/* this div contains all the svg and images of the landing */}
         <div className="absolute inset-0 flex items-center justify-center">
@@ -36,7 +37,7 @@ const HomePage = () => {
             alt="Vihaan Logo"
             width={80}
             height={80}
-            className="absolute top-0 xl:top-8 lg:top-0 z-99999"
+            className="absolute top-0 xl:top-8 lg:top-0 z-99"
           />
           <Image
             src={FixedAroundClock}
@@ -44,18 +45,21 @@ const HomePage = () => {
             className="absolute"
           />
           {/* 70vh */}
-          <Image
-            src={Clockwise}
-            alt="FixedAroundClock"
-            className="absolute animate-clockwise"
-          />
+          <div className="absolute w-screen h-screen hidden md:flex items-center justify-center overflow-hidden">
+            <Image
+              src={Clockwise}
+              alt="FixedAroundClock"
+              className="absolute animate-clockwise overflow-none"
+            />
 
-          <Image
-            src={AntiClockwise}
-            alt="FixedAroundClock"
-            className="absolute animate-anticlockwise"
-          />
+            <Image
+              src={AntiClockwise}
+              alt="FixedAroundClock"
+              className="absolute animate-anticlockwise overflow-none"
+            />
+          </div>
           {/* circle with less opacity outermost */}
+          {/* <div className="relative opacity-10 overflow-hidden"> */}
           <Image
             src={RotateZ}
             alt="RotateZ-alongx"
@@ -67,7 +71,7 @@ const HomePage = () => {
             alt="RotateZ-alongy"
             className="absolute w-[1000px]"
           />
-
+          {/* </div> */}
           {/* Complete Clock & Moving Hand */}
           <div className="relative flex items-center justify-center top-6 lg:top-12 w-full">
             {/* Clock Face */}
@@ -116,7 +120,7 @@ const HomePage = () => {
           </h5>
         </div>
       </div>
-      <Navbar />
+
       <Countdown />
       <Navigation_links />
     </>

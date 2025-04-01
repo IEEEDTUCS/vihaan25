@@ -5,7 +5,7 @@ import ScrollLink from "./assets/ScrollLink";
 const GridLayout = () => {
   return (
     <div
-      className="md:hidden   -top-0 z-30 w-[100vw]   right-auto h-screen "
+      className="md:hidden   -top-0 z-999999 w-[100vw]   right-auto h-screen "
       style={{
         display: "grid",
         gridTemplateColumns: "1fr",
