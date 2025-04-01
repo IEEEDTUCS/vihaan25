@@ -12,6 +12,7 @@ import HorizontalVectors from "@/app/assets/HorizontalVectors.svg";
 import Logo from "@/app/assets/Logo.svg";
 import Navigation_links from "../_components/NavBar/Navigation_links";
 import Countdown from "../_components/Countdown";
+import Navbar from "../_components/NavBar/Navbar";
 
 const HomePage = () => {
   React.useEffect(() => {
@@ -115,8 +116,8 @@ const HomePage = () => {
           </h5>
         </div>
       </div>
-      {/* <Navbar /> */}
-      {/* <Countdown /> */}
+      <Navbar />
+      <Countdown />
       <Navigation_links />
     </>
   );

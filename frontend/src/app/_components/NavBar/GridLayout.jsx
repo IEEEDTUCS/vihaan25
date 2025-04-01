@@ -1,12 +1,11 @@
 import React from "react";
-import Logo from "@/app/assets/Logo.svg";
-import { Link } from "react-scroll"; // Ensure you import Link for smooth scrolling
+import { Link } from "react-scroll";
+import ScrollLink from "./assets/ScrollLink";
 
-const GridLayout = ({ setIsOpen }) => {
-  // Accept setIsOpen as a prop
+const GridLayout = () => {
   return (
     <div
-      className="md:hidden top-5 z-400 w-[100vw] right-auto"
+      className="md:hidden   -top-0 z-30 w-[100vw]   right-auto h-screen "
       style={{
         display: "grid",
         gridTemplateColumns: "1fr",
@@ -18,11 +17,10 @@ const GridLayout = ({ setIsOpen }) => {
         position: "absolute",
       }}
     >
-      <div className="absolute bg-black w-[100vw] opacity-90 -z-10 h-full">
+      <div className="absolute bg-black w-[100vw] opacity-100 -z-10 h-full">
         {/* background */}
         <img className="w-[100vw]" src="./Group22.png" alt="" />
       </div>
-
       <div
         style={{
           gridRow: "1",
@@ -31,152 +29,31 @@ const GridLayout = ({ setIsOpen }) => {
           alignItems: "center",
         }}
       >
-        {/* Placeholder for any content */}
-      </div>
-
-      <div
-        style={{
-          gridRow: "3",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <div
-          className="mt-6"
-          style={{
-            padding: "10px 20px",
-          }}
-        >
-          {/* tracks */}
-          <Link
-            to="about"
-            smooth={true}
-            duration={1500}
-            offset={-100}
-            onClick={() => setIsOpen(false)}
-            style={{ zIndex: 9999, cursor: "pointer" }}
-          >
-            <img src="./AboutButton.png" alt="" />
-          </Link>
+        <div>
+          {/* logo */}
+          <img
+            className="absolute top-5 left-1/2 transform -translate-x-1/2 "
+            src="./Logo.png"
+            alt=""
+          />
         </div>
       </div>
-
-      <div
-        style={{
-          gridRow: "5",
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: "20px",
-        }}
-      >
-        <div
-          className="absolute left-0 top-[38vh]"
-          style={{
-            display: "flex",
-            justifyContent: "left",
-            alignItems: "center",
-          }}
-        >
-          <div
-            style={{
-              padding: "10px 20px",
-            }}
-          >
-            {/* judges */}
-            <Link
-              to="schedule"
-              smooth={true}
-              duration={1500}
-              offset={-100}
-              onClick={() => setIsOpen(false)}
-              style={{ zIndex: 9999, cursor: "pointer" }}
-            >
-              <img src="./ScheduleButton.png" alt="" />
-            </Link>
-          </div>
-        </div>
-
-        <div
-          className="right-0 absolute top-[38vh]"
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <div
-            style={{
-              padding: "10px 20px",
-            }}
-          >
-            {/* faqs */}
-            <Link
-              to="faqs"
-              smooth={true}
-              duration={1500}
-              offset={-100}
-              onClick={() => setIsOpen(false)}
-              style={{ zIndex: 9999, cursor: "pointer" }}
-            >
-              <img src="./FAQButton.png" alt="" />
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      <div
-        style={{
-          gridRow: "6",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <div
-          style={{
-            padding: "10px 20px",
-          }}
-        >
-          {/* home */}
-          <Link
-            to="home"
-            smooth={true}
-            duration={1500}
-            offset={-100}
-            onClick={() => setIsOpen(false)}
-            style={{ zIndex: 9999, cursor: "pointer" }}
-          >
-            <img src="./HomeButton.png" alt="" />
-          </Link>
-        </div>
-      </div>
-
-      <div
-        style={{
-          gridRow: "7",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "top",
-        }}
-      >
-        <div
-          style={{
-            padding: "10px 20px",
-          }}
-        >
-          {/* team */}
-          <Link
-            to="team"
-            smooth={true}
-            duration={1500}
-            offset={-100}
-            onClick={() => setIsOpen(false)}
-            style={{ zIndex: 9999, cursor: "pointer" }}
-          >
-            <img className="z-100000" src="./SponsorButton.png" alt="" />
-          </Link>
-        </div>
+      <div className="flex flex-col space-y-12 mt-20 text-2xl">
+        <Link to="home" smooth={true} duration={1500} offset={-100}>
+          <ScrollLink name="HOME" />
+        </Link>
+        <Link to="about" smooth={true} duration={1500} offset={-100}>
+          <ScrollLink name="ABOUT" />
+        </Link>
+        <Link to="schedule" smooth={true} duration={1500} offset={-100}>
+          <ScrollLink name="SCHEDULE" />
+        </Link>
+        <Link to="sponsor" smooth={true} duration={1500} offset={-100}>
+          <ScrollLink name="SPONSOR" />
+        </Link>
+        <Link to="faqs" smooth={true} duration={1500} offset={-100}>
+          <ScrollLink name="FAQ" />
+        </Link>
       </div>
     </div>
   );
