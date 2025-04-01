@@ -127,6 +127,7 @@ const Navbar = () => {
         <GridLayout
           className="md:hidden  lg:hidden "
           style={{ zIndex: 1000 }}
+          closeMenu={() => setIsOpen(false)}
         />
       )}
     </nav>

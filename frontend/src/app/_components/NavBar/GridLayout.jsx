@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-scroll';
 import ScrollLink from "./assets/ScrollLink";
 
-const GridLayout = () => {
+const GridLayout = ({ closeMenu }) => {
     return (
         <div className='md:hidden   -top-0 z-30 w-[100vw]   right-auto h-screen ' style={{
             display: 'grid',
@@ -35,19 +35,19 @@ const GridLayout = () => {
                 </div>
             </div>
             <div className='flex flex-col space-y-12 mt-20 text-2xl'>
-                <Link to="home" smooth={true} duration={1500} offset={-100}>
+                <Link to="home" smooth={true} duration={1500} offset={-100} onClick={closeMenu}>
                   <ScrollLink name="HOME" />
                 </Link>
-                <Link to="about" smooth={true} duration={1500} offset={-100}>
+                <Link to="about" smooth={true} duration={1500} offset={-100} onClick={closeMenu}>
                   <ScrollLink name="ABOUT" />
                 </Link>
-                <Link to="schedule" smooth={true} duration={1500} offset={-100}>
+                <Link to="schedule" smooth={true} duration={1500} offset={-100} onClick={closeMenu}>
                   <ScrollLink name="SCHEDULE" />
                 </Link>
-                <Link to="sponsor" smooth={true} duration={1500} offset={-100}>
+                <Link to="sponsor" smooth={true} duration={1500} offset={-100} onClick={closeMenu}>
                   <ScrollLink name="SPONSOR" />
                 </Link>
-                <Link to="faqs" smooth={true} duration={1500} offset={-100}>
+                <Link to="faqs" smooth={true} duration={1500} offset={-100} onClick={closeMenu}>
                   <ScrollLink name="FAQ" />
                 </Link>
 
