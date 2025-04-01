@@ -19,14 +19,14 @@ const About = () => {
     console.log(className);
   }
 
-  useEffect(() => {
-    const allWebsiteWrapper = document.getElementById("AllWebsite");
-    if (isBlurred && allWebsiteWrapper) {
-      allWebsiteWrapper.style.filter = "blur(5px)";
-    } else if (allWebsiteWrapper) {
-      allWebsiteWrapper.style.filter = "none";
-    }
-  }, [isBlurred]);
+  // useEffect(() => {
+  //   const allWebsiteWrapper = document.getElementById("AllWebsite");
+  //   if (isBlurred && allWebsiteWrapper) {
+  //     allWebsiteWrapper.style.filter = "blur(5px)";
+  //   } else if (allWebsiteWrapper) {
+  //     allWebsiteWrapper.style.filter = "none";
+  //   }
+  // }, [isBlurred]);
 
   return (
     <div className="relative mb-0 flex items-center justify-between w-full mt-16 pr-0 ">
