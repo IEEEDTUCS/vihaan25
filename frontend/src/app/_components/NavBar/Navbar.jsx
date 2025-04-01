@@ -12,9 +12,8 @@ import About from "./assets/About";
 import Schedule from "./assets/Schedule";
 import Sponsor from "./assets/Sponsor";
 import FAQ from "./assets/Faq";
-import { Link } from 'react-scroll';
+import { Link } from "react-scroll";
 // import Image from "next/image";
-
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,7 +48,9 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 backdrop-blur-sm right-0 transition-opacity duration-300 opacity-100 ${isOpen ? "bg-transparent " : "bg-transparent"} `}
+      className={`fixed top-0 left-0 backdrop-blur-sm right-0 transition-opacity duration-300 opacity-100 ${
+        isOpen ? "bg-transparent " : "bg-transparent"
+      } `}
       style={{ zIndex: 100 }}
     >
       <div className="max-w-7xl  px-4 sm:px-6 lg:px-8">
@@ -62,15 +63,14 @@ const Navbar = () => {
             <div className="text-center justify-center text-stone-500 text-xs font-normal font-['Orbitron'] tracking-widest">
               {songPlaying ? "<ON>" : "<OFF>"}
             </div>
-            <Volume_side_svg/>
-            
+            <Volume_side_svg />
           </div>
 
           {/* Navigation Links */}
           <div className=" md:block hidden xl:absolute xl:right-8 ">
             <div className=" flex items-baseline lg:relative xl:relative md:absolute md:top-6 lg:top-0 md:right-8 lg:right-0  xl:left-0.5   relative ">
               {/* Dotted Lines */}
-              <Navbar_circle/>
+              <Navbar_circle />
               <div className="flex justify-evenly space-x-0 md:space-x-4 border-white  ">
                 <Link to="home" smooth={true} duration={1500} offset={-100}>
                   <Home />
@@ -117,10 +117,7 @@ const Navbar = () => {
               transition={{ stiffness: 300 }}
               onClick={toggleMenu}
             >
-              
-              <img
-                src="/svg/faqIcon.svg"
-              />
+              <img src="/svg/faqIcon.svg" />
             </motion.div>
           </div>
         </div>
@@ -130,7 +127,7 @@ const Navbar = () => {
       {isOpen && (
         <GridLayout
           className="md:hidden  lg:hidden "
-          style={{ zIndex: 1000 }}
+          style={{ zIndex: 10000 }}
         />
       )}
     </nav>

@@ -33,9 +33,9 @@ const HomePage = () => {
           <Image
             src={Logo}
             alt="Vihaan Logo"
-            width={100}
-            height={100}
-            className="absolute top-6 xl:top-8 lg:top-0 z-99999"
+            width={90}
+            height={90}
+            className="absolute top-0 xl:top-8 lg:top-0 z-99999"
           />
           <Image
             src={FixedAroundClock}
@@ -84,7 +84,7 @@ const HomePage = () => {
             />
           </div>
         </div>
-        <div className="text-content font-extrabold relative flex items-center flex-col jusitfy-center top-60 md:top-50 lg:top-40 z-10">
+        <div className="text-content font-extrabold relative flex items-center flex-col jusitfy-center top-80 md:top-50 lg:top-[40vh] z-10">
           <p className="max-[450px]:text-[42px] text-7xl md:text-8xl lg:text-[9rem] font-khinterference ">
             VIHAAN 8.0
           </p>
