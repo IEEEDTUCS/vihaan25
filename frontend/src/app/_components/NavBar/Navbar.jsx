@@ -7,11 +7,7 @@ import Image from "next/image";
 import GridLayout from "./GridLayout";
 import Volume_side_svg from "./assets/Volume_side_svg";
 import Navbar_circle from "./assets/Navbar_circle";
-import Home from "./assets/Home";
-import About from "./assets/About";
-import Schedule from "./assets/Schedule";
-import Sponsor from "./assets/Sponsor";
-import FAQ from "./assets/Faq";
+import ScrollLink from "./assets/ScrollLink";
 import { Link } from 'react-scroll';
 // import Image from "next/image";
 
@@ -73,19 +69,19 @@ const Navbar = () => {
               <Navbar_circle/>
               <div className="flex justify-evenly space-x-0 md:space-x-4 border-white  ">
                 <Link to="home" smooth={true} duration={1500} offset={-100}>
-                  <Home />
+                  <ScrollLink name="HOME" />
                 </Link>
                 <Link to="about" smooth={true} duration={1500} offset={-100}>
-                  <About />
+                  <ScrollLink name="ABOUT" />
                 </Link>
                 <Link to="schedule" smooth={true} duration={1500} offset={-100}>
-                  <Schedule />
+                  <ScrollLink name="SCHEDULE" />
                 </Link>
                 <Link to="sponsor" smooth={true} duration={1500} offset={-100}>
-                  <Sponsor />
+                  <ScrollLink name="SPONSOR" />
                 </Link>
                 <Link to="faqs" smooth={true} duration={1500} offset={-100}>
-                  <FAQ />
+                  <ScrollLink name="FAQ" />
                 </Link>
                 <div className="-right-[1vw] absolute top-2 ">
                   <svg
