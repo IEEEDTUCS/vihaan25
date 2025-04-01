@@ -97,7 +97,7 @@ const HomePage = () => {
             AWAITS YOU
           </h2>
           <h2 className="text-white mt-4 md:mt-0 font-pprightGrotesk text-[10px]">
-            REGISTRATION COMING SOON
+            REGISTER AT
           </h2>
           <div
             className="apply-button"
