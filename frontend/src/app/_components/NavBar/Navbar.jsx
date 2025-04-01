@@ -21,6 +21,8 @@ const Navbar = () => {
   const [isRotated, setIsRotated] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const lastScrollY = useRef(0);
+  const [isAtTop, setIsAtTop] = useState(true);
+  const scrollThreshold = 200; // Set your desired threshold here
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -30,6 +32,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       lastScrollY.current = window.scrollY;
+      setIsAtTop(window.scrollY < scrollThreshold);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -47,13 +50,15 @@ const Navbar = () => {
   }, [isOpen]);
 
   return (
-    <nav
-      className={`fixed top-0 left-0 backdrop-blur-sm right-0 transition-opacity duration-300 opacity-100 ${
-        isOpen ? "bg-transparent " : "bg-transparent"
-      } `}
-      style={{ zIndex: 100 }}
+    <motion.div
+      className={`top-0  z-90 left-0 right-0 ${
+        isAtTop ? "bg-transparent" : " fixed backdrop-blur-sm shadow-md"
+      }`}
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: isAtTop ? 1 : 1, y: isAtTop ? -10 : 0 }}
+      transition={{ duration: 1.9, ease: "easeInOut" }}
     >
-      <div className="max-w-7xl  px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo Area */}
           <div className="flex space-x-1  items-center relative">
@@ -67,7 +72,7 @@ const Navbar = () => {
           </div>
 
           {/* Navigation Links */}
-          <div className=" md:block hidden xl:absolute xl:right-8 ">
+          <div className=" md:block z-110 hidden xl:absolute xl:right-8 ">
             <div className=" flex items-baseline lg:relative xl:relative md:absolute md:top-6 lg:top-0 md:right-8 lg:right-0  xl:left-0.5   relative ">
               {/* Dotted Lines */}
               <Navbar_circle />
@@ -111,7 +116,7 @@ const Navbar = () => {
           <div className="-mr-2 flex md:hidden">
             <motion.div
               className=" top-[14px] right-3"
-              style={{ position: "absolute", zIndex: 100 }}
+              style={{ position: "absolute", zIndex: 500 }}
               whileTap={{ rotate: 90 }}
               animate={{ rotate: isRotated ? 45 : 0 }}
               transition={{ stiffness: 300 }}
@@ -130,7 +135,7 @@ const Navbar = () => {
           style={{ zIndex: 10000 }}
         />
       )}
-    </nav>
+    </motion.div>
   );
 };
 

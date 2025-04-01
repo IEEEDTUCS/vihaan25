@@ -33,8 +33,8 @@ const HomePage = () => {
           <Image
             src={Logo}
             alt="Vihaan Logo"
-            width={90}
-            height={90}
+            width={80}
+            height={80}
             className="absolute top-0 xl:top-8 lg:top-0 z-99999"
           />
           <Image
@@ -84,7 +84,7 @@ const HomePage = () => {
             />
           </div>
         </div>
-        <div className="text-content font-extrabold relative flex items-center flex-col jusitfy-center top-80 md:top-50 lg:top-[40vh] z-10">
+        <div className="text-content font-extrabold relative flex items-center flex-col jusitfy-center top-75 md:top-50 lg:top-[38vh] z-10">
           <p className="max-[450px]:text-[42px] text-7xl md:text-8xl lg:text-[9rem] font-khinterference ">
             VIHAAN 8.0
           </p>
@@ -99,19 +99,19 @@ const HomePage = () => {
             data-hackathon-slug="vihaan8"
             data-button-theme="dark-inverted"
           ></div>
-          <Image
-            src={HorizontalVectors}
-            alt="Horizontal Lines"
-            className="relative top-20 z-10 Verticle Lines"
-          />
 
-          <h4 className="mt-15 text-lg min-[440px]:text-xl   sm:text-2xl font-khinterference text-bold tracking-wider">
-            WELCOME CODER
-          </h4>
-          <h5 className="w-56 font-light font-khinterference text-center text-sm sm:text-base ">
-            8 Hours of coding,
-            <br /> 8 Hours of fun, <br />8 Hours of learning
-            <br /> 24 hours Hackathon
+          <div className="relative w-full flex justify-center">
+            <Image
+              src={HorizontalVectors}
+              alt="Horizontal Lines"
+              className="absolute top-1  z-10  w-full md:w-3/5"
+            />
+            <h4 className="mt-15 md:mt-0  text-lg min-[440px]:text-xl sm:text-2xl font-khinterference text-bold tracking-wider">
+              WELCOME CODER
+            </h4>
+          </div>
+          <h5 className="w-80 font-light font-khinterference text-center text-sm sm:text-base ">
+            Let's 8 begin
           </h5>
         </div>
       </div>
