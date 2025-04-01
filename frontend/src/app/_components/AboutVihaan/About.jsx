@@ -15,8 +15,8 @@ const About = () => {
       {/* Ye SVG ka hai */}
 
       <div className="z-10 w-full m-6 sm:mx-10 md:mx-14 lg:mx-20 max-[1280px]:relative max-[1280px]:w-full ">
-        <div className="mb-10 mr-10 w-150 max-[750px]:h-28 max-[750px]:relative right-[5%] flex items-end">
-          <img src="/Images-Abt-IEEE/head.svg" alt="Heading" />
+        <div className="mb-10 mr-10 ml-0 w-150 max-[750px]:h-28 max-[750px]:relative flex items-end ">
+          <img src="/Images-Abt-IEEE/head.svg" alt="Heading" className="  " />
         </div>
         <h1 className="text-7xl tracking-widest text-heading font-khinterference xl:w-[80%] w-full max-[600px]:text-[300%] max-[600px]:font-bold max-[600px]:tracking-[0rem] ">
           VIHAAN 8.0
@@ -24,7 +24,7 @@ const About = () => {
         <h2 className="text-6xl xl:w-[90%] font-medium text-heading tracking-widest font-khinterference mt-2 max-[600px]:text-[300%] ;">
           PRESENTED BY IEEE DTU
         </h2>
-        <p className="text-para mt-4  xl:w-[60%] w-full font-orbitron font-normal tracking-wider sm:tracking-widest max-[600px]:w-full max-[600px]:text-sm text-base">
+        <p className="text-para pr-8 mt-4  xl:w-[60%] w-full font-orbitron font-normal tracking-wider sm:tracking-widest max-[600px]:w-full max-[600px]:text-sm text-base">
           VIHAAN is a 24-hour long hackathon that provides a platform for
           budding programmers to come up with solutions to real-world problems
           using technology. Students participate in teams of up to 4 members. To

@@ -7,14 +7,9 @@ import Image from "next/image";
 import GridLayout from "./GridLayout";
 import Volume_side_svg from "./assets/Volume_side_svg";
 import Navbar_circle from "./assets/Navbar_circle";
-import Home from "./assets/Home";
-import About from "./assets/About";
-import Schedule from "./assets/Schedule";
-import Sponsor from "./assets/Sponsor";
-import FAQ from "./assets/Faq";
-import { Link } from 'react-scroll';
+import ScrollLink from "./assets/ScrollLink";
+import { Link } from "react-scroll";
 // import Image from "next/image";
-
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,6 +17,8 @@ const Navbar = () => {
   const [isRotated, setIsRotated] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const lastScrollY = useRef(0);
+  const [isAtTop, setIsAtTop] = useState(true);
+  const scrollThreshold = 200; // Set your desired threshold here
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -31,6 +28,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       lastScrollY.current = window.scrollY;
+      setIsAtTop(window.scrollY < scrollThreshold);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -48,44 +46,49 @@ const Navbar = () => {
   }, [isOpen]);
 
   return (
-    <nav
-      className={`fixed top-0 left-0 backdrop-blur-sm right-0 transition-opacity duration-300 opacity-100 ${isOpen ? "bg-transparent " : "bg-transparent"} `}
-      style={{ zIndex: 100 }}
+    <motion.div
+      className={`top-0  z-90 left-0 right-0 ${
+        isAtTop ? "bg-transparent fixed" : " fixed backdrop-blur-sm shadow-md"
+      }`}
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: isAtTop ? 1 : 1, y: isAtTop ? -10 : 0 }}
+      transition={{ duration: 1.9, ease: "easeInOut" }}
     >
-      <div className="max-w-7xl  px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo Area */}
-          <div className="flex space-x-1  items-center relative">
+          {/* //todo this part is commented and will be change in future @unnat fix this */}
+          {/* <div className="flex space-x-1  items-center relative">
             <div className="text-center justify-center text-stone-500 text-xs font-normal font-['Orbitron'] tracking-widest">
               VOLUME
             </div>
             <div className="text-center justify-center text-stone-500 text-xs font-normal font-['Orbitron'] tracking-widest">
               {songPlaying ? "<ON>" : "<OFF>"}
             </div>
-            <Volume_side_svg/>
-            
-          </div>
+            <Volume_side_svg />
+          </div> */}
+          <div> </div>
 
           {/* Navigation Links */}
-          <div className=" md:block hidden xl:absolute xl:right-8 ">
+          <div className=" md:block z-110 hidden xl:absolute xl:right-8 ">
             <div className=" flex items-baseline lg:relative xl:relative md:absolute md:top-6 lg:top-0 md:right-8 lg:right-0  xl:left-0.5   relative ">
               {/* Dotted Lines */}
-              <Navbar_circle/>
+              <Navbar_circle />
               <div className="flex justify-evenly space-x-0 md:space-x-4 border-white  ">
                 <Link to="home" smooth={true} duration={1500} offset={-100}>
-                  <Home />
+                  <ScrollLink name="HOME" />
                 </Link>
                 <Link to="about" smooth={true} duration={1500} offset={-100}>
-                  <About />
+                  <ScrollLink name="ABOUT" />
                 </Link>
                 <Link to="schedule" smooth={true} duration={1500} offset={-100}>
-                  <Schedule />
+                  <ScrollLink name="SCHEDULE" />
                 </Link>
                 <Link to="sponsor" smooth={true} duration={1500} offset={-100}>
-                  <Sponsor />
+                  <ScrollLink name="SPONSOR" />
                 </Link>
                 <Link to="faqs" smooth={true} duration={1500} offset={-100}>
-                  <FAQ />
+                  <ScrollLink name="FAQ" />
                 </Link>
                 <div className="-right-[1vw] absolute top-2 ">
                   <svg
@@ -111,16 +114,13 @@ const Navbar = () => {
           <div className="-mr-2 flex md:hidden">
             <motion.div
               className=" top-[14px] right-3"
-              style={{ position: "absolute", zIndex: 100 }}
+              style={{ position: "absolute", zIndex: 500 }}
               whileTap={{ rotate: 90 }}
               animate={{ rotate: isRotated ? 45 : 0 }}
               transition={{ stiffness: 300 }}
               onClick={toggleMenu}
             >
-              
-              <img
-                src="/svg/faqIcon.svg"
-              />
+              <img src="/svg/faqIcon.svg" />
             </motion.div>
           </div>
         </div>
@@ -130,10 +130,11 @@ const Navbar = () => {
       {isOpen && (
         <GridLayout
           className="md:hidden  lg:hidden "
-          style={{ zIndex: 1000 }}
+          style={{ zIndex: 10000 }}
+          closeMenu={() => toggleMenu()}
         />
       )}
-    </nav>
+    </motion.div>
   );
 };
 

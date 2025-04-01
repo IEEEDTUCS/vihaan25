@@ -12,6 +12,7 @@ import HorizontalVectors from "@/app/assets/HorizontalVectors.svg";
 import Logo from "@/app/assets/Logo.svg";
 import Navigation_links from "../_components/NavBar/Navigation_links";
 import Countdown from "../_components/Countdown";
+import Navbar from "../_components/NavBar/Navbar";
 
 const HomePage = () => {
   React.useEffect(() => {
@@ -27,15 +28,16 @@ const HomePage = () => {
 
   return (
     <>
-      <div className="relative flex  h-[80vh] sm:h-screen flex-col items-center justify-start">
+      {/* <Navbar /> */}
+      <div className="relative flex w-screen  h-[80vh] sm:h-screen flex-col items-center justify-start overscroll-x-none">
         {/* this div contains all the svg and images of the landing */}
         <div className="absolute inset-0 flex items-center justify-center">
           <Image
             src={Logo}
             alt="Vihaan Logo"
-            width={100}
-            height={100}
-            className="absolute top-6 xl:top-8 lg:top-0 z-99999"
+            width={80}
+            height={80}
+            className="absolute top-0 xl:top-8 lg:top-0 z-60"
           />
           <Image
             src={FixedAroundClock}
@@ -43,18 +45,21 @@ const HomePage = () => {
             className="absolute"
           />
           {/* 70vh */}
-          <Image
-            src={Clockwise}
-            alt="FixedAroundClock"
-            className="absolute animate-clockwise"
-          />
+          <div className="absolute w-screen h-screen hidden md:flex items-center justify-center overflow-hidden">
+            <Image
+              src={Clockwise}
+              alt="FixedAroundClock"
+              className="absolute animate-clockwise overflow-none"
+            />
 
-          <Image
-            src={AntiClockwise}
-            alt="FixedAroundClock"
-            className="absolute animate-anticlockwise"
-          />
+            <Image
+              src={AntiClockwise}
+              alt="FixedAroundClock"
+              className="absolute animate-anticlockwise overflow-none"
+            />
+          </div>
           {/* circle with less opacity outermost */}
+          {/* <div className="relative opacity-10 overflow-hidden"> */}
           <Image
             src={RotateZ}
             alt="RotateZ-alongx"
@@ -66,7 +71,7 @@ const HomePage = () => {
             alt="RotateZ-alongy"
             className="absolute w-[1000px]"
           />
-
+          {/* </div> */}
           {/* Complete Clock & Moving Hand */}
           <div className="relative flex items-center justify-center top-6 lg:top-12 w-full">
             {/* Clock Face */}
@@ -84,7 +89,7 @@ const HomePage = () => {
             />
           </div>
         </div>
-        <div className="text-content font-extrabold relative flex items-center flex-col jusitfy-center top-60 md:top-50 lg:top-40 z-10">
+        <div className="text-content font-extrabold relative flex items-center flex-col jusitfy-center top-75 md:top-50 lg:top-[38vh] z-10">
           <p className="max-[450px]:text-[42px] text-7xl md:text-8xl lg:text-[9rem] font-khinterference ">
             VIHAAN 8.0
           </p>
@@ -92,30 +97,30 @@ const HomePage = () => {
             AWAITS YOU
           </h2>
           <h2 className="text-white mt-4 md:mt-0 font-pprightGrotesk text-[10px]">
-            REGISTRATION COMING SOON
+            REGISTER AT
           </h2>
           <div
             className="apply-button"
             data-hackathon-slug="vihaan8"
             data-button-theme="dark-inverted"
           ></div>
-          <Image
-            src={HorizontalVectors}
-            alt="Horizontal Lines"
-            className="relative top-20 z-10 Verticle Lines"
-          />
 
-          <h4 className="mt-15 text-lg min-[440px]:text-xl   sm:text-2xl font-khinterference text-bold tracking-wider">
-            WELCOME CODER
-          </h4>
-          <h5 className="w-56 font-light font-khinterference text-center text-sm sm:text-base ">
-            8 Hours of coding,
-            <br /> 8 Hours of fun, <br />8 Hours of learning
-            <br /> 24 hours Hackathon
+          <div className="relative mt-15 md:mt-0 w-full flex justify-center">
+            <Image
+              src={HorizontalVectors}
+              alt="Horizontal Lines"
+              className="absolute top-1  z-10  w-full md:w-3/5"
+            />
+            <h4 className="  text-lg min-[440px]:text-xl sm:text-2xl font-khinterference text-bold tracking-wider">
+              WELCOME CODER
+            </h4>
+          </div>
+          <h5 className="w-80 font-light font-khinterference text-center text-sm sm:text-base ">
+            Let's 8 begin
           </h5>
         </div>
       </div>
-      {/* <Navbar /> */}
+
       <Countdown />
       <Navigation_links />
     </>
