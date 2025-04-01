@@ -5,6 +5,7 @@ import EventSchedule from "./_components/EventSchedule/EventSchedule";
 import FAQ from "./_components/FAQ/faq";
 import Footer from "./_components/Footer/Footer";
 import Countdown from "./_components/Countdown";
+import AbtIEEE from "./_components/AboutVihaan/About-IEEE-Nav/IEEE";  
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <div id="home" ><HomePage/></div>
       <Countdown/>
       <div id="about"><About/></div>
+      <div id="IEEEsection"><AbtIEEE/></div>
       <div id="schedule"><EventSchedule/></div>
       <div id="sponsor"><Sponsor/></div>
       <div id="faqs"><FAQ id="faqs"/></div>

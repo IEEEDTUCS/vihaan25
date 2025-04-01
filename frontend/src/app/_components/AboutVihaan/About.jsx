@@ -3,7 +3,7 @@ import Button from "@/app/_components/ui/Button";
 // import "./About.css";
 import "@/app/globals.css";
 import AboutSVG from "./AboutSvg";
-import AbtIEEE from "./About-IEEE-Nav/IEEE";   
+ 
 
 const About = () => {
   return (
@@ -40,7 +40,6 @@ const About = () => {
           <AboutSVG />
         </div>
       </div>
-      <AbtIEEE/>
 
       <div className="flex items-center w-4/5 max-[1280px]:hidden lg:visible ">
         <div className="relative w-full h-[80%] max-[600px]:hidden ">

@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import "@/app/globals.css";
 import { IoLocation } from "react-icons/io5";
@@ -6,11 +7,13 @@ import { MdMarkEmailUnread } from "react-icons/md";
 import { RxInstagramLogo } from "react-icons/rx";
 import { FaLinkedin } from "react-icons/fa";
 import { FaDiscord } from "react-icons/fa6";
-
+import { useState } from "react";
 
 export default function IEEE (){
+    let [className, classChange] = useState("one");
+
   return (
-    <div className="bg-[url(/Images-Abt-IEEE/Abt-IEEE/Bg.svg)] bg-cover h-[100vh] w-[56vw] flex flex-col items-center justify-start p-10 z-1000 top-0">
+    <div className="bg-[url(/Images-Abt-IEEE/Abt-IEEE/Bg.svg)] bg-cover h-[100vh] w-[25vw] hidden flex flex-col items-center justify-start p-10 z-1000 top-0">
         <div className="flex flex-row w-full justify-between mb-[11%] mt-[5%] ">
             <div className="font-semibold ">
                 <h1 className="text-3xl font-orbitron tracking-widest text-[#A59188]">ABOUT US</h1>
