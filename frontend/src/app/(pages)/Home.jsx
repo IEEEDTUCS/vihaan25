@@ -88,7 +88,7 @@ const HomePage = () => {
           <p className="max-[450px]:text-[42px] text-7xl md:text-8xl lg:text-[9rem] font-khinterference ">
             VIHAAN 8.0
           </p>
-          <h2 className="text-white text-xl md:text-3xl md:mt-4 lg:mt-0 font-khinterference relative">
+          <h2 className="text-[#d7d7d7] text-xl md:text-3xl md:mt-4 lg:mt-0 font-khinterference relative">
             AWAITS YOU
           </h2>
           <h2 className="text-white mt-4 md:mt-0 font-pprightGrotesk text-[10px]">
