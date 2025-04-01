@@ -26,9 +26,8 @@ const HomePage = () => {
   }, []);
 
   return (
-    
     <>
-      <div className="relative flex h-screen flex-col items-center justify-start overflow-hidden">
+      <div className="relative flex  h-[80vh] sm:h-screen flex-col items-center justify-start">
         {/* this div contains all the svg and images of the landing */}
         <div className="absolute inset-0 flex items-center justify-center">
           <Image
@@ -85,7 +84,7 @@ const HomePage = () => {
             />
           </div>
         </div>
-        <div className="text-content font-extrabold relative flex items-center flex-col jusitfy-center top-60 md:top-90 lg:top-40 z-10">
+        <div className="text-content font-extrabold relative flex items-center flex-col jusitfy-center top-60 md:top-50 lg:top-40 z-10">
           <p className="max-[450px]:text-[42px] text-7xl md:text-8xl lg:text-[9rem] font-khinterference ">
             VIHAAN 8.0
           </p>
@@ -106,10 +105,10 @@ const HomePage = () => {
             className="relative top-20 z-10 Verticle Lines"
           />
 
-          <h4 className="mt-15 text-xl md:text-2xl font-khinterference text-bold tracking-wider">
+          <h4 className="mt-15 text-lg min-[440px]:text-xl   sm:text-2xl font-khinterference text-bold tracking-wider">
             WELCOME CODER
           </h4>
-          <h5 className="w-56 font-light font-khinterference text-center text-base">
+          <h5 className="w-56 font-light font-khinterference text-center text-sm sm:text-base ">
             8 Hours of coding,
             <br /> 8 Hours of fun, <br />8 Hours of learning
             <br /> 24 hours Hackathon
@@ -117,6 +116,7 @@ const HomePage = () => {
         </div>
       </div>
       {/* <Navbar /> */}
+      <Countdown />
       <Navigation_links />
     </>
   );
