@@ -9,7 +9,7 @@ import Countdown from "./_components/Countdown";
 export default function Home() {
   return (
     <>
-      <div id="home" ><HomePage/></div>
+      {/* <div id="home" ><HomePage/></div> */}
       {/* <Countdown/> */}
       <div id="about"><About/></div>
       <div id="schedule"><EventSchedule/></div>

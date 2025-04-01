@@ -27,7 +27,7 @@ const HomePage = () => {
 
   return (
     <>
-      <div className="relative flex  h-[80vh] sm:h-screen flex-col items-center justify-start">
+      <div className="relative flex w-screen  h-[80vh] sm:h-screen flex-col items-center justify-start overscroll-x-none">
         {/* this div contains all the svg and images of the landing */}
         <div className="absolute inset-0 flex items-center justify-center">
           <Image
@@ -100,13 +100,13 @@ const HomePage = () => {
             data-button-theme="dark-inverted"
           ></div>
 
-          <div className="relative w-full flex justify-center">
+          <div className="relative mt-15 md:mt-0 w-full flex justify-center">
             <Image
               src={HorizontalVectors}
               alt="Horizontal Lines"
               className="absolute top-1  z-10  w-full md:w-3/5"
             />
-            <h4 className="mt-15 md:mt-0  text-lg min-[440px]:text-xl sm:text-2xl font-khinterference text-bold tracking-wider">
+            <h4 className="  text-lg min-[440px]:text-xl sm:text-2xl font-khinterference text-bold tracking-wider">
               WELCOME CODER
             </h4>
           </div>
@@ -116,7 +116,7 @@ const HomePage = () => {
         </div>
       </div>
       {/* <Navbar /> */}
-      <Countdown />
+      {/* <Countdown /> */}
       <Navigation_links />
     </>
   );
