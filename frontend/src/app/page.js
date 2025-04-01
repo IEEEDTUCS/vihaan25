@@ -12,7 +12,8 @@ export default function Home() {
       <div id="home" ><HomePage/></div>
       {/* <Countdown/> */}
       <div id="about"><About/></div>
-      <div id="schedule"><EventSchedule/></div>
+      <div ><EventSchedule/></div>
+      {/* Id is given to it's component */}
       <div id="sponsor"><Sponsor/></div>
       <div id="faqs"><FAQ id="faqs"/></div>
       <Footer/> 
