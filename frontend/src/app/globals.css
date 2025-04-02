@@ -19,8 +19,8 @@ body {
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-  background-repeat: repeat-y; 
-  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
   /* filter: blur(5px); */
 }
 

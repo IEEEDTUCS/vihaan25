@@ -11,10 +11,11 @@ export default function Home() {
   return (
     <>
       <div id="home" ><HomePage/></div>
-      <Countdown/>
+      {/* <Countdown/> */}
       <div id="about"><About/></div>
       <div id="IEEEsection"><AbtIEEE/></div>
-      <div id="schedule"><EventSchedule/></div>
+      <div ><EventSchedule/></div>
+      {/* Id is given to it's component */}
       <div id="sponsor"><Sponsor/></div>
       <div id="faqs"><FAQ id="faqs"/></div>
       <Footer/> 
