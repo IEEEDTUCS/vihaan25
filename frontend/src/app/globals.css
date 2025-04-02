@@ -21,6 +21,7 @@ body {
   background-attachment: fixed;
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
   /* filter: blur(5px); */
 }
 
@@ -192,7 +193,6 @@ body {
   stroke-dasharray: 50;
   stroke-dashoffset: 50;
   animation: textAnimation 4s ease-in-out 1 forwards;
-  /* animation-timeline: view(75% 5%); */
 }
 @keyframes textAnimation {
   0% {

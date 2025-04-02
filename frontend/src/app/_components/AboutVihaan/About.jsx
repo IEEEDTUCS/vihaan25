@@ -13,6 +13,7 @@ const About = () => {
   let[className, setClassName] = useState("");
   const [isBlurred, setIsBlurred] = useState(false);
 
+
   let popout = () => {
     setClassName("Button-for-Abt-Section");
     setIsBlurred(true);
@@ -37,20 +38,20 @@ const About = () => {
       />
       {/* Ye SVG ka hai */}
 
-      <div className="z-10 w-full m-6 sm:mx-10 md:mx-14 lg:mx-20 max-[1280px]:relative max-[1280px]:w-full ">
+      <div className="z-10 w-[] m-6 sm:mx-10 md:mx-14 lg:mx-20 max-[1280px]:relative max-[1280px]:w-full ">
         <div className="mb-10 mr-10 ml-0 w-150 max-[750px]:h-28 max-[750px]:relative flex items-end ">
-          <img src="/Images-Abt-IEEE/head.svg" alt="Heading" className="  " />
+          <img src="/Images-Abt-IEEE/head.svg" alt="Heading" className="w-full max-[750px]:relative max-[750px]:left-0 max-[750px]:w-[60%] " />
         </div>
         <h1 className="text-7xl tracking-widest text-heading font-khinterference xl:w-[80%] w-full max-[600px]:text-[300%] max-[600px]:font-bold max-[600px]:tracking-[0rem] ">
           VIHAAN 8.0
         </h1>
-        <h2 className="text-6xl xl:w-[90%] font-medium text-heading tracking-widest font-khinterference mt-2 max-[600px]:text-[300%] ;">
+        <h2 className="text-6xl xl:w-[90%] font-medium text-heading tracking-widest font-khinterference mt-2 max-[600px]:text-[200%] ;">
           PRESENTED BY IEEE DTU
         </h2>
-        <p className="text-para pr-8 mt-4  xl:w-[60%] w-full font-orbitron font-normal tracking-wider sm:tracking-widest max-[600px]:w-full max-[600px]:text-sm text-base">
+        <p className="text-para pr-8 mt-4  xl:w-[60%] w-full font-orbitron font-normal tracking-wider text-[#A59188] sm:tracking-widest max-[600px]:w-full max-[600px]:text-sm text-base">
           VIHAAN is a 24-hour long hackathon that provides a platform for
           budding programmers to come up with solutions to real-world problems
-          using technology. Students participate in teams of up to 4 members. To
+          using technology. Students participate in teams of up to 4 members across various tracks. To
           add to the experience and learning quotient, teams that make it past
           the hackathon are awarded various cash prizes and goodies.
         </p>
