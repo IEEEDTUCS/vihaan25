@@ -19,6 +19,7 @@ export default function IEEE({ className, setClassName }) {
 return (
         <><Blur className={className} popin={popin} ></Blur>
         <div className={`${className} bg-[url(/Images-Abt-IEEE/Abt-IEEE/Bg.svg)] bg-cover h-[100vh] w-[25vw] fixed -right-150 duration-300 ease-in flex flex-col items-center justify-start p-10 z-1000 top-0`}>
+          <div className="overflow-hidden text-ellipsis">
                 <div className="flex flex-row w-full justify-between mb-[11%] mt-[5%] ">
                         <div className="font-semibold ">
                                 <h1 className="text-3xl font-orbitron tracking-widest text-[#A59188]">ABOUT US</h1>
@@ -65,6 +66,7 @@ return (
                         <a href="https://www.linkedin.com/company/ieee-dtu/" target="_blank"><FaLinkedin className="hover:text-2xl duration-300 ease-in" /></a>
                         <a href="https://discord.gg/rfD9aW48" target="_blank"><FaDiscord className="hover:text-2xl duration-300 ease-in" /></a>
                 </div>
+          </div>
         </div></>
 );
 };
