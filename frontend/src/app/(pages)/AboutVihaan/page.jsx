@@ -1,9 +1,11 @@
-import About from "@components/AboutVihaan/About"
+import About from "@components/AboutVihaan/About";
 const page = () => {
   return (
     <>
-    {/* PAGES ARE JUST TO TEST COMPONENTS */}
-    <About/>
+      {/* PAGES ARE JUST TO TEST COMPONENTS */}
+      <div className="w-screen ">
+        <About />
+      </div>
     </>
   );
 };
