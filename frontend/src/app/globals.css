@@ -192,7 +192,7 @@ body {
   stroke-dasharray: 50;
   stroke-dashoffset: 50;
   animation: textAnimation 4s ease-in-out 1 forwards;
-  animation-timeline: view(75% 5%);
+  /* animation-timeline: view(75% 5%); */
 }
 @keyframes textAnimation {
   0% {
@@ -220,7 +220,7 @@ body {
   right: 0;
   z-index: 10000;
   transition: 1s ease-in;
-  /* filter: blur(5px); */
+
 }
 
 .Button-for-Abt-Section-after {
@@ -228,3 +228,11 @@ body {
   right: -15px;
   transition: 3s ease-in;
 }
+
+.Blur-Class-Screen{
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: 1s ease-in;
+}
+

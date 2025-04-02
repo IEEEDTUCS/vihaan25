@@ -16,7 +16,7 @@ const About = () => {
   let popout = () => {
     setClassName("Button-for-Abt-Section");
     setIsBlurred(true);
-    console.log(className);
+    // console.log(className);
   }
 
   // useEffect(() => {
