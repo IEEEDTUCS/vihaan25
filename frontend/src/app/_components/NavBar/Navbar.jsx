@@ -114,7 +114,7 @@ const Navbar = () => {
           <div className="-mr-2 flex md:hidden">
             <motion.div
               className=" top-[14px] right-3"
-              style={{ position: "absolute", zIndex: 500 }}
+              style={{ position: "absolute", zIndex: 1001 }}
               whileTap={{ rotate: 90 }}
               animate={{ rotate: isRotated ? 45 : 0 }}
               transition={{ stiffness: 300 }}

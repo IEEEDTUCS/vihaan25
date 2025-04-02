@@ -15,9 +15,9 @@ const About = () => {
       {/* Ye SVG ka hai */}
 
       <div className="z-10 w-full m-6 sm:mx-10 md:mx-14 lg:mx-20 max-[1280px]:relative max-[1280px]:w-full ">
-        <div className="mb-10 mr-10 ml-0 w-150 max-[750px]:h-28 max-[750px]:relative flex items-end ">
-          <img src="/Images-Abt-IEEE/head.svg" alt="Heading" className="  " />
-        </div>
+        <div className="mb-10 mr-10 ml-0 w-full md:w-150 max-[750px]:h-28 max-[750px]:relative flex items-end justify-center">
+          <img src="/Images-Abt-IEEE/head.svg" alt="Heading"/>
+        </div>  
         <h1 className="text-7xl tracking-widest text-heading font-khinterference xl:w-[80%] w-full max-[600px]:text-[300%] max-[600px]:font-bold max-[600px]:tracking-[0rem] ">
           VIHAAN 8.0
         </h1>
