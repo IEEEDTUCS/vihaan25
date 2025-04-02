@@ -218,9 +218,8 @@ body {
 .Button-for-Abt-Section{
   position: fixed;
   right: 0;
-  z-index: 10000;
+  z-index: 1000;
   transition: all 1.5s cubic-bezier(0.25, 1, 0.5, 1);
-
 }
 
 .Button-for-Abt-Section-after {
@@ -236,3 +235,6 @@ body {
   transition: all 1.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
+.Hide-Nav-Bar{
+  display: none;
+}
