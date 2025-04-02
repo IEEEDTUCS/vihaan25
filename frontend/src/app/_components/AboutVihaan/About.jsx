@@ -45,7 +45,7 @@ const About = () => {
         <h1 className="text-7xl tracking-widest text-[#A59188] text-heading font-khinterference xl:w-[80%] w-full max-[600px]:text-[300%] max-[600px]:font-bold max-[600px]:tracking-[0rem] ">
           VIHAAN 8.0
         </h1>
-        <h2 className="text-6xl text-[#A59188] xl:w-[120%] font-medium text-heading tracking-widest font-khinterference mt-2 max-[600px]:text-[200%] ;">
+        <h2 className="text-6xl text-[#A59188] xl:w-[120%] font-medium text-heading tracking-wide font-khinterference mt-2 max-[600px]:text-[200%] ;">
           PRESENTED BY IEEE DTU
         </h2>
         <p className="text-para pr-8 mt-4 text-justify xl:w-[60%] w-full font-orbitron font-normal tracking-wider text-[#A59188] sm:tracking-widest max-[600px]:w-full max-[600px]:text-sm text-base">

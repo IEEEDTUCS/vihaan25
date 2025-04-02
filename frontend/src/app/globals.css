@@ -219,7 +219,7 @@ body {
   position: fixed;
   right: 0;
   z-index: 10000;
-  transition: 1s ease-in;
+  transition: all 1.5s cubic-bezier(0.25, 1, 0.5, 1);
 
 }
 
@@ -233,6 +233,6 @@ body {
   position: fixed;
   right: 0;
   top: 0;
-  transition: 1s ease-in;
+  transition: all 1.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
