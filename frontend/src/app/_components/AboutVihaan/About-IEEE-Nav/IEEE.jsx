@@ -17,7 +17,7 @@ export default function IEEE({ className, setClassName }) {
 //     console.log(className);
     
 return (
-        <><Blur className={className} ></Blur>
+        <><Blur className={className} popin={popin} ></Blur>
         <div className={`${className} bg-[url(/Images-Abt-IEEE/Abt-IEEE/Bg.svg)] bg-cover h-[100vh] w-[25vw] fixed -right-150 duration-300 ease-in flex flex-col items-center justify-start p-10 z-1000 top-0`}>
                 <div className="flex flex-row w-full justify-between mb-[11%] mt-[5%] ">
                         <div className="font-semibold ">
@@ -45,15 +45,15 @@ return (
                 </div>
                 <div className="flex flex-row justify-around w-full mt-[5%] ">
                         <div className=" flex flex-col items-start ">
-                                <IoLocation className="mb-[120%]" />
-                                <IoMdCall className="mb-[160%]" />
+                                <IoLocation className="mb-[150%]" />
+                                <IoMdCall className="mb-[180%]" />
                                 <IoMdCall className="mb-[180%]" />
                                 <MdMarkEmailUnread className="mb-[90%]" />
                         </div>
                         <div className="flex flex-col items-start relative -top-[4%]">
                                 <p className="font-orbitron text-base font-medium tracking-wide text-[#A59188]">Delhi Technological University</p>
-                                <p className="font-orbitron text-base font-medium tracking-wide text-[#A59188]">Abhimanyu Kumar <br /> <hr /> (+91 93104 48583) <hr /></p>
-                                <p className="font-orbitron text-base font-medium tracking-wide text-[#A59188]">Spruha Kar <br /><hr />(+91 72178 61438) <hr /></p>
+                                <p className="font-orbitron text-base font-medium tracking-wide text-[#A59188] my-[2%]">Abhimanyu Kumar Jha<br /> <hr /> (+91 93104 48583) <hr /></p>
+                                <p className="font-orbitron text-base font-medium tracking-wide text-[#A59188] mb-[2%]">Spruha Kar <br /><hr />(+91 72178 61438) <hr /></p>
                                 <p className="font-orbitron text-base font-medium tracking-wide text-[#A59188]">ieeedtu.contact@gmail.com</p>
                         </div>
 

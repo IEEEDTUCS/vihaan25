@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default function Blur({ className }) {
+export default function Blur({ className, popin}) {
     let [BlurClass, setBlurClass] = useState("");
 
     useEffect(() => {
@@ -14,6 +14,7 @@ export default function Blur({ className }) {
     return (
         <div 
             className={`${BlurClass} fixed top-0 -right-600 duration-400 ease-in w-screen h-screen backdrop-blur-xs z-[999]`}
+            onClick={popin}
         ></div>
     );
 }
