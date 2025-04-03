@@ -9,12 +9,8 @@ const Sponsor = () => {
   };
 
   const sponsorList = [
-    {
-      title: "“DEVFOLIO LOGO”",
-      image: "/images/sponsor/Devfolio_Logo-Colored.svg",
-    },
+    { title: "DEVFOLIO LOGO", image: "/images/sponsor/Devfolio_Logo-Colored.svg" },
     { title: "GitHub", image: "/images/sponsor/GitHub.png" },
-    // { title: "Polygon", image: "/images/sponsor/Polygon.png" },
     { title: "ETHINDIA LOGO", image: "/images/sponsor/ethindia-light.png" },
     { title: "Wolfram", image: "/images/sponsor/Wolfram.png" },
     { title: "NoticeBard", image: "/images/sponsor/NoticeBard.png" },
@@ -24,9 +20,7 @@ const Sponsor = () => {
     { title: "PSOCKETS", image: "/images/sponsor/PSOCKETS.png" },
   ];
 
-  const technologyPartners = [
-    { title: "Logitech", image: "/images/sponsor/Logitech.png" },
-  ];
+  const technologyPartners = [{ title: "Logitech", image: "/images/sponsor/Logitech.png" }];
 
   const coursePartners = [
     { title: "Interview Buddy", image: "/images/sponsor/InterviewBuddy.png" },
@@ -55,15 +49,11 @@ const Sponsor = () => {
 
       {/* Sponsor List */}
       <p className="text-4xl text-center mb-4">Sponsors</p>
-      <div className="grid grid-cols-2 sm:gap-12 gap-6 mb-10 items-center">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-6 sm:gap-12 mb-10 items-center ">
         {sponsorList.map((sponsor, index) => (
-          <Image
-            key={index}
-            src={sponsor.image}
-            alt={sponsor.title}
-            width={160}
-            height={120}
-          />
+          <div key={index} className={`flex justify-center ${sponsorList.length % 2 !== 0 && index === sponsorList.length - 1 ? 'col-span-2 md:col-span-1' : ''}`}>
+            <Image src={sponsor.image} alt={sponsor.title} width={160} height={120} />
+          </div>
         ))}
       </div>
 
@@ -75,8 +65,8 @@ const Sponsor = () => {
             key={index}
             src={sponsor.image}
             alt={sponsor.title}
-            width={160}
-            height={160}
+            width={300}
+            height={300}
           />
         ))}
       </div>

@@ -47,7 +47,7 @@ const Navbar = () => {
 
   return (
     <motion.div
-      className={`top-0  z-90 left-0 right-0 ${
+      className={`top-0 z-90 left-0 right-0 ${
         isAtTop ? "bg-transparent fixed" : " fixed backdrop-blur-sm shadow-md"
       }`}
       initial={{ opacity: 0, y: -20 }}
@@ -67,7 +67,6 @@ const Navbar = () => {
             </div>
             <Volume_side_svg />
           </div> */}
-          <div> </div>
 
           {/* Navigation Links */}
           <div className=" md:block z-110 hidden xl:absolute xl:right-8 ">
@@ -114,7 +113,7 @@ const Navbar = () => {
           <div className="-mr-2 flex md:hidden">
             <motion.div
               className=" top-[14px] right-3"
-              style={{ position: "absolute", zIndex: 1001 }}
+              style={{ position: "absolute", zIndex: 500 }}
               whileTap={{ rotate: 90 }}
               animate={{ rotate: isRotated ? 45 : 0 }}
               transition={{ stiffness: 300 }}

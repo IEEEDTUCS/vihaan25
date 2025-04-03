@@ -1,11 +1,9 @@
 @import "tailwindcss";
 
-
-
 :root {
   --background: url("/background.jpg")!important;
   --foreground: #8F7E77;
-}
+  }
 
 @theme inline{
   --color-background: var(--background);
@@ -23,6 +21,8 @@ body {
   background-attachment: fixed;
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
+  /* filter: blur(5px); */
 }
 
 
@@ -193,7 +193,6 @@ body {
   stroke-dasharray: 50;
   stroke-dashoffset: 50;
   animation: textAnimation 4s ease-in-out 1 forwards;
-  animation-timeline: view(75% 5%);
 }
 @keyframes textAnimation {
   0% {
@@ -215,3 +214,25 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+.Button-for-Abt-Section{
+  position: fixed;
+  right: 0;
+  z-index: 10000;
+  transition: all 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+
+}
+
+.Button-for-Abt-Section-after {
+  position: fixed;
+  right: -15px;
+  transition: 3s ease-in;
+}
+
+.Blur-Class-Screen{
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: all 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
