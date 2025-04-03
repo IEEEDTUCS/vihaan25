@@ -1,7 +1,37 @@
+import { useEffect, useRef, useState } from "react";
+
 const AboutSVG = () => {
+  const svgRef = useRef(null);
+  const [key, setKey] = useState(0);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          if (!inView) {
+            setKey((prevKey) => prevKey + 1); // Trigger re-render to restart animation
+          }
+          if (inView) {
+            setInView(false);
+          }
+        }
+      },
+      { threshold: 0.5 } // Detects when at least 50% of element is visible
+    );
+
+    if (svgRef.current) observer.observe(svgRef.current);
+
+    return () => {
+      if (svgRef.current) observer.unobserve(svgRef.current);
+    };
+  }, [inView]);
+
   return (
     <div className="h-80 w-80 relative -right-40 bottom-25 max-[1028px]:collapse xl:visible">
       <svg
+        key={key}
+        ref={svgRef}
         className="zhsvg"
         width="350"
         height="350"

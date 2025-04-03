@@ -29,7 +29,7 @@ const HomePage = () => {
   return (
     <>
       {/* <Navbar /> */}
-      <div className="relative flex w-screen  h-[80vh] sm:h-screen flex-col items-center justify-start overscroll-x-none">
+      <div className="relative flex w-screen  h-[80vh] sm:h-screen flex-col items-center justify-start overflow-hidden">
         {/* this div contains all the svg and images of the landing */}
         <div className="absolute inset-0 flex items-center justify-center">
           <Image
@@ -37,7 +37,7 @@ const HomePage = () => {
             alt="Vihaan Logo"
             width={80}
             height={80}
-            className="absolute top-0 xl:top-8 lg:top-0 z-60"
+            className="absolute top-0 xl:top-8 lg:top-0 "
           />
           <Image
             src={FixedAroundClock}
@@ -89,34 +89,34 @@ const HomePage = () => {
             />
           </div>
         </div>
-        <div className="text-content font-extrabold relative flex items-center flex-col jusitfy-center top-75 md:top-50 lg:top-[38vh] z-10">
-          <p className="max-[450px]:text-[42px] text-7xl md:text-8xl lg:text-[9rem] font-khinterference ">
+        <div className="text-content font-extrabold relative flex items-center flex-col jusitfy-center top-75 md:top-50 lg:top-[38vh] z-10 mb-0">
+          <p className="max-[450px]:text-[42px] text-7xl md:text-8xl lg:text-[9rem] font-khinterference">
             VIHAAN 8.0
           </p>
-          <h2 className="text-[#d7d7d7] text-xl md:text-3xl md:mt-4 lg:mt-0 font-khinterference relative">
+          <h2 className="text-[#d0d0d0] text-xl md:text-3xl md:mt-4 lg:mt-0 font-khinterference relative">
             AWAITS YOU
           </h2>
-          <h2 className="text-white mt-4 md:mt-0 font-pprightGrotesk text-[10px]">
+          <h2 className="text-[#d0d0d0] mt-4 md:mt-6 font-pprightGrotesk text-[10px]">
             REGISTER AT
           </h2>
           <div
             className="apply-button"
             data-hackathon-slug="vihaan8"
-            data-button-theme="dark-inverted"
+            data-button-theme="light"
           ></div>
 
-          <div className="relative mt-15 md:mt-0 w-full flex justify-center">
+          <div className="relative mt-8 md:mt0 w-full flex justify-center">
             <Image
               src={HorizontalVectors}
               alt="Horizontal Lines"
               className="absolute top-1  z-10  w-full md:w-3/5"
             />
-            <h4 className="  text-lg min-[440px]:text-xl sm:text-2xl font-khinterference text-bold tracking-wider">
+            <h4 className="text-md min-[440px]:text-xl sm:text-2xl font-khinterference text-bold tracking-wider">
               WELCOME CODER
             </h4>
           </div>
           <h5 className="w-80 font-light font-khinterference text-center text-sm sm:text-base ">
-            Let's 8 begin
+            Let 8 begin
           </h5>
         </div>
       </div>
