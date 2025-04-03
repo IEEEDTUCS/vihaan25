@@ -37,7 +37,7 @@ const HomePage = () => {
             alt="Vihaan Logo"
             width={80}
             height={80}
-            className="absolute top-0 xl:top-8 lg:top-0 z-60"
+            className="absolute top-0 xl:top-8 lg:top-0 "
           />
           <Image
             src={FixedAroundClock}

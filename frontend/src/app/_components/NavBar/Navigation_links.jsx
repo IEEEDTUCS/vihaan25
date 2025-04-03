@@ -85,7 +85,7 @@ const Navigation_links = () => {
           </a>
         </div>
 
-        {/* Twitter Icon */}
+        {/* Twitter Icon */} 
         <div className="relative group ">
           <a href="https://x.com/dtu_ieee">
             <svg
