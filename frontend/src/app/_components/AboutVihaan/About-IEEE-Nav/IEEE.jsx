@@ -25,9 +25,9 @@ export default function IEEE({ className, setClassName, isHidden, setIsHidden })
       <Blur className={className} popin={popin} />
 
       <div
-        className={`${className} bg-[url(/Images-Abt-IEEE/Abt-IEEE/Bg.svg)] bg-cover h-[100vh] w-[25%] max-[768px]:w-[65%] max-[668px]:w-[77%] max-[450px]:w-[95%] max-[1280px]:w-[35%] max-[1024px]:w-[45%] max-[400px]:w-[105%] max-[1500px]:w-[30%] fixed -right-150 duration-300 ease-in flex flex-col items-center justify-start p-[3%] max-[1024px]:p-[4%] max-[700px]:p-[8%] max-[768px]:p-[8%] max-[500px]:p-[9.5%] z-1000 top-0`}
+        className={`${className} bg-[url(/Images-Abt-IEEE/Abt-IEEE/Bg.svg)] overflow-x-hidden bg-local bg-no-repeat max-[1280px]:overflow-scroll h-[100vh] w-[25%] max-[768px]:w-[65%] max-[668px]:w-[77%] max-[450px]:w-[95%] max-[1280px]:w-[35%] max-[1024px]:w-[45%] max-[400px]:w-[105%] max-[1500px]:w-[30%] fixed -right-150 duration-300 ease-in flex flex-col items-center justify-start p-[3%] max-[1024px]:p-[4%] max-[700px]:p-[8%] max-[768px]:p-[8%] max-[500px]:p-[9.5%] z-1000 top-0`}
       >
-        <div className="overflow-hidden bg-cover w-full flex flex-col items-center justify-start">
+        <div className="bg-local w-full flex flex-col items-center justify-start">
           <div className="flex flex-row w-full justify-between mb-[11%] mt-[5%]">
             <div className="font-semibold">
               <h1 className="text-3xl font-orbitron tracking-widest text-[#A59188]">
