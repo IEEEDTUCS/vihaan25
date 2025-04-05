@@ -6,13 +6,13 @@ const EventSchedule = () => {
   return (
     <div
       id="schedule"
-      className="lg:mx-20 md:mx-16 sm:mx-8 mx-4 my-4 min-h-[40vh] relative -top-50"
+      className="lg:mx-20 md:mx-16 sm:mx-8 mx-4 my-4 md:min-h-[40vh] relative -top-50"
     >
       <p className="font-khinterference md:text-7xl   text-4xl  tracking-widest">
         Event Schedule
       </p>
       {/* <TechTimeline /> */}
-      <div className="flex   flex-col justify-center font-extrabold items-center mt-20 text-4xl font-orbitron text-center">
+      <div className="flex   flex-col justify-center font-extrabold items-center mt-20 text-4xl font-orbitron text-center text-wrap">
         <RandomizedTextEffect text="Coming Soon" />
         {/* <div className=" w-full h-8 mx-auto">
           <div className="absolute left-1/5 w-full md:w-3/5 h-8 bg-gradient-to-b from-[#8f7d7652] to-[#8f7d7600]  border-t border-[#8f7d76]"></div>
