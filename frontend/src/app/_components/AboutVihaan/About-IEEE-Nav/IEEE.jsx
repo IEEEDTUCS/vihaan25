@@ -61,7 +61,7 @@ export default function IEEE({ className, setClassName, isHidden, setIsHidden })
             <p className="font-orbitron relative flex flex-row w-full justify-center text-sm text-[#A59188] tracking-wide">
               IEEE DTU ALUMNI
             </p>
-            <div className="bg-[#A59188] relative top-[10%] h-[3vh] flex flex-row w-full justify-center text-white hover:opacity-80 duration-300 ease-in">
+            <div className="bg-[#A59188] relative top-[10%] h-[3vh] flex flex-row w-full justify-center items-center text-white hover:opacity-80 duration-300 ease-in">
               <a href="https://www.ieeedtu.in/#cs" target="_blank" rel="noopener noreferrer">
                 <button className="font-orbitron text-sm tracking-wide">
                   Visit IEEE DTU Page
