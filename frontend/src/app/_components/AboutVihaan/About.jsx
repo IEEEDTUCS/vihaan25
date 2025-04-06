@@ -23,8 +23,15 @@ const About = () => {
   };
 
 
+  const handleImageClick = (e) => {
+    e.target.classList.add("animate-wiggle");
+    setTimeout(() => {
+      e.target.classList.remove("animate-wiggle");
+    }, 4000); 
+  };
+
   return (
-    <div className="relative mb-0 flex items-center justify-between w-full sm:mt-16 pr-0 overflow-hidden ">
+    <div className="relative mb-0 flex items-center justify-between w-full max-[750px]:mt-20 sm:mt-20 pr-0 overflow-hidden ">
       <img
         src="/Images-Abt-IEEE/svg1.svg"
         alt="Background Design"
@@ -39,8 +46,8 @@ const About = () => {
         initial={{opacity:0, x:-100}}
         transition={{duration:1}}
         viewport={{ once: true }}
-        className="mb-10 mr-10 ml-0 w-150 max-[750px]:h-28 max-[750px]:relative flex  ">
-          <img src="/Images-Abt-IEEE/head.svg" alt="Heading" className="w-full max-[750px]:relative max-[750px]:left-0 max-[750px]:w-[60%] " />
+        className="mb-10 mr-10 ml-0 w-150 max-[750px]:w-[150%] max-[750px]:h-28 max-[750px]:relative flex  ">
+          <img src="/Images-Abt-IEEE/head.svg" alt="Heading" className="w-full max-[750px]:relative max-[750px]:left-0 max-[750px]:w-[60%] max-[750px]:top-[40%]" />
         </motion.div>
         <motion.h1 
         whileInView={{x:0, opacity:1}}
@@ -94,9 +101,10 @@ const About = () => {
             src="/Images-Abt-IEEE/svgglass.svg"
             alt="Magnifying Glass"
             className="w-full relative left-10 h-[110%] animate-giggle hover:animate-wiggle z-1"
+            onClick={handleImageClick}
           />
 
-          <div className="text-para-z-1 mt-4 w-[100%] h-10 font-bold font-orbitron 2xl:text-xl flex justify-center absolute top-[25%] -z-3 ">
+          <div className="text-para-z-1 mt-4 w-[100%] h-10 font-bold font-orbitron 2xl:text-xl flex justify-center absolute max-[1281]:text-sm max-[1281]:left-[1%] top-[26%] -z-3 ">
             COMING SOON!
           </div>
         </div>
