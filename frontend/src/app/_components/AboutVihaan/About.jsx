@@ -23,6 +23,13 @@ const About = () => {
   };
 
 
+  const handleImageClick = (e) => {
+    e.target.classList.add("animate-wiggle");
+    setTimeout(() => {
+      e.target.classList.remove("animate-wiggle");
+    }, 4000); 
+  };
+
   return (
     <div className="relative mb-0 flex items-center justify-between w-full sm:mt-16 pr-0 overflow-hidden ">
       <img
@@ -93,10 +100,11 @@ const About = () => {
           <img
             src="/Images-Abt-IEEE/svgglass.svg"
             alt="Magnifying Glass"
-            className="w-full relative left-10 h-[110%] animate-giggle  hover:animate-wiggle z-1"
+            className="w-full relative left-10 h-[110%] animate-giggle hover:animate-wiggle z-1"
+            onClick={handleImageClick}
           />
 
-          <div className="text-para-z-1 mt-4 w-[100%] h-10 font-bold font-orbitron 2xl:text-xl flex justify-center absolute top-[25%] -z-3 ">
+          <div className="text-para-z-1 mt-4 w-[100%] h-10 font-bold font-orbitron 2xl:text-xl flex justify-center absolute max-[1281]:text-sm max-[1281]:left-[1%] top-[26%] -z-3 ">
             COMING SOON!
           </div>
         </div>
