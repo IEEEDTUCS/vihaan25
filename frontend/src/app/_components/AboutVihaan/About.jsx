@@ -31,7 +31,7 @@ const About = () => {
   };
 
   return (
-    <div className="relative mb-0 flex items-center justify-between w-full sm:mt-16 pr-0 overflow-hidden ">
+    <div className="relative mb-0 flex items-center justify-between w-full max-[750px]:mt-20 sm:mt-20 pr-0 overflow-hidden ">
       <img
         src="/Images-Abt-IEEE/svg1.svg"
         alt="Background Design"
@@ -46,8 +46,8 @@ const About = () => {
         initial={{opacity:0, x:-100}}
         transition={{duration:1}}
         viewport={{ once: true }}
-        className="mb-10 mr-10 ml-0 w-150 max-[750px]:h-28 max-[750px]:relative flex  ">
-          <img src="/Images-Abt-IEEE/head.svg" alt="Heading" className="w-full max-[750px]:relative max-[750px]:left-0 max-[750px]:w-[60%] " />
+        className="mb-10 mr-10 ml-0 w-150 max-[750px]:w-[150%] max-[750px]:h-28 max-[750px]:relative flex  ">
+          <img src="/Images-Abt-IEEE/head.svg" alt="Heading" className="w-full max-[750px]:relative max-[750px]:left-0 max-[750px]:w-[60%] max-[750px]:top-[40%]" />
         </motion.div>
         <motion.h1 
         whileInView={{x:0, opacity:1}}
