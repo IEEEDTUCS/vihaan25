@@ -87,7 +87,7 @@ export default function IEEE({ className, setClassName, isHidden, setIsHidden })
                   <span className="font-orbitron text-base font-medium tracking-wide text-[#A59188]">
                     Abhimanyu Kumar Jha
                     <br />
-                    <hr /> (+91 93104 48583) <hr />
+                     (+91 93104 48583) 
                   </span>
                 </li>
                 <li className="flex items-center gap-4 mb-[2%]">
@@ -95,7 +95,7 @@ export default function IEEE({ className, setClassName, isHidden, setIsHidden })
                   <p className="font-orbitron text-base font-medium tracking-wide text-[#A59188]">
                     Spruha Kar
                     <br />
-                    <hr />(+91 72178 61438) <hr />
+                    (+91 72178 61438) 
                   </p>
                 </li>
                 <li className="flex items-center gap-4">

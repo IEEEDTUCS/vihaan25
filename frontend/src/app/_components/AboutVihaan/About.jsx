@@ -93,7 +93,7 @@ const About = () => {
           <img
             src="/Images-Abt-IEEE/svgglass.svg"
             alt="Magnifying Glass"
-            className="w-full relative left-10 h-[110%] animate-giggle hover:animate-wiggle z-1"
+            className="w-full relative left-10 h-[110%] animate-giggle  hover:animate-wiggle z-1"
           />
 
           <div className="text-para-z-1 mt-4 w-[100%] h-10 font-bold font-orbitron 2xl:text-xl flex justify-center absolute top-[25%] -z-3 ">
