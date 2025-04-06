@@ -41,13 +41,13 @@ const About = () => {
       {/* Ye SVG ka hai */}
 
       <motion.div 
-      className="z-10 w-[250%] m-6 text-wrap  sm:mx-10 md:mx-14 lg:mx-20 max-[1280px]:relative max-[1280px]:w-full ">
+      className="z-10 w-[250%] m-6 text-wrap sm:mx-10 md:mx-14 lg:mx-20 max-[1280px]:relative max-[1280px]:w-full ">
         <motion.div
         whileInView={{x:0, opacity:1}}
         initial={{opacity:0, x:-100}}
         transition={{duration:1}}
         viewport={{ once: true }}
-        className="mb-10 mr-10 ml-0 w-150 max-[750px]:h-28 max-[750px]:relative flex items-end ">
+        className="mb-10 mr-10 ml-0 w-150 max-[750px]:h-28 max-[750px]:relative flex  ">
           <img src="/Images-Abt-IEEE/head.svg" alt="Heading" className="w-full max-[750px]:relative max-[750px]:left-0 max-[750px]:w-[60%] " />
         </motion.div>
         <motion.h1 
@@ -71,7 +71,7 @@ const About = () => {
         initial={{opacity:0, x:-100}}
         transition={{duration:1}}
         viewport={{ once: true }}
-        className="text-para pr-8 mt-4 text-justify xl:w-[60%] w-full font-orbitron font-normal tracking-wider max-[600px]:text-[50%] text-[#A59188] sm:tracking-widest max-[600px]:pr-[20%] max-[600px]:w-full max-[600px]:text-sm text-base ">
+        className="text-para pr-[0] mt-4 text-justify xl:w-[100%] w-full font-orbitron font-normal tracking-wider max-[600px]:text-[50%] text-[#A59188] sm:tracking-widest max-[600px]:pr-[20%] max-[600px]:w-full max-[600px]:text-sm text-base ">
           VIHAAN is a 24-hour long hackathon that provides a platform for
           budding programmers to come up with solutions to real-world problems
           using technology. Students participate in teams of up to 4 members across various tracks. To
@@ -90,6 +90,8 @@ const About = () => {
         </motion.div>
           <AbtIEEE className={className} setClassName={setClassName} isHidden={isHidden} setIsHidden={setIsHidden} />
         <div className="ml-[50%] relative -top-20 max-xl:collapse">
+        </div>
+        <div className="ml-[60%] relative -top-20 max-xl:collapse">
           <AboutSVG />
         </div>
       </motion.div>
