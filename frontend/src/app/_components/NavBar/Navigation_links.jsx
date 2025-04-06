@@ -1,10 +1,31 @@
   "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Instagram, Linkedin, Twitter } from "lucide-react";
+import {motion, useAnimation} from 'framer-motion';
 
 const Navigation_links = () => {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const controls = useAnimation();
+  useEffect(() => {
+    const handleScroll = ()=>{
+      const position = window.scrollY;
+      const opacity = Math.max(0, 1 - position / window.innerHeight);
+      setScrollPosition(position);
+      controls.start({opacity: opacity})
+    }
+  
+    window.addEventListener('scroll',handleScroll);
+    return () => {
+      window.removeEventListener('scroll',handleScroll)
+    }
+  }, [controls])
+  
   return (
-    <div className="flex md:space-x-4  items-center md:bottom-[4vh] bottom-[2vh] md:left-6c left-0 absolute  p-2 md:p-4">
+    <motion.div
+    initial={{ opacity: 1 }}
+    animate={controls}
+    style={{transition: 'opacity 0.1s'}}
+    className="flex md:space-x-4  items-center md:bottom-[4vh] bottom-[2vh] md:left-6c left-0 absolute  p-2 md:p-4">
       <div className="">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -108,7 +129,7 @@ const Navigation_links = () => {
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
