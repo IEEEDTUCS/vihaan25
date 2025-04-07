@@ -6,6 +6,7 @@ import FAQ from "./_components/FAQ/faq";
 import Footer from "./_components/Footer/Footer";
 import Countdown from "./_components/Countdown";
 import AbtIEEE from "./_components/AboutVihaan/About-IEEE-Nav/IEEE";  
+import FooterNew from "./_components/FooterNew/footerNew";
 
 export default function Home() {
   return (
@@ -18,7 +19,8 @@ export default function Home() {
       {/* Id is given to it's component */}
       <div id="sponsor"><Sponsor/></div>
       <div id="faqs"><FAQ id="faqs"/></div>
-      <Footer/> 
+      {/* <Footer/>  */}
+      <div id="footer"><FooterNew/></div>
     </>
   );
 }
