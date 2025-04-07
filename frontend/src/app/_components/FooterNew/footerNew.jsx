@@ -94,7 +94,7 @@ export default function FooterNew() {
             
             <div className="mt-8 px-4">
                 <hr className="border-[#8F7E77]/30" />
-                <p className="text-center text-sm mt-4">Designed with ❤️ by IEEE DTU</p>
+                <p className="text-center text-sm mt-4">Made with ❤️ by IEEE DTU</p>
             </div>
         </motion.footer>
     );
