@@ -24,7 +24,7 @@ func LoadVars() EnvVars {
 	
 	port := os.Getenv("PORT")
 	if port == "" {
-		panic("Missing variable: PORT") 
+		port = "1323"
 	}
 
 	googleClientId := os.Getenv("GOOGLE_CLIENT_ID")

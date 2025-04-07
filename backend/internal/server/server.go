@@ -37,11 +37,11 @@ func NewServer() *Server {
 }
 
 func (s *Server) RegisterRoutes() {
-	//s.Static("/", "public")
-	//s.Static("/_next", "public/_next")
+	s.Static("/", "public")
+	s.Static("/_next", "public/_next")
 
-	//s.File("/", "public/index.html")
-	//s.File("/quiz", "public/quiz.html")
+	s.File("/", "public/index.html")
+	s.File("/quiz", "public/quiz.html")
 	
 	api := s.Group("/api")
 
