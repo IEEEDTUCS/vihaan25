@@ -73,7 +73,7 @@ const DotButton = ({ href = "#", children }) => {
 
   return href ? (
     <Link href={href} passHref legacyBehavior>
-      <a target="_blank" rel="noopener noreferrer">
+      <a rel="noopener noreferrer">
         {buttonContent}
       </a>
     </Link>
