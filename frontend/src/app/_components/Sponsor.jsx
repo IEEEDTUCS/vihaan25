@@ -11,7 +11,7 @@ const Sponsor = () => {
 
   const sponsorList = [
     { title: "DEVFOLIO LOGO", image: "/images/sponsor/Devfolio_Logo-Colored.svg" },
-    { title: "GitHub", image: "/images/sponsor/GitHub.png" },
+    { title: "GitHub", image: "/images/sponsor/Github.png" },
     { title: "ETHINDIA LOGO", image: "/images/sponsor/ethindia-light.png" },
     { title: "Wolfram", image: "/images/sponsor/Wolfram.png" },
     { title: "NoticeBard", image: "/images/sponsor/NoticeBard.png" },
