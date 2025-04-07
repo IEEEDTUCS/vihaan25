@@ -42,20 +42,52 @@ const tabs = [
     title: "I'm interested, How do I register?",
     description: (
       <>
-        We’ll soon be putting up registration links on our website. Stay tuned!
+        Registrations are live!. Stay tuned!
         Registration details only require basic details. Follow us on{" "}
         <Instagram /> and <LinkedIn /> for regular updates.
       </>
     ),
   },
   {
-    title: "What's the prize if you end up winning?Give me some Incentive.",
+    title: "What's the prize if you end up winning? Give me some Incentive.",
     description: (
       <>
         We have loads of cash prizes and swags up for grabs. Further details
         will be released soon. Follow us on <Instagram /> and <LinkedIn /> for
         regular updates.
       </>
+    ),
+  },
+  {
+    title: "Are there any prerequisites for participating? Am I required to have any form of tools?",
+    description: (
+      <>
+        You'll just need your trusty laptop and a sufficient bandwidth internet connection. While we do provide power stations on the venue, the availability is subject to the crowd. Hence, we strongly recommend you charge up your devices to the brim.
+      </>
+    ),
+  },
+  {
+    title: "Is it a team competition? Can't I participate alone?",
+    description: (
+      <>
+        Sure, you can participate alone. However, we strongly recommend you to participate in teams since hackathons are all about brainstorming and teamwork!
+      </>
+    ),
+  },
+  {
+    title: "What is the participation criteria for me and my teammates?",
+    description: (
+      <>
+        There is only one - you must be currently (as of April 2025) enrolled in a university as a full-time student. You can be from any year or any branch.
+      </>
+    ),
+  },
+  {
+    title: "Am I required to pay anything for participating?",
+    description: (
+      <>
+       No, participation is free! We only require your enthusiasm!
+      </> 
     ),
   },
 ];
