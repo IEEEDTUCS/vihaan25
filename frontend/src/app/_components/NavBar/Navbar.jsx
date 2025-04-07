@@ -36,13 +36,11 @@ const Navbar = ({ isHidden }) => {
     }
   }, [isOpen]);
 
-  console.log("Navbar isHidden:", isHidden);
+  // console.log("Navbar isHidden:", isHidden);
 
   return (
     <motion.div
-      className={`top-0 z-90 left-0 right-0 ${
-        isHidden ? "" : "Hide-Nav-Bar"
-      } ${
+      className={`top-0 z-90 left-0 right-0 ${isHidden ? "" : "Hide-Nav-Bar"} ${
         isAtTop ? "bg-transparent fixed" : "fixed backdrop-blur-sm shadow-md"
       }`}
       initial={{ opacity: 0, y: -20 }}
