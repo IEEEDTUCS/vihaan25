@@ -1,3 +1,4 @@
+"use client";
 import PastSpeaker from "@/app/_components/PastSpeaker/PastSpeaker";
 import React, { useState } from "react";
 
@@ -100,11 +101,11 @@ function page() {
   };
 
   return (
-    <div className="mx-20 flex flex-col gap-12 items-center">
+    <div className="mx-20">
       <div className="font-khinterference md:text-7xl text-4xl tracking-widest mb-6 text-center">
         Previous Judges and Speakers
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4 place-items-center">
         {speakers.map((speaker, index) => (
           <div key={index} onClick={() => handleToggle(index)}>
             <PastSpeaker {...speaker} isActive={activeIndex === index} />
