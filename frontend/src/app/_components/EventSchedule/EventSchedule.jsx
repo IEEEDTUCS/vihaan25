@@ -10,9 +10,14 @@ const EventSchedule = () => {
       id="schedule"
       className="lg:mx-20 md:mx-16 sm:mx-8 mx-4 my-4 md:min-h-[40vh] relative -top-50"
     >
-      <h3 className="font-khinterference md:text-7xl text-4xl tracking-widest">
+      <motion.h3 
+          whileInView={{ x: 0, opacity: 1 }}
+          initial={{ opacity: 0, x: -100 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        className="font-khinterference md:text-7xl text-4xl tracking-widest">
         Event Schedule
-      </h3>
+      </motion.h3>
       <TechTimeline />
       {/*<motion.div
         whileInView={{ opacity: 1 }}

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 
 const DotButton = ({ children }) => {
@@ -91,28 +92,29 @@ export default function TechTimeline() {
     </div>
     ) },
     { id: 2, title: "Registration Ends", date: "MARCH 9", position: "bottom", description: (
-    <div className="flex flex-col space-y-4 justify-center items-center text-center font-khinterference text-[#A59188] w-full">
+    <div 
+        className="flex flex-col space-y-4 justify-center items-center text-center font-khinterference text-[#A59188] w-full">
     <h2 className="text-4xl">Registration Ends</h2>
     <p className="text-md">Invite friends and devs, create a team, and put on your thinking caps while we review your entities.</p>
     </div>
     ) },
     { id: 3, title: "Event Brochure", date: "MARCH 9", position: "top", description: (
-    <div className="flex flex-col space-y-4 justify-center items-center text-center font-khinterference text-[#A59188] w-full">
+    <motion.div className="flex flex-col space-y-4 justify-center items-center text-center font-khinterference text-[#A59188] w-full">
     <h2 className="text-4xl">Event Brochure</h2>
     <p className="text-md">Invite friends and devs, create a team, and put on your thinking caps while we review your entities.</p>
-    </div>
+    </motion.div>
     ) },
     { id: 4, title: "Vihaan Begins", date: "MARCH 9", position: "bottom", description: (
-    <div className="flex flex-col space-y-4 justify-center items-center text-center font-khinterference text-[#A59188] w-full">
+    <motion.div className="flex flex-col space-y-4 justify-center items-center text-center font-khinterference text-[#A59188] w-full">
     <h2 className="text-4xl">Vihaan Begins</h2>
     <p className="text-md">Invite friends and devs, create a team, and put on your thinking caps while we review your entities.</p>
-    </div>
+    </motion.div>
     ) },
     { id: 5, title: "Vihaan Ends", date: "MARCH 9", position: "top", description: (
-    <div className="flex flex-col space-y-4 justify-center items-center text-center font-khinterference text-[#A59188] w-full">
+    <motion.div className="flex flex-col space-y-4 justify-center items-center text-center font-khinterference text-[#A59188] w-full">
     <h2 className="text-4xl">Vihaan Ends</h2>
     <p className="text-md">Invite friends and devs, create a team, and put on your thinking caps while we review your entities.</p>
-    </div>
+    </motion.div>
     ) },
   ];
 
@@ -125,7 +127,12 @@ export default function TechTimeline() {
         {/* Timeline container */}
         <div className="relative w-full flex justify-between items-center">
           {/* Custom dashed line with irregular gaps */}
-          <div className="absolute left-0 right-0 top-1/2 transform -translate-y-1/2 h-[2px] z-0 hidden md:flex justify-between">
+          <motion.div 
+          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0 }}
+          transition={{ duration: 2 }}
+          viewport={{ once: true }}
+            className="absolute left-0 right-0 top-1/2 transform -translate-y-1/2 h-[2px] z-0 hidden md:flex justify-between">
             {[...Array(40)].map((_, i) => (
               <div
                 key={i}
@@ -136,9 +143,14 @@ export default function TechTimeline() {
                 }}
               ></div>
             ))}
-          </div>
+          </motion.div>
           
-          <div className="absolute left-6/20 top-0 w-[1px] z-0 flex flex-col justify-between md:hidden">
+          <motion.div 
+          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0 }}
+          transition={{ duration: 2 }}
+          viewport={{ once: true }}
+            className="absolute left-6/20 top-0 w-[1px] z-0 flex flex-col justify-between md:hidden">
             {[...Array(25)].map((_, i) => (
               <div
                 key={i}
@@ -149,7 +161,7 @@ export default function TechTimeline() {
                 }}
               ></div>
             ))}
-          </div>
+          </motion.div>
 
           {/* Timeline events */}
           {/* Desktop View */}
@@ -160,7 +172,11 @@ export default function TechTimeline() {
                 className="flex lg:flex-col items-center relative"
               >
                 {/* Event box and date - positioned based on top/bottom */}
-                <div
+                <motion.div
+          whileInView={{ opacity: 1}}
+          initial={{ opacity: 0 }}
+          transition={{ duration: 2 }}
+          viewport={{ once: true }}
                   className={`absolute ${
                     event.position === "top" ? "bottom-16" : "top-16"
                   } flex lg:flex-col items-center`}
@@ -178,9 +194,14 @@ export default function TechTimeline() {
                       {event.date}
                     </p>
                   )}
-                </div>
+                </motion.div>
                 {/* Diamond node - centered on the timeline */}
-                <DiamondNode />
+                <motion.div
+          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0 }}
+          transition={{ duration: 2 }}
+          viewport={{ once: true }}
+                ><DiamondNode /></motion.div>
               </div>
             ))}
           </div>
@@ -205,9 +226,15 @@ export default function TechTimeline() {
           </div>
         </div>
       </div>
-      <div className="w-full flex flex-row justify-center items-center pt-10">
+      <motion.div
+        key={`eventsDesc${currentSelection}`}
+          whileInView={{ y: 0, opacity: 1 }} 
+        initial={{ opacity: 0, y: 100 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: false }}
+        className="w-full flex flex-row justify-center items-center pt-10">
         {timelineEvents[currentSelection].description}
-      </div>
+      </motion.div>
     </div>
   );
 }
