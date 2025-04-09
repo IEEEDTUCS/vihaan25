@@ -21,20 +21,22 @@ export const Tracks = () => {
   const goToPage = (targetIndex) => {
     const book = flipBookRef.current.pageFlip();
     const currentPage = book.getCurrentPageIndex();
-  
+    if (targetIndex %2 != 0) targetIndex = targetIndex-1;
+    
     if (targetIndex === currentPage) return;
-  
-    const direction = targetIndex > currentPage ? 1 : -1;
+    
     const flipInterval = setInterval(() => {
       const newIndex = book.getCurrentPageIndex();
-  
       if (newIndex === targetIndex) {
         clearInterval(flipInterval);
       } else {
-        direction > 0 ? book.flipNext() : book.flipPrev();
+        if (targetIndex > newIndex) book.flipNext();
+        else book.flipPrev();
       }
-    }, 800); // Adjust speed here (ms)
+    }, 1000);
   };
+  
+  
   
 
 
