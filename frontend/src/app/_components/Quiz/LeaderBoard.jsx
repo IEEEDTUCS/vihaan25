@@ -26,14 +26,12 @@ export default function LeaderBoard() {
 
         <div className="flex flex-wrap justify-start bordernew bg-contain bg-no-repeat bg-center w-[80%] h-[100%] pl-5 z-10">
           <div className="bg-[url('/Quiz/1st-pos.svg')] bg-contain bg-no-repeat w-full h-[50%] flex items-center justify-center mt-4">
-            <p className="text-xl font-bold text-white relative -left-[15%]">
-              Winner 1
-            </p>
+            <p className="text-xl font-bold text-white relative -left-[15%]">Winner 1</p>
           </div>
-          <div className="bg-[url('/Quiz/2nd-pos.svg')] bg-contain bg-no-repeat w-[35%] h-[50%] max-[920px]:w-[55%] max-[920px]:h-[35%] flex items-center justify-center mt-4">
+          <div className="bg-[url('/Quiz/2nd-pos.svg')] bg-contain bg-no-repeat w-[35%] h-[50%] max-[920px]:w-[55%] max-[1200px]:w-[45%] max-[920px]:h-[35%] flex items-center justify-center mt-4">
             <p className="text-xl font-bold text-white">Winner 2</p>
           </div>
-          <div className="bg-[url('/Quiz/3rd-pos.svg')] bg-contain bg-no-repeat w-[30%] h-[50%] max-[920px]:w-[45%] max-[920px]:h-[35%] flex items-center justify-center mt-4">
+          <div className="bg-[url('/Quiz/3rd-pos.svg')] bg-contain bg-no-repeat w-[30%] h-[50%] max-[920px]:w-[45%] max-[1200px]:w-[40%] max-[920px]:h-[35%] flex items-center justify-center mt-4">
             <p className="text-xl font-bold text-white">Winner 3</p>
           </div>
         </div>
