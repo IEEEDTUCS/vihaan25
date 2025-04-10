@@ -8,7 +8,7 @@ const EventSchedule = () => {
   return (
     <div
       id="schedule"
-      className="lg:mx-20 md:mx-16 sm:mx-8 mx-4 my-4 md:min-h-[40vh] relative -top-50"
+      className="lg:mx-20 mt-20 md:mx-16 sm:mx-8 mx-4 my-4 md:min-h-[40vh] relative -top-50"
     >
       <motion.h3 
           whileInView={{ x: 0, opacity: 1 }}
