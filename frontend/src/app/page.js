@@ -4,11 +4,10 @@ import Sponsor from "./_components/Sponsor";
 import About from "./_components/AboutVihaan/About";
 import EventSchedule from "./_components/EventSchedule/EventSchedule";
 import FAQ from "./_components/FAQ/faq";
-import Footer from "./_components/Footer/Footer";
-import Countdown from "./_components/Countdown";
 import AbtIEEE from "./_components/AboutVihaan/About-IEEE-Nav/IEEE";  
 import FooterNew from "./_components/FooterNew/footerNew";
 import Team from "./_components/Team"
+import { Tracks } from "./_components/Tracks/Tracks";
 
 export default function Home() {
   return (
