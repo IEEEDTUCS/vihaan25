@@ -238,3 +238,11 @@ body {
 .Hide-Nav-Bar{
   display: none;
 }
+
+.bordernew {
+    border-image: url("/Quiz/border1.svg") 30 stretch;
+    border-width: 30px;
+}
+
+
+
