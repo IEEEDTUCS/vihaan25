@@ -24,16 +24,24 @@ export default function LeaderBoard() {
           </h1>
         </div>
 
-        <div className="flex flex-wrap justify-start bordernew bg-contain bg-no-repeat bg-center w-[80%] h-[100%] pl-5 z-10">
-          <div className="bg-[url('/Quiz/1st-pos.svg')] bg-contain bg-no-repeat w-full h-[50%] flex items-center justify-center mt-4">
-            <p className="text-xl font-bold text-white relative -left-[15%]">Winner 1</p>
-          </div>
-          <div className="bg-[url('/Quiz/2nd-pos.svg')] bg-contain bg-no-repeat w-[35%] h-[50%] max-[920px]:w-[55%] max-[1200px]:w-[45%] max-[920px]:h-[35%] flex items-center justify-center mt-4">
-            <p className="text-xl font-bold text-white">Winner 2</p>
-          </div>
-          <div className="bg-[url('/Quiz/3rd-pos.svg')] bg-contain bg-no-repeat w-[30%] h-[50%] max-[920px]:w-[45%] max-[1200px]:w-[40%] max-[920px]:h-[35%] flex items-center justify-center mt-4">
-            <p className="text-xl font-bold text-white">Winner 3</p>
-          </div>
+        {/* add dynamic winners ke naam */}
+
+        <div className="flex flex-wrap justify-start relative bordernew bg-contain bg-no-repeat bg-center w-[80%] h-[100%] pl-5 z-10">
+        <div className="bg-[url('/Quiz/1st-pos.svg')] bg-contain bg-no-repeat w-full h-[50%] flex items-center justify-center mt-4">
+                <p className="text-xl font-bold absolute left-100 max-[920px]:relative max-[920px]:left-20 border border-amber-950 text-[#4e3124] font-khinterference tracking-normal">
+                    Winner 1
+                </p>
+            </div>
+            <div className="bg-[url('/Quiz/2nd-pos.svg')] bg-contain bg-no-repeat w-[35%] h-[50%] max-[920px]:w-[55%] max-[1200px]:w-[45%] max-[920px]:h-[35%] flex items-center justify-center mt-4">
+                <p className="text-xl font-bold absolute bottom-43 border text-[#4e3124] border-amber-950 font-khinterference tracking-tight">
+                    Winner 2
+                </p>
+            </div>
+            <div className="bg-[url('/Quiz/3rd-pos.svg')] bg-contain bg-no-repeat w-[30%] h-[50%] max-[920px]:w-[45%] max-[1200px]:w-[40%] max-[920px]:h-[35%] flex items-center justify-center mt-4">
+                <p className="text-xl font-bold absolute bottom-43 text-[#4e3124] border border-amber-950 font-khinterference tracking-tighter">
+                    Winner 3
+                </p>
+            </div>
         </div>
       </div>
 
@@ -51,20 +59,21 @@ export default function LeaderBoard() {
           </h1>
         </div>
 
+{/* add dynamic winners ke naam */}
        
          <div className="border-[15px] border-[url('/Quiz/wood-border.png')] bg-[#121212] w-full h-auto rounded-xl p-4 space-y-4">
                 <div className="relative bg-[url('/Quiz/1st-pos.svg')] bg-contain bg-no-repeat bg-center h-40 w-full flex items-center justify-center">
-                    <div className="text-white text-base font-bold">Winner 1</div>
+                    <div className="text-[#4e3124] border-amber-950 font-khinterference tracking-normal text-base font-bold ml-23">Winner 1</div> 
                 </div>
 
             
-                <div className="relative bg-[url('/Quiz/1st-pos.svg')] bg-contain bg-no-repeat bg-center h-40 w-full flex items-center justify-center">
-                    <div className="text-white text-base font-bold">Winner 2</div>
+                <div className="relative bg-[url('/Quiz/2nd-pos.svg')] bg-contain bg-no-repeat bg-center h-40 w-full flex items-center justify-center">
+                    <div className="text-[#4e3124] border-amber-950 font-khinterference tracking-tight text-base font-bold">Winner 2</div>
                 </div>
 
              
-                <div className="relative bg-[url('/Quiz/1st-pos.svg')] bg-contain bg-no-repeat bg-center h-40 w-full flex items-center justify-center">
-                    <div className="text-white text-base font-bold">Winner 3</div>
+                <div className="relative bg-[url('/Quiz/3rd-pos.svg')] bg-contain bg-no-repeat bg-center h-40 w-full flex items-center justify-center">
+                    <div className="text-[#4e3124] border-amber-950 font-khinterference tracking-tight text-base font-bold">Winner 3</div>
                 </div>
             </div>
       </div>

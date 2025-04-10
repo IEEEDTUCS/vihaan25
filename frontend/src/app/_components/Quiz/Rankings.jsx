@@ -43,6 +43,7 @@ const Rankings = () => {
             </tr>
           </thead>
           <tbody>
+            {/* add dynamic data logo ka */}
             {rows.map((row, idx) => (
               <tr key={idx} className="text-black text-lg ">
                 <td className="px-4 py-1 text-left border-[#82270048] border-r-8">{row.sno}</td>
