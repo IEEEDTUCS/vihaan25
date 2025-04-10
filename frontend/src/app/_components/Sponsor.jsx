@@ -50,7 +50,7 @@ const Sponsor = () => {
       transition={{duration:1}}
       viewport={{ once: true }}
       className="text-4xl text-center mb-4">Title Sponsor</motion.p>
-      <motion.Image
+      <motion.img
         src={titleSponsor.image}
         alt={titleSponsor.title}
         width={150}
