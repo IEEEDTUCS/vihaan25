@@ -100,10 +100,10 @@ const About = () => {
         />
         <div className="ml-[50%] relative -top-20 max-xl:collapse"></div>
         <div className="ml-[60%] relative -top-20 max-xl:collapse">
-          <AboutSVG />
+          {/* <AboutSVG /> */}
         </div>
       </motion.div>
-      
+
       <div className="flex items-center w-[210%] max-[1280px]:hidden lg:visible ">
         <div className="relative w-full h-[100%] max-[600px]:hidden ">
           <img
@@ -114,10 +114,10 @@ const About = () => {
           />
 
           <div className="text-para-z-1 mt-4 w-[100%] h-10 font-bold font-orbitron 2xl:text-xl flex justify-center absolute max-[1281]:text-sm max-[1281]:left-[1%] top-[26%] -z-3 ">
-            COMING SOON!
+            On 17-18 April
           </div>
         </div>
-        
+
         <img
           src="/Images-Abt-IEEE/svg2.svg"
           alt="Decorative Element"
