@@ -129,13 +129,19 @@ const LandingPage = () => {
           <h5 className="w-80 font-light font-khinterference text-center text-sm sm:text-base ">
             Let 8 begin
           </h5>
-          <div className="flex gap-7">
-            <div className="lg:mt-5 md:mt-0 -mt-3.5 scale-[40%] sm:mt-0 md-scale-100 lg:scale-100  sm:scale-75" >
-              <DotButton href="https://chat.whatsapp.com/BES3Gaa2De456UQVYIFR53">Join Whatsapp Community</DotButton>
-            </div>
-            <div className="lg:mt-5 md:mt-0 -mt-3.5 scale-[40%] sm:mt-0 md-scale-100 lg:scale-100  sm:scale-75" >
-              <DotButton href="https://vihaan8.devfolio.co/">Register</DotButton>
-            </div>
+          <div className="flex md:gap-7 gap-4 lg:mt-5 mt-2 sm:mt-0 font-['Orbitron'] text-lg">
+            <a
+              href="https://chat.whatsapp.com/BES3Gaa2De456UQVYIFR53"
+              className="bg-Button px-6 py-2 max-[450px]:scale-75 w-fit"
+            >
+              Whatsapp
+            </a>
+            <a
+              href="https://vihaan8.devfolio.co/"
+              className="bg-Button px-3 py-2 max-[450px]:scale-75 w-fit"
+            >
+              Register
+            </a>
           </div>
         </div>
       </div>
