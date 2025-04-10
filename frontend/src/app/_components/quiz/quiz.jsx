@@ -4,6 +4,7 @@ import Button from "@/app/_components/ui/Button";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
+import Rankings from "./Rankings";
 
 const OptionButton = ({ option }) => {
   return (
@@ -96,6 +97,9 @@ const Quiz = () => {
 
   const [submitted, setSubmitted] = useState(false);
   const [submitStatus, setSubmitStatus] = useState("");
+  
+  const [leaderboard, setLeaderboard] = useState([]);
+  const [leaderboardLoading, setLeaderboardLoading] = useState(false);
 
   const fetchUser = async (accessToken) => {
     try {
@@ -261,11 +265,29 @@ const Quiz = () => {
   }
 };
 
+  useEffect(() => {
+  const fetchLeaderboard = async () => {
+    setLeaderboardLoading(true);
+    try {
+      const res = await fetch(`${backendUrl}/quiz/leaderboard`);
+      if (!res.ok) throw new Error("Failed to fetch leaderboard");
+      const data = await res.json();
+      setLeaderboard(data);
+    } catch (err) {
+      console.error("Error loading leaderboard:", err);
+    } finally {
+      setLeaderboardLoading(false);
+    }
+  };
+
+  fetchLeaderboard();
+}, [backendUrl, user, submitted]);
+
   return (
     <div>
     <img src="/svg/quiz-ui/vector1.svg" className="absolute size-[400px] md:size-[600px] top-10"/>
     <img src="/svg/quiz-ui/vector2.svg" className="absolute size-[400px] md:size-[600px] bottom-20 right-0"/>
-    <div className="w-full flex flex-col relative">
+    <div className="w-full flex flex-col relative" name="quiz">
       <div className="w-full h-screen flex flex-col">
         <div className="w-full flex flex-row justify-between items-center px-2 py-4">
           <div className="flex flex-row justify-center items-center space-x-2">
@@ -356,7 +378,7 @@ const Quiz = () => {
                             transition={{ duration: 1.5 }}
                             viewport={{ once: true }}
                         >
-                      <Link to="leaderboard" smooth duration={1500} offset={-100}>
+                      <Link to="leaderboard" smooth duration={1500} offset={10}>
                         <Button href="" children="View Leaderboard" />
                       </Link>
                       </motion.div>
@@ -377,6 +399,9 @@ const Quiz = () => {
             </div> 
           </div>}
         </div>
+      </div>
+      <div className="w-screen">
+        <Rankings loading={leaderboardLoading} data={leaderboard} /> 
       </div>
     </div>
     </div>
