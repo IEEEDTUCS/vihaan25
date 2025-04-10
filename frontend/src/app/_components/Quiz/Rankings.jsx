@@ -17,7 +17,7 @@ const Rankings = () => {
     <div className='flex justify-center items-center mt-50 '>
     <img src="/Quiz/Rankings/HEading.svg" alt=""/>
     </div>
-    <div className="p-4 bg-gradient-to-br from-[#8b74448b] via-[#e8dcc6] to-[#b29164] shadow-inner m-[20%] mb-0 mt-[5%] max-[650px]:m-[8%] min-h-screen rounded-2xl border-4 border-[#8d6e31] outline-dashed border-dotted opacity-80 relative">
+    <div className="p-4 bg-gradient-to-br from-[#E0C9A6] via-[#e8dcc6] to-[#b29164] shadow-inner m-[20%] mb-0 mt-[5%] max-[650px]:m-[8%] min-h-screen rounded-2xl border-4 border-[#8d6e31] outline-dashed border-dotted opacity-80 relative">
       
       <div className="absolute top-4 left-4 w-20 h-20 rounded-md border-2 flex items-center justify-center text-xs">
         <img src="/svg/Logo.svg" alt="" />
