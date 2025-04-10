@@ -118,14 +118,16 @@ export const Tracks = () => {
           ))}
         </HTMLFlipBook>
       </div>
-      <div className="w-full grid  sm:grid-cols-4 grid-cols-2 justify-center items-center  gap-1 sm:gap-4 relative">
-        {content.map((item, index) => (
-          <TrackButton
-            key={index}
-            children={item.title}
-            onClick={() => goToPage(index)}
-          />
-        ))}
+      <div className="flex justify-center items-center w-full h-fit mt-10 mb-10 mx-2">
+        <div className="w-full md:w-4/5 lg:w-3/5 grid  sm:grid-cols-4 grid-cols-2 justify-center items-center  gap-1 sm:gap-4 relative p-4">
+          {content.map((item, index) => (
+            <MyBotton
+              key={index}
+              children={item.title}
+              onClick={() => goToPage(index)}
+            />
+          ))}
+        </div>
       </div>
     </>
   );
@@ -142,3 +144,11 @@ const Page = React.forwardRef(({ children, className }, ref) => {
     </div>
   );
 });
+
+const MyBotton = ({ children }) => {
+  return (
+    <div className="flex cursor-pointer justify-center items-center text-center text-nowrap px-4 py-2 bg-Button text-[#a89a84] font-orbitron font-bold">
+      {children}
+    </div>
+  );
+};
