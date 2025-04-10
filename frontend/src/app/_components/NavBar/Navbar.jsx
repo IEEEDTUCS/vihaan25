@@ -36,8 +36,6 @@ const Navbar = ({ isHidden }) => {
     }
   }, [isOpen]);
 
-  // console.log("Navbar isHidden:", isHidden);
-
   return (
     <motion.div
       className={`top-0 z-90 left-0 right-0 ${isHidden ? "" : "Hide-Nav-Bar"} ${
