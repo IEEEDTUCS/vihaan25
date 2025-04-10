@@ -1,0 +1,13 @@
+services:
+  backend:
+    container_name: vihaan-green
+    build:
+        context: ../../backend/
+        dockerfile: Dockerfile
+    restart: unless-stopped
+    env_file:
+        - production.env
+    volumes:
+      - ./production.env:/server/.env:ro
+    ports:
+      - "8080:8081"
