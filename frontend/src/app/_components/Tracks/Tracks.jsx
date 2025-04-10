@@ -75,29 +75,30 @@ export const Tracks = () => {
       <p className="md:text-7xl text-4xl tracking-widest font-bold  font-khinterference flex justify-center">
         Tracks
       </p>
-      <div className="flex flex-col items-center justify-center w-full relative gap-4 mt-0 h-screen">
-        <Image
+      <div className="flex flex-col items-center justify-center w-full relative gap-4 mt-0 h-fit pb-20 pt-10 md:bg-[url(/Book.png)] bg-[url(/MobileBook.png)] bg-contain bg-no-repeat bg-center">
+        {/* <Image
           src="/Book.png"
           alt="Book"
-          className="absolute h-[600] w-[1000] md:block hidden"
+          className=" h-[600] w-[1000] md:block hidden"
           width={1000}
           height={600}
         />
         <Image
           src="/MobileBook.png"
           alt="Book"
-          className="absolute h-[400] w-[300] md:hidden block"
+          className=" h-[400] w-[300] md:hidden block"
           width={500}
           height={600}
-        />
+        /> */}
         <HTMLFlipBook
-          width={400}
-          height={500}
+          width={410}
+          height={600}
           drawShadow
           showCover={false}
-          className="shadow-2xl bg-none block -top-1"
+          className="shadow-2xl bg-none block pl-5"
           mobileScrollSupport={true}
           ref={flipBookRef}
+          autoSize={true}
         >
           {content.map((item, i) => (
             <Page
