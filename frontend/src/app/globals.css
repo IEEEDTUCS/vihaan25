@@ -238,3 +238,17 @@ body {
 .Hide-Nav-Bar{
   display: none;
 }
+
+.Book-left-page{
+  background-image: url("/leftPage.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+}
+
+.Book-right-page{
+  background-image: url("/rightPage.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+}

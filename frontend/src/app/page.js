@@ -15,9 +15,9 @@ export default function Home() {
       <div id="home" ><HomePage/></div>
       {/* <Countdown/> */}
       <div id="about"><About/></div>
-      <div id="tracks" className="relative h-screen"><Tracks/></div>
       <div id="IEEEsection"><AbtIEEE/></div>
       <div ><EventSchedule/></div>
+      <div id="tracks" className="relative min-h-screen"><Tracks/></div>
       {/* Id is given to it's component */}
       <div id="sponsor"><Sponsor/></div>
       <div id="faqs"><FAQ id="faqs"/></div>
