@@ -244,5 +244,12 @@ body {
     border-width: 30px;
 }
 
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
 
+.animate-wiggle {
+  animation: wiggle 0.5s ease-in-out infinite;
+}
 

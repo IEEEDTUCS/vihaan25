@@ -4,7 +4,7 @@ import Button from "@/app/_components/ui/Button";
 
 const Rankings = () => {
   const rows = Array.from({ length: 30 }, (_, i) => ({
-    sno: 1,
+    sno: `${1}.-`,
     name: 'RUPIN',
     points: '14000',
   }));
