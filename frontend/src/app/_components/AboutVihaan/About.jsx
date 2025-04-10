@@ -103,7 +103,7 @@ const About = () => {
           <AboutSVG />
         </div>
       </motion.div>
-
+      
       <div className="flex items-center w-[210%] max-[1280px]:hidden lg:visible ">
         <div className="relative w-full h-[100%] max-[600px]:hidden ">
           <img
@@ -117,7 +117,7 @@ const About = () => {
             COMING SOON!
           </div>
         </div>
-
+        
         <img
           src="/Images-Abt-IEEE/svg2.svg"
           alt="Decorative Element"

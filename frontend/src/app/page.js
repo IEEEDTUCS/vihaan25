@@ -1,3 +1,4 @@
+"use client"
 import HomePage from "./(pages)/Home";
 import Sponsor from "./_components/Sponsor";
 import About from "./_components/AboutVihaan/About";
@@ -14,6 +15,7 @@ export default function Home() {
       <div id="home" ><HomePage/></div>
       {/* <Countdown/> */}
       <div id="about"><About/></div>
+      <div id="tracks" className="relative h-screen"><Tracks/></div>
       <div id="IEEEsection"><AbtIEEE/></div>
       <div ><EventSchedule/></div>
       {/* Id is given to it's component */}
