@@ -62,21 +62,28 @@ export default function LeaderBoard() {
 
         {/* add dynamic winners ke naam */}
        
-         <div className="border-[15px] border-[url('/Quiz/wood-border.png')] bg-[#121212] w-full h-auto rounded-xl p-4 space-y-4">
-                <div className="relative bg-[url('/Quiz/1st-pos.svg')] bg-contain bg-no-repeat bg-center h-40 w-full flex items-center justify-center">
-                    <div className="text-[#4e3124] border-amber-950 font-khinterference tracking-normal text-base font-bold ml-23 max-w-[15%] truncate">Winnddddddddddddddddddddddddddddddddddddder 1</div> 
-                </div>
+        <div className="p-[3px] rounded-xl border-12 border-[#916d4c57] bg-gradient-to-r from-[#c69f7000] via-[#b88a4a1d] to-[#a97b3a1a]">
+  <div className=" rounded-xl p-4 space-y-4">
+    <div className="relative bg-[url('/Quiz/1st-pos.svg')] bg-contain bg-no-repeat bg-center h-40 w-full flex items-center justify-center">
+      <div className="text-[#4e3124] font-khinterference tracking-normal text-base font-bold ml-23 max-w-[15%] truncate">
+        Winnddddddddddddddddddddddddddddddddddddder 1
+      </div> 
+    </div>
 
-            
-                <div className="relative bg-[url('/Quiz/2nd-pos.svg')] bg-contain bg-no-repeat bg-center h-40 w-full flex items-center justify-center">
-                    <div className="text-[#4e3124] border-amber-950 font-khinterference tracking-tight text-base font-bold max-w-[15%] truncate">Winnffffffffffffffffffffffffffffffffffffffffffer 2</div>
-                </div>
+    <div className="relative bg-[url('/Quiz/2nd-pos.svg')] bg-contain bg-no-repeat bg-center h-40 w-full flex items-center justify-center">
+      <div className="text-[#4e3124] font-khinterference tracking-tight text-base font-bold max-w-[15%] truncate">
+        Winnffffffffffffffffffffffffffffffffffffffffffer 2
+      </div>
+    </div>
 
-             
-                <div className="relative bg-[url('/Quiz/3rd-pos.svg')] bg-contain bg-no-repeat bg-center h-40 w-full flex items-center justify-center">
-                    <div className="text-[#4e3124] border-amber-950 font-khinterference tracking-tight text-base font-bold max-w-[15%] truncate">Winner 3</div>
-                </div>
-            </div>
+    <div className="relative bg-[url('/Quiz/3rd-pos.svg')] bg-contain bg-no-repeat bg-center h-40 w-full flex items-center justify-center">
+      <div className="text-[#4e3124] font-khinterference tracking-tight text-base font-bold max-w-[15%] truncate">
+        Winner 3
+      </div>
+    </div>
+  </div>
+</div>
+
       </div>
     </div>
   );
