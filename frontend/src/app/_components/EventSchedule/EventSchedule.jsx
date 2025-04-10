@@ -15,6 +15,18 @@ const EventSchedule = () => {
       </p>
       {/* <TechTimeline /> */}
       <motion.div
+      className="lg:mx-20 mt-20 md:mx-16 sm:mx-8 mx-4 my-4 md:min-h-[40vh] relative -top-50"
+    >
+      <motion.h3 
+          whileInView={{ x: 0, opacity: 1 }}
+          initial={{ opacity: 0, x: -100 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        className="font-khinterference md:text-7xl text-4xl tracking-widest">
+        Event Schedule
+      </motion.h3>
+      <TechTimeline />
+      {/*<motion.div
         whileInView={{ opacity: 1 }}
         initial={{ opacity: 0 }}
         transition={{ duration: 1 }}
@@ -26,6 +38,11 @@ const EventSchedule = () => {
           <div className="absolute left-1/9 w-full md:w-4/5 h-8 bg-gradient-to-b from-[#8f7d7628] to-[#8f7d7600]  border-t border-[#8f7d76b9]"></div>
         </div> */}
       </motion.div>
+         <div className=" w-full h-8 mx-auto">
+          <div className="absolute left-1/5 w-full md:w-3/5 h-8 bg-gradient-to-b from-[#8f7d7652] to-[#8f7d7600]  border-t border-[#8f7d76]"></div>
+          <div className="absolute left-1/9 w-full md:w-4/5 h-8 bg-gradient-to-b from-[#8f7d7628] to-[#8f7d7600]  border-t border-[#8f7d76b9]"></div>
+        </div>
+      </motion.div> */}
     </div>
   );
 };
