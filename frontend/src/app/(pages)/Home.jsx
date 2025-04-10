@@ -35,7 +35,7 @@ const LandingPage = () => {
     };
   }, []);
 
-  console.log("HomePage rendered");
+  // console.log("HomePage rendered");
   return (
     <>
       {/* <Navbar /> */}

@@ -1,8 +1,18 @@
-import Link from "next/link";
+import React from 'react';
+import Link from 'next/link';
 
-const DotButton = ({ href = "#", children }) => {
+const TrackButton = ({ href = '', children, onClick }) => {
   const buttonContent = (
-    <div className="flex cursor-pointer">
+    <div
+      className="flex cursor-pointer"
+      onClick={(e) => {
+        // Prevent default link behavior if onClick is used
+        if (onClick) {
+          e.preventDefault();
+          onClick();
+        }
+      }}
+    >
       <div className="relative bg-[#D9D9D938]/78 lg:px-6 px-4 py-3 text-center lg:min-w-[200px] whitespace-nowrap">
         {/* Top border with irregular dashes */}
         <div className="absolute top-0 left-0 right-0 h-[1px] flex">
@@ -71,15 +81,14 @@ const DotButton = ({ href = "#", children }) => {
     </div>
   );
 
-  return href ? (
+  // If href is provided and there's no onClick, wrap in a Link
+  return href && !onClick ? (
     <Link href={href} passHref legacyBehavior>
-      <a rel="noopener noreferrer">
-        {buttonContent}
-      </a>
+      <a rel="noopener noreferrer">{buttonContent}</a>
     </Link>
   ) : (
     buttonContent
   );
 };
 
-export default DotButton;
+export default TrackButton;
