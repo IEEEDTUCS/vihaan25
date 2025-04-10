@@ -10,7 +10,7 @@ export default function LeaderBoard() {
         <img
           src="/Quiz/Stopwatch.svg"
           alt=""
-          className="absolute w-[90%] h-[100%] object-contain z-11 -top-5 -right-90 max-[1300px]:w-[90%] max-[920px]:hidden max-[1300px]:h-[80%] max-[650px]:right-auto max-[650px]:left-0"
+          className="absolute w-[90%] h-[100%] object-contain z-11 -top-5 -right-90 max-[1300px]:w-[90%] max-[1020px]:hidden max-[1300px]:h-[80%] max-[650px]:right-auto max-[650px]:left-0"
         />
 
         <div className="flex flex-col items-center py-10 z-10">
@@ -34,12 +34,12 @@ export default function LeaderBoard() {
                 </p>
                 </div>
                 <div className="bg-[url('/Quiz/2nd-pos.svg')] bg-contain bg-no-repeat w-[35%] h-[50%] max-[920px]:w-[55%] max-[1200px]:w-[45%] max-[920px]:h-[35%] flex items-center justify-center mt-4">
-                <p className="text-xl font-bold absolute bottom-38 border text-[#4e3124] border-amber-950 font-khinterference tracking-tight text-center max-w-[10%] truncate">
+                <p className="text-xl font-bold absolute bottom-28 border text-[#4e3124] border-amber-950 font-khinterference tracking-tight text-center max-w-[10%] truncate">
                 Team-Crazy-as-Fuck(Winner-2)
                 </p>
                 </div>
                 <div className="bg-[url('/Quiz/3rd-pos.svg')] bg-contain bg-no-repeat w-[30%] h-[50%] max-[920px]:w-[45%] max-[1200px]:w-[40%] max-[920px]:h-[35%] flex items-center justify-center mt-4">
-                <p className="text-xl font-bold absolute bottom-38 text-[#4e3124] border border-amber-950 font-khinterference tracking-tighter text-center max-w-[10%] truncate">
+                <p className="text-xl font-bold absolute bottom-28 text-[#4e3124] border border-amber-950 font-khinterference tracking-tighter text-center max-w-[10%] truncate">
                 Team-Crazy-as-Fuck(Winner-3)
                 </p>
                 </div>

@@ -23,7 +23,7 @@ const Rankings = () => {
         <img src="/svg/Logo.svg" alt="" />
       </div>
 
-      
+      {/* add dynamic date ya change krdi daily abhimanyu bhaiya */}
       <div className="absolute top-14 right-40 -rotate-12 max-[500px]:right-5 font-khinterference text-[#9a272774] text-2xl font-bold">
         17-4-25
       </div>
