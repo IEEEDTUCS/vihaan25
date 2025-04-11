@@ -100,10 +100,10 @@ const About = () => {
         />
         <div className="ml-[50%] relative -top-20 max-xl:collapse"></div>
         <div className="ml-[60%] relative -top-20 max-xl:collapse">
-          <AboutSVG />
+          {/* <AboutSVG /> */}
         </div>
       </motion.div>
-      
+
       <div className="flex items-center w-[210%] max-[1280px]:hidden lg:visible ">
         <div className="relative w-full h-[100%] max-[600px]:hidden ">
           <img
@@ -117,7 +117,7 @@ const About = () => {
            Scroll Down!
           </div>
         </div>
-        
+
         <img
           src="/Images-Abt-IEEE/svg2.svg"
           alt="Decorative Element"

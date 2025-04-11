@@ -42,61 +42,81 @@ export default function FooterNew({ visible }) {
                     <div className="w-full h-[160px] rounded overflow-hidden shadow-md">
                         <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
                             <CustomMap />
-                        </APIProvider>
-                    </div>
-                </div>
+                        </APIProvider> */}
+          </div>
+        </div>
 
-               
-                <div className="flex flex-col w-[320px]">
-                    <h2 className="text-xl font-extrabold text-[#A59188] mb-4">Contact Us</h2>
-                    <div className="flex items-start gap-3 mb-2">
-                        <IoMdCall size={20} />
-                        <span>Abhimanyu Kumar Jha<br />(+91 93104 48583)</span>
-                    </div>
-                    <div className="flex items-start gap-3 mb-2">
-                        <IoMdCall size={20} />
-                        <span>Spruha Kar<br />(+91 72178 61438)</span>
-                    </div>
-                    <div className="flex items-start gap-3">
-                        <MdMarkEmailUnread size={20} />
-                        <p>ieeedtu.contact@gmail.com</p>
-                    </div>
-                </div>
+        <div className="flex flex-col w-[320px]">
+          <h2 className="text-xl font-extrabold text-[#A59188] mb-4">
+            Contact Us
+          </h2>
+          <div className="flex items-start gap-3 mb-2">
+            <IoMdCall size={20} />
+            <span>
+              Abhimanyu Kumar Jha
+              <br />
+              (+91 93104 48583)
+            </span>
+          </div>
+          <div className="flex items-start gap-3 mb-2">
+            <IoMdCall size={20} />
+            <span>
+              Spruha Kar
+              <br />
+              (+91 72178 61438)
+            </span>
+          </div>
+          <div className="flex items-start gap-3">
+            <MdMarkEmailUnread size={20} />
+            <p>ieeedtu.contact@gmail.com</p>
+          </div>
+        </div>
 
-              
-                <div className="flex flex-col w-[200px]">
-                    <h2 className="text-xl font-extrabold text-[#A59188] mb-4">Social Media</h2>
-                    <p className="mb-4">Learn, Hack, Win...</p>
-                    <div className="flex gap-5 text-2xl">
-                        <a href="https://www.instagram.com/ieee.dtu" target="_blank" rel="noopener noreferrer">
-                            <RxInstagramLogo className="hover:text-white transition duration-300" />
-                        </a>
-                        <a href="https://www.linkedin.com/company/ieee-dtu/" target="_blank" rel="noopener noreferrer">
-                            <FaLinkedin className="hover:text-white transition duration-300" />
-                        </a>
-                        <a href="https://discord.gg/rfD9aW48" target="_blank" rel="noopener noreferrer">
-                            <FaDiscord className="hover:text-white transition duration-300" />
-                        </a>
-                    </div>
-                </div>
+        <div className="flex flex-col w-[200px]">
+          <h2 className="text-xl font-extrabold text-[#A59188] mb-4">
+            Social Media
+          </h2>
+          <p className="mb-4">Learn, Hack, Win...</p>
+          <div className="flex gap-5 text-2xl">
+            <a
+              href="https://www.instagram.com/ieee.dtu"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <RxInstagramLogo className="hover:text-white transition duration-300" />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/ieee-dtu/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin className="hover:text-white transition duration-300" />
+            </a>
+            <a
+              href="https://discord.gg/rfD9aW48"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaDiscord className="hover:text-white transition duration-300" />
+            </a>
+          </div>
+        </div>
 
-             
-                <div className="flex items-center justify-center w-[80px]">
-                    <button
-                        onClick={scrollToTop}
-                        className="w-12 h-12 rounded-full bg-[#A59188] text-[#13151B] text-2xl font-bold hover:bg-[#8F7E77] transition duration-300"
-                        aria-label="Back to top"
-                    >
-                        ↑
-                    </button>
-                </div>
-            </div>
+        <div className="flex items-center justify-center w-[80px]">
+          <button
+            onClick={scrollToTop}
+            className="w-12 h-12 rounded-full bg-[#A59188] text-[#13151B] text-2xl font-bold hover:bg-[#8F7E77] transition duration-300"
+            aria-label="Back to top"
+          >
+            ↑
+          </button>
+        </div>
+      </div>
 
-            
-            <div className="mt-8 px-4">
-                <hr className="border-[#8F7E77]/30" />
-                <p className="text-center text-sm mt-4">Made with ❤️ by IEEE DTU</p>
-            </div>
-        </motion.footer>
-    );
+      <div className="mt-8 px-4">
+        <hr className="border-[#8F7E77]/30" />
+        <p className="text-center text-sm mt-4">Made with ❤️ by IEEE DTU</p>
+      </div>
+    </motion.footer>
+  );
 }

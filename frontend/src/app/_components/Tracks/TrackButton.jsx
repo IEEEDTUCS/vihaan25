@@ -1,7 +1,7 @@
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
-const TrackButton = ({ href = '', children, onClick }) => {
+const TrackButton = ({ href = "", children, onClick }) => {
   const buttonContent = (
     <div
       className="flex cursor-pointer"
@@ -13,7 +13,7 @@ const TrackButton = ({ href = '', children, onClick }) => {
         }
       }}
     >
-      <div className="relative bg-[#D9D9D938]/78 lg:px-6 px-4 py-3 text-center lg:min-w-[200px] whitespace-nowrap">
+      <div className="relative bg-[#D9D9D938]/78 lg:px-6 px-4 py-3 text-center w-[150px] whitespace-nowrap">
         {/* Top border with irregular dashes */}
         <div className="absolute top-0 left-0 right-0 h-[1px] flex">
           {[...Array(15)].map((_, i) => (

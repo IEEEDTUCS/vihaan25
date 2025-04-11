@@ -8,7 +8,7 @@ import RotateZ from "@/app/assets/RotateZ.svg";
 import CompleteClock from "@/app/assets/CompleteClock.svg";
 import MovingHand from "@/app/assets/MovingHand.svg";
 import HorizontalVectors from "@/app/assets/HorizontalVectors.svg";
-
+import DotButton from "../_components/ui/Button";
 import Logo from "@/app/assets/Logo.svg";
 import Navigation_links from "../_components/NavBar/Navigation_links";
 import Countdown from "../_components/Countdown";
@@ -129,6 +129,20 @@ const LandingPage = () => {
           <h5 className="w-80 font-light font-khinterference text-center text-sm sm:text-base ">
             Let 8 begin
           </h5>
+          <div className="flex md:gap-7 gap-4 lg:mt-5 mt-2 sm:mt-0 font-['Orbitron'] text-lg">
+            <a
+              href="https://chat.whatsapp.com/BES3Gaa2De456UQVYIFR53"
+              className="bg-Button px-6 py-2 max-[450px]:scale-75 w-fit"
+            >
+              Whatsapp
+            </a>
+            <a
+              href="https://vihaan8.devfolio.co/"
+              className="bg-Button px-3 py-2 max-[450px]:scale-75 w-fit"
+            >
+              Register
+            </a>
+          </div>
         </div>
       </div>
     </>

@@ -42,9 +42,9 @@ const tabs = [
     title: "I'm interested, How do I register?",
     description: (
       <>
-        Registrations are live!. Stay tuned!
-        Registration details only require basic details. Follow us on{" "}
-        <Instagram /> and <LinkedIn /> for regular updates.
+        Registrations are live!. Stay tuned! Registration details only require
+        basic details. Follow us on <Instagram /> and <LinkedIn /> for regular
+        updates.
       </>
     ),
   },
@@ -59,10 +59,14 @@ const tabs = [
     ),
   },
   {
-    title: "Are there any prerequisites for participating? Am I required to have any form of tools?",
+    title:
+      "Are there any prerequisites for participating? Am I required to have any form of tools?",
     description: (
       <>
-        You'll just need your trusty laptop and a sufficient bandwidth internet connection. While we do provide power stations on the venue, the availability is subject to the crowd. Hence, we strongly recommend you charge up your devices to the brim.
+        You'll just need your trusty laptop and a sufficient bandwidth internet
+        connection. While we do provide power stations on the venue, the
+        availability is subject to the crowd. Hence, we strongly recommend you
+        charge up your devices to the brim.
       </>
     ),
   },
@@ -70,7 +74,9 @@ const tabs = [
     title: "Is it a team competition? Can't I participate alone?",
     description: (
       <>
-        Sure, you can participate alone. However, we strongly recommend you to participate in teams since hackathons are all about brainstorming and teamwork!
+        Sure, you can participate alone. However, we strongly recommend you to
+        participate in teams since hackathons are all about brainstorming and
+        teamwork!
       </>
     ),
   },
@@ -78,16 +84,16 @@ const tabs = [
     title: "What is the participation criteria for me and my teammates?",
     description: (
       <>
-        There is only one - you must be currently (as of April 2025) enrolled in a university as a full-time student. You can be from any year or any branch.
+        There is only one - you must be currently (as of April 2025) enrolled in
+        a university as a full-time student. You can be from any year or any
+        branch.
       </>
     ),
   },
   {
     title: "Am I required to pay anything for participating?",
     description: (
-      <>
-       No, participation is free! We only require your enthusiasm!
-      </> 
+      <>No, participation is free! We only require your enthusiasm!</>
     ),
   },
 ];
@@ -110,8 +116,8 @@ const FAQ = () => {
       <p className="text-[#8F7E77] text-7xl lg:hidden font-khinterference font-bold  px-10">
         FAQ's{" "}
       </p>
-      <div className="container sm:mx-auto max-sm:mx-0 pb-10 pt-2 ">
-        <div className="h-fit ">
+      <div className=" sm:mx-auto max-sm:mx-0 pb-10 pt-2 flex justify-center">
+        <div className="h-fit w-full md:w-4/5">
           {tabs.map((tab, index) => (
             <motion.div
               key={index}
