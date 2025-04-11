@@ -16,8 +16,6 @@ WORKDIR /server
 
 COPY --from=builder /app/build/server .
 
-COPY --from=builder /app/public/ ./public/
-
 EXPOSE 1323
 
 CMD ["./server"]
