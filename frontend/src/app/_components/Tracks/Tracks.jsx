@@ -1,4 +1,5 @@
-import React, { useRef } from "react";
+"use client";
+import React, { useRef, useState, useEffect } from "react";
 import HTMLFlipBook from "react-pageflip";
 import Image from "next/image";
 // import Book from "/Book.png";
@@ -6,9 +7,29 @@ import Image from "next/image";
 // import LeftPage from "@/app/_components/Tracks/leftPage.png";
 // import RightPage from "@/app/_components/Tracks/rightPage.png";
 import TrackButton from "./TrackButton";
+function useIsMobile(breakpoint = 768) {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < breakpoint);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < breakpoint);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [breakpoint]);
+
+  return isMobile;
+}
+
 export const Tracks = () => {
   const flipBookRef = useRef(null);
 
+  // const [isMobile, setIsMobile] = useState(false);
+  const isMobile = useIsMobile(500);
+  // setIsMobile(useIsMobile(768));
+  // Adjust the breakpoint as needed
+  console.log("Is mobile:", isMobile);
   const content = [
     {
       title: "Esports",
@@ -92,8 +113,8 @@ export const Tracks = () => {
           height={600}
         /> */}
         <HTMLFlipBook
-          width={410}
-          height={600}
+          width={isMobile ? 320 : 410}
+          height={isMobile ? 500 : 600}
           drawShadow
           showCover={false}
           className="shadow-2xl bg-none block pl-5"
