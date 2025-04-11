@@ -115,16 +115,17 @@ func SeedQuestions(db *gorm.DB) error {
 
 	correctIndices := []int{1, 3, 1, 3, 2, 1, 2}
 
-	startDate := time.Date(2025, 4, 11, 0, 0, 0, 0, time.Local)
+	startDate := time.Date(2025, 4, 12, 0, 0, 0, 0, time.Local).Truncate(24 * time.Hour)
 
 	for i := 0; i < len(questions); i++ {
 		question := QuizQuestion{
 			Date:          startDate.AddDate(0, 0, i),
 			QuestionTitle: questions[i],
 		}
-
-		// Skip if already exists
-		if err := db.First(&question).Error; err == nil {
+		
+		var existing QuizQuestion
+		if err := db.Where("date = ?", question.Date).First(&existing).Error; err == nil {
+			// Question already exists for this date
 			continue
 		}
 
