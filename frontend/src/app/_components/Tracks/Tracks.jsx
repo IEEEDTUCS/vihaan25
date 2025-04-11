@@ -8,7 +8,7 @@ import Image from "next/image";
 // import RightPage from "@/app/_components/Tracks/rightPage.png";
 import TrackButton from "./TrackButton";
 function useIsMobile(breakpoint = 768) {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < breakpoint);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
