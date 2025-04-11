@@ -88,7 +88,7 @@ const Reveal = () => {
         {revealed && (
           <section
             ref={secondSectionRef}
-            className="snap-end h-screen my-[20%] max-[1280px]:my-[35%] flex items-center justify-center px-4"
+            className="snap-end h-screen my-[20%] max-[1280px]:my-[35%] max-[500px]:my-[40%] flex items-center justify-center px-4"
           >
             <motion.div
               initial={{ opacity: 0, y: 50 }}
