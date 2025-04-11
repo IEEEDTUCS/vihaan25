@@ -115,7 +115,7 @@ func SeedQuestions(db *gorm.DB) error {
 
 	correctIndices := []int{1, 3, 1, 3, 2, 1, 2}
 
-	startDate := time.Date(2025, 4, 12, 0, 0, 0, 0, time.Local).Truncate(24 * time.Hour)
+	startDate := time.Date(2025, 4, 11, 0, 0, 0, 0, time.Local).Truncate(24 * time.Hour)
 
 	for i := 0; i < len(questions); i++ {
 		question := QuizQuestion{
