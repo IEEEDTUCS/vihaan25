@@ -12,6 +12,7 @@ import { FaDiscord } from "react-icons/fa6";
 import { motion } from "framer-motion";
 
 export default function FooterNew() {
+    const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     };
@@ -39,7 +40,7 @@ export default function FooterNew() {
                         <p className="text-base">Delhi Technological University</p>
                     </div>
                     <div className="w-full h-[160px] rounded overflow-hidden shadow-md">
-                        <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
+                        <APIProvider apiKey={apiKey}>
                             <CustomMap />
                         </APIProvider>
                     </div>
