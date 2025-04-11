@@ -62,7 +62,7 @@ export const Tracks = () => {
         "In a world that’s more connected than ever, security is everything. Build tools for cybersecurity, digital identity protection, fraud detection, encrypted communications, or physical security systems powered by IoT and AI. Tackle threats before they become crises and keep the digital and real world safe.",
     },
     {
-      title: "Eduction",
+      title: "Education",
       content:
         "Reshape the future of learning through engaging, accessible, and adaptive technologies. Create platforms for remote and hybrid education, interactive learning modules using AR/VR, AI tutors, or inclusive tools for students with disabilities. Help close the learning gap and make quality education universal.",
     },
