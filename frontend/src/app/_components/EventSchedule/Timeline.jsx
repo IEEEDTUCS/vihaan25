@@ -269,9 +269,9 @@ export default function TechTimeline() {
                 <p className="text-[#a89a84] font-khinterference text-md tracking-wider mb-2 self-center col-span-1">
                   {event.date}
                 </p>
-                <p className="col-span-1">
+                <div className="col-span-1">
                   <DiamondNode />
-                </p>
+                </div>
 
                 <div className="col-span-3">
                   <button
