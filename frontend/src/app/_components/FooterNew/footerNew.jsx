@@ -11,7 +11,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaDiscord } from "react-icons/fa6";
 import { motion } from "framer-motion";
 
-export default function FooterNew() {
+export default function FooterNew({ visible }) {
     const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
