@@ -2,68 +2,110 @@ import React, { useEffect, useRef, useState } from "react";
 import "@/app/globals.css";
 import { Tracks } from "@components/Tracks/Tracks";
 import { motion } from "framer-motion";
+import FooterNew from "@components/FooterNew/footerNew";
+import Sponsor from "@components/Sponsor";
+import FAQ from "@components/FAQ/faq";
 
 const Reveal = () => {
   const secondSectionRef = useRef(null);
   const [revealed, setRevealed] = useState(false);
   const [shouldHideIntro, setShouldHideIntro] = useState(false);
+  const [footerVisible, setFooterVisible] = useState(false);
+  const [clockClicked, setClockClicked] = useState(false);
+  const [clockSrc, setClockSrc] = useState("/svg/GlowClock.svg");
 
   const handleReveal = () => {
-    setRevealed(true);
+    setClockClicked(true); // trigger animation
 
-    // After 4 seconds, hide the first section
+    // After 3s animation, reveal everything
     setTimeout(() => {
+      
+      setRevealed(true);
+      setFooterVisible(true);
       setShouldHideIntro(true);
-    }, 2000);
+    }, 3000);
 
-    // Scroll after slight delay
     setTimeout(() => {
-      secondSectionRef.current?.scrollIntoView({ behavior: "smooth" });
-    }, 50);
+      setClockSrc("/svg/GlowClockFinal.svg");
+    }, 2400);
+    
   };
 
+  useEffect(() => {
+    if (revealed) {
+      setTimeout(() => {
+        secondSectionRef.current?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  }, [revealed]);
+
   return (
-    <div
-      className={`h-screen snap-y snap-mandatory scroll-smooth ${
-        revealed ? "overflow-y-scroll" : "overflow-hidden"
-      }`}
-    >
-      {/* First Section */}
-      <section
-        className={`snap-start h-screen flex flex-col items-center justify-center transition-opacity duration-1000 ${
-          shouldHideIntro ? "hidden" : ""
+    <>
+      <div
+        className={`snap-y snap-mandatory scrolltracks scroll-smooth ${
+          revealed ? "overflow-y-scroll" : "overflow-hidden"
         }`}
+        
       >
-        <h1 className="font-khinterference text-xs tracking-widest text-center text-white mb-4">
-          {revealed ? "Explore the Tracks!" : "Tap to Reveal Tracks"}
-        </h1>
+        {/* First Section */}
+        {!shouldHideIntro && (
+          <section className={`snap-end flex flex-col justify-end items-center transition-all duration-1000`}>
+            <h1 className={`font-khinterference text-4xl relative -bottom-70 tracking-widest text-center`}>
+              {revealed ? "Explore the Tracks!" : "Tap to Reveal Tracks!"}
+            </h1>
 
-        <img
-          src="/svg/GlowClock.svg"
-          className={`w-[450px] h-auto mt-2 cursor-pointer transition-transform ${
-            revealed ? "" : "animate-wiggle"
-          }`}
-          alt="Glow Clock"
-          onClick={handleReveal}
-        />
-        <div className="w-[1300px] h-[1300px]"></div>
-      </section>
+            <motion.img
+              id="glow-clock-img"
+              src={clockSrc}
+              alt="Glow Clock"
+              onClick={handleReveal}
+              className={`cursor-pointer h-150 ${revealed ? "" : "relative -bottom-65" }`}
+              animate={
+                clockClicked && clockSrc === "/svg/GlowClock.svg"
+                  ? {
+                      rotate: [0, 10, -10, 10, -10, 0],
+                      filter: [
+                        "brightness(100%)",
+                        "brightness(200%)",
+                        "brightness(300%)",
+                        "brightness(200%)",
+                        "brightness(300%)",
+                        "brightness(100%)"
+                      ],
+                    }
+                  : {}
+              }
+              transition={
+                clockClicked && clockSrc === "/svg/GlowClock.svg"
+                  ? { duration: 3.4, ease: "easeInOut", repeat: 0 }
+                  : {}
+              }
+            />
+          </section>
+        )}
 
-      {/* Second Section */}
-      <section
-        ref={secondSectionRef}
-        className="snap-start scroll-smooth h-screen flex items-center justify-center px-4"
-      >
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 3 }}
-          className="max-w-[90%] w-full mx-auto"
-        >
-          <Tracks />
-        </motion.div>
-      </section>
-    </div>
+        {/* Second Section */}
+        {revealed && (
+          <section
+            ref={secondSectionRef}
+            className="snap-end h-screen my-[20%] max-[1280px]:my-[35%] max-[500px]:my-[40%] flex items-center justify-center px-4"
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 3 }}
+              className="max-w-[90%] w-full mx-auto"
+            >
+              <Tracks />
+            </motion.div>
+          </section>
+        )}
+      </div>
+      
+      <Sponsor visible={footerVisible}></Sponsor>
+      <FAQ visible={footerVisible}></FAQ>
+      <FooterNew visible={footerVisible} />
+    </>
   );
 };
 

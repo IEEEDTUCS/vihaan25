@@ -99,8 +99,8 @@ const About = () => {
           setIsHidden={setIsHidden}
         />
         <div className="ml-[50%] relative -top-20 max-xl:collapse"></div>
-        <div className="ml-[60%] relative -top-20 max-xl:collapse">
-          {/* <AboutSVG /> */}
+        <div className="ml-[60%] relative -top-10 max-xl:collapse">
+          <AboutSVG />
         </div>
       </motion.div>
 
@@ -114,7 +114,7 @@ const About = () => {
           />
 
           <div className="text-para-z-1 mt-4 w-[100%] h-10 font-bold font-orbitron 2xl:text-xl flex justify-center absolute max-[1281]:text-sm max-[1281]:left-[1%] top-[26%] -z-3 ">
-            On 17-18 April
+           Scroll Down!
           </div>
         </div>
 

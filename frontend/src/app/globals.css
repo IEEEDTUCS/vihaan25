@@ -244,13 +244,9 @@ body {
     border-width: 30px;
 }
 
-@keyframes wiggle {
-  0%, 100% { transform: rotate(-2deg); }
-  50% { transform: rotate(2deg); }
-}
 
 .animate-wiggle {
-  animation: wiggle 0.5s ease-in-out infinite;
+  animation: wiggle 0.5s ease-in-out forwards;
 }
 
 
@@ -274,4 +270,9 @@ body {
   /* background-attachment: fixed;  */
   background-size: 100% 100%;
   /* background-size: contain; */
+}
+
+.scrolltracks{
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
