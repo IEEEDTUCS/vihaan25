@@ -93,6 +93,7 @@ export const Tracks = () => {
 
   return (
     <>
+    <div className="overflow-hidden">
       <p className="md:text-7xl text-4xl tracking-widest font-bold  font-khinterference flex justify-center md:mt-32">
         Tracks
       </p>
@@ -150,6 +151,7 @@ export const Tracks = () => {
             />
           ))}
         </div>
+      </div>
       </div>
     </>
   );

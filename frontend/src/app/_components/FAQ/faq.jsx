@@ -98,7 +98,7 @@ const tabs = [
   },
 ];
 
-const FAQ = () => {
+const FAQ = ({ visible }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeItem, setActiveItem] = useState(tabs[0]);
 
@@ -110,6 +110,9 @@ const FAQ = () => {
 
   return (
     <>
+    <div className={`${
+                visible ? "" : "hidden"
+            } `}>
       <p className="text-[#8F7E77] text-7xl lg:block hidden font-khinterference font-bold mt-32 px-20">
         Frequently Asked Questions
       </p>
@@ -162,6 +165,7 @@ const FAQ = () => {
             </motion.div>
           ))}
         </div>
+      </div>
       </div>
     </>
   );

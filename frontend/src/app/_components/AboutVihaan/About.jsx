@@ -99,8 +99,8 @@ const About = () => {
           setIsHidden={setIsHidden}
         />
         <div className="ml-[50%] relative -top-20 max-xl:collapse"></div>
-        <div className="ml-[60%] relative -top-20 max-xl:collapse">
-          {/* <AboutSVG /> */}
+        <div className="ml-[60%] relative -top-10 max-xl:collapse">
+          <AboutSVG />
         </div>
       </motion.div>
 

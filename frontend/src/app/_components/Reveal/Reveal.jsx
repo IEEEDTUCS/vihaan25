@@ -3,6 +3,8 @@ import "@/app/globals.css";
 import { Tracks } from "@components/Tracks/Tracks";
 import { motion } from "framer-motion";
 import FooterNew from "@components/FooterNew/footerNew";
+import Sponsor from "@components/Sponsor";
+import FAQ from "@components/FAQ/faq";
 
 const Reveal = () => {
   const secondSectionRef = useRef(null);
@@ -40,9 +42,10 @@ const Reveal = () => {
   return (
     <>
       <div
-        className={`snap-y snap-mandatory scroll-smooth ${
+        className={`snap-y snap-mandatory scrolltracks scroll-smooth ${
           revealed ? "overflow-y-scroll" : "overflow-hidden"
         }`}
+        
       >
         {/* First Section */}
         {!shouldHideIntro && (
@@ -52,34 +55,32 @@ const Reveal = () => {
             </h1>
 
             <motion.img
-  id="glow-clock-img"
-  src={clockSrc}
-  alt="Glow Clock"
-  onClick={handleReveal}
-  className={`cursor-pointer h-150 ${revealed ? "" : "relative -bottom-65" }`}
-  animate={
-    clockClicked && clockSrc === "/svg/GlowClock.svg"
-      ? {
-          rotate: [0, 10, -10, 10, -10, 0],
-          filter: [
-            "brightness(100%)",
-            "brightness(200%)",
-            "brightness(300%)",
-            "brightness(200%)",
-            "brightness(300%)",
-            "brightness(100%)"
-          ],
-        }
-      : {}
-  }
-  transition={
-    clockClicked && clockSrc === "/svg/GlowClock.svg"
-      ? { duration: 3.4, ease: "easeInOut", repeat: 0 }
-      : {}
-  }
-/>
-
-
+              id="glow-clock-img"
+              src={clockSrc}
+              alt="Glow Clock"
+              onClick={handleReveal}
+              className={`cursor-pointer h-150 ${revealed ? "" : "relative -bottom-65" }`}
+              animate={
+                clockClicked && clockSrc === "/svg/GlowClock.svg"
+                  ? {
+                      rotate: [0, 10, -10, 10, -10, 0],
+                      filter: [
+                        "brightness(100%)",
+                        "brightness(200%)",
+                        "brightness(300%)",
+                        "brightness(200%)",
+                        "brightness(300%)",
+                        "brightness(100%)"
+                      ],
+                    }
+                  : {}
+              }
+              transition={
+                clockClicked && clockSrc === "/svg/GlowClock.svg"
+                  ? { duration: 3.4, ease: "easeInOut", repeat: 0 }
+                  : {}
+              }
+            />
           </section>
         )}
 
@@ -87,7 +88,7 @@ const Reveal = () => {
         {revealed && (
           <section
             ref={secondSectionRef}
-            className="snap-end h-screen flex items-center justify-center px-4"
+            className="snap-end h-screen my-[20%] max-[1280px]:my-[35%] flex items-center justify-center px-4"
           >
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -100,6 +101,9 @@ const Reveal = () => {
           </section>
         )}
       </div>
+      
+      <Sponsor visible={footerVisible}></Sponsor>
+      <FAQ visible={footerVisible}></FAQ>
       <FooterNew visible={footerVisible} />
     </>
   );
