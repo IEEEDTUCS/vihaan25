@@ -41,7 +41,7 @@ export default function FooterNew() {
                     <div className="w-full h-[160px] rounded overflow-hidden shadow-md">
                         <APIProvider apiKey={apiKey}>
                             <CustomMap />
-                        </APIProvider> */}
+                        </APIProvider>
           </div>
         </div>
 
