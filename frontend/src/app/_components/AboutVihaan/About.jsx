@@ -114,7 +114,7 @@ const About = () => {
           />
 
           <div className="text-para-z-1 mt-4 w-[100%] h-10 font-bold font-orbitron 2xl:text-xl flex justify-center absolute max-[1281]:text-sm max-[1281]:left-[1%] top-[26%] -z-3 ">
-            COMING SOON!
+           Scroll Down!
           </div>
         </div>
         
