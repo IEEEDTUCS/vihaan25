@@ -46,9 +46,9 @@ const Reveal = () => {
       >
         {/* First Section */}
         {!shouldHideIntro && (
-          <section className={`snap-end flex flex-col ${revealed ? "" :"relative -bottom-70 "} justify-end items-center transition-all duration-1000`}>
-            <h1 className="font-khinterference text-4xl tracking-widest text-center">
-              {revealed ? "Explore the Tracks!" : "Tap to Reveal Tracks"}
+          <section className={`snap-end flex flex-col justify-end items-center transition-all duration-1000`}>
+            <h1 className={`font-khinterference text-4xl relative -bottom-70 tracking-widest text-center`}>
+              {revealed ? "Explore the Tracks!" : "Tap to Reveal Tracks!"}
             </h1>
 
             <motion.img
@@ -56,7 +56,7 @@ const Reveal = () => {
   src={clockSrc}
   alt="Glow Clock"
   onClick={handleReveal}
-  className="cursor-pointer h-150"
+  className={`cursor-pointer h-150 ${revealed ? "" : "relative -bottom-65" }`}
   animate={
     clockClicked && clockSrc === "/svg/GlowClock.svg"
       ? {
