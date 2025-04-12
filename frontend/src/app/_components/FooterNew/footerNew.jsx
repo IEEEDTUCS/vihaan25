@@ -12,37 +12,35 @@ import { FaDiscord } from "react-icons/fa6";
 import { motion } from "framer-motion";
 
 export default function FooterNew({ visible }) {
-    const scrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    };
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
-    return (
-        <motion.footer
-            className={`w-full ${
-                visible ? "" : "hidden"
-            } bg-gradient-to-tr from-[#0e0e0eab] via-[#121111b1] to-[#3c2c2685] border border-dashed border-[#88888866] transition-colors duration-300 hover:border-white/30
+  return (
+    <motion.footer
+      className={`w-full ${
+        visible ? "" : "hidden"
+      } bg-gradient-to-tr from-[#0e0e0eab] via-[#121111b1] to-[#3c2c2685] border border-dashed border-[#88888866] transition-colors duration-300 hover:border-white/30
  text-[#8F7E77] font-orbitron pt-10 pb-6 z-[100]`}
-            initial={{ opacity: 0, y: 50 }}
-            animate={visible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-            transition={{ duration: 0.5 }}
-        >
-            <div className="flex flex-wrap justify-evenly px-6 gap-6">
-               
-                <div className="flex justify-center items-center w-[240px] h-[200px]">
-                    <img src="/svg/Logo.svg" alt="logo" className="w-[90%] h-[75%]" />
-                </div>
+      initial={{ opacity: 0, y: 50 }}
+      animate={visible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+      transition={{ duration: 0.5 }}
+    >
+      <div className="flex flex-wrap justify-evenly px-6 gap-6">
+        <div className="flex justify-center items-center w-[240px] h-[200px]">
+          <img src="/svg/Logo.svg" alt="logo" className="w-[90%] h-[75%]" />
+        </div>
 
-               
-                <div className="flex flex-col w-[240px]">
-                    <h2 className="text-xl font-extrabold text-[#A59188] mb-4">Venue</h2>
-                    <div className="flex items-start gap-2 mb-4">
-                        <IoLocation size={20} />
-                        <p className="text-base">Delhi Technological University</p>
-                    </div>
-                    <div className="w-full h-[160px] rounded overflow-hidden shadow-md">
-                       <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
-                            <CustomMap />
-                        </APIProvider>
+        <div className="flex flex-col w-[240px]">
+          <h2 className="text-xl font-extrabold text-[#A59188] mb-4">Venue</h2>
+          <div className="flex items-start gap-2 mb-4">
+            <IoLocation size={20} />
+            <p className="text-base">Delhi Technological University</p>
+          </div>
+          <div className="w-full h-[160px] rounded overflow-hidden shadow-md">
+            <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
+              <CustomMap />
+            </APIProvider>
           </div>
         </div>
 
@@ -83,14 +81,14 @@ export default function FooterNew({ visible }) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <RxInstagramLogo className="hover:text-white transition duration-300" />
+              <RxInstagramLogo className="hover:text-red transition duration-300" />
             </a>
             <a
               href="https://www.linkedin.com/company/ieee-dtu/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaLinkedin className="hover:text-white transition duration-300" />
+              <FaLinkedin className="hover:text-[#0077B5] transition duration-300" />
             </a>
             <a
               href="https://discord.gg/rfD9aW48"
