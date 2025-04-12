@@ -23,21 +23,14 @@ export default function Home() {
       <div id="home" ><HomePage/></div>
       {/* <Countdown/> */}
       <div id="about"><About/></div>
-      {/* <div id="tracks" className="relative h-screen"><Tracks/></div>s */}
       <div id="IEEEsection"><AbtIEEE/></div>
       <div ><EventSchedule/></div>
       {/* <div id="reveal"><Reveal/></div> */}
       <div id="tracks" ><Tracks/></div>
-      {/* Id is given to it's component */}
-      <div id="team"><Core_council/></div>
-      <div ><Chairperson/></div>
       <div id="sponsor"><Sponsor/></div>
       <div id="faqs"><FAQ id="faqs"/></div>
       <div id="team"><Full_team/></div>
-      {/* <div ><Chairperson/></div> */}
       <div > <Footer/> </div>
-      {/* <Footer/>  */}
-      {/* <Footer/>  */}
     </>
   );
 }

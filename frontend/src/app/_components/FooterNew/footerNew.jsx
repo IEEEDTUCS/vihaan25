@@ -11,19 +11,18 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaDiscord } from "react-icons/fa6";
 import { motion } from "framer-motion";
 
-export default function FooterNew({ visible }) {
+export default function FooterNew() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <motion.footer
-      className={`w-full ${
-        visible ? "" : "hidden"
-      } bg-gradient-to-tr from-[#0e0e0eab] via-[#121111b1] to-[#3c2c2685] border border-dashed border-[#88888866] transition-colors duration-300 hover:border-white/30
+      className={`w-full bg-gradient-to-tr from-[#0e0e0eab] via-[#121111b1] to-[#3c2c2685] border border-dashed border-[#88888866] transition-colors duration-300 hover:border-white/30
  text-[#8F7E77] font-orbitron pt-10 pb-6 z-[100]`}
       initial={{ opacity: 0, y: 50 }}
-      animate={visible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+      // animate={visible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
       <div className="flex flex-wrap justify-evenly px-6 gap-6">
