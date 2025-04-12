@@ -28,8 +28,8 @@ export default function Home() {
       {/* <div id="reveal"><Reveal/></div> */}
       <div id="tracks" ><Tracks/></div>
       <div id="sponsor"><Sponsor/></div>
-      <div id="faqs"><FAQ id="faqs"/></div>
       <div id="team"><Full_team/></div>
+      <div id="faqs"><FAQ /></div>
       <div > <Footer/> </div>
     </>
   );

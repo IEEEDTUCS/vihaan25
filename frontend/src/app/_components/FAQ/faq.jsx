@@ -98,7 +98,7 @@ const tabs = [
   },
 ];
 
-const FAQ = ({ visible }) => {
+const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeItem, setActiveItem] = useState(tabs[0]);
 
@@ -110,62 +110,60 @@ const FAQ = ({ visible }) => {
 
   return (
     <>
-    <div className={`${
-                visible ? "" : "hidden"
-            } `}>
-      <p className="text-[#8F7E77] text-7xl lg:block hidden font-khinterference font-bold mt-32 px-20">
-        Frequently Asked Questions
-      </p>
-      <p className="text-[#8F7E77] text-7xl lg:hidden font-khinterference font-bold  px-10">
-        FAQ's{" "}
-      </p>
-      <div className=" sm:mx-auto max-sm:mx-0 pb-10 pt-2 flex justify-center">
-        <div className="h-fit w-full md:w-4/5">
-          {tabs.map((tab, index) => (
-            <motion.div
-              key={index}
-              className={`overflow-hidden m-3`}
-              onClick={() => handleClick(index)}
-            >
-              <button
-                className={`p-3 px-4 w-full cursor-pointer items-center justify-between transition-all font-semibold text-[#8F7E77] font-khinterference flex gap-2 border border-dashed border-[#8F7E77] bg-[#090A0E]`}
+      <div className="">
+        <p className="text-[#8F7E77] text-7xl lg:block hidden font-khinterference font-bold mt-32 px-20">
+          Frequently Asked Questions
+        </p>
+        <p className="text-[#8F7E77] text-7xl lg:hidden font-khinterference font-bold  px-10">
+          FAQ's{" "}
+        </p>
+        <div className=" sm:mx-auto max-sm:mx-0 pb-10 pt-2 flex justify-center">
+          <div className="h-fit w-full md:w-4/5">
+            {tabs.map((tab, index) => (
+              <motion.div
+                key={index}
+                className={`overflow-hidden m-3`}
+                onClick={() => handleClick(index)}
               >
-                {tab.title}
-                {
-                  <Image
-                    src="/svg/faqIcon.svg"
-                    width="512"
-                    height="512"
-                    alt="faqIcon"
-                    className={`${
-                      activeIndex === index ? "rotate-45" : "rotate-0"
-                    } transition-transform ease-in-out w-5 h-5 text-gray-200 mr-4 w-8 h-8`}
-                  />
-                }
-              </button>
-              <AnimatePresence mode="sync">
-                {activeIndex === index && (
-                  <motion.div
-                    className="bg-[#13151B6E] border-b border-l border-r border-dashed border-[#8F7E77] rounded-b-xl"
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{
-                      duration: 0.3,
-                      ease: "easeInOut",
-                      delay: 0.14,
-                    }}
-                  >
-                    <pre className="text-[#8F7E77] text-wrap font-sans  p-3 pt-1 w-[94%] font-khinterference ">
-                      {tab.description}
-                    </pre>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.div>
-          ))}
+                <button
+                  className={`p-3 px-4 w-full cursor-pointer items-center justify-between transition-all font-semibold text-[#8F7E77] font-khinterference flex gap-2 border border-dashed border-[#8F7E77] bg-[#090A0E]`}
+                >
+                  {tab.title}
+                  {
+                    <Image
+                      src="/svg/faqIcon.svg"
+                      width="512"
+                      height="512"
+                      alt="faqIcon"
+                      className={`${
+                        activeIndex === index ? "rotate-45" : "rotate-0"
+                      } transition-transform ease-in-out text-gray-200 mr-4 w-8 h-8`}
+                    />
+                  }
+                </button>
+                <AnimatePresence mode="sync">
+                  {activeIndex === index && (
+                    <motion.div
+                      className="bg-[#13151B6E] border-b border-l border-r border-dashed border-[#8F7E77] rounded-b-xl"
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{
+                        duration: 0.3,
+                        ease: "easeInOut",
+                        delay: 0.14,
+                      }}
+                    >
+                      <pre className="text-[#8F7E77] text-wrap font-sans  p-3 pt-1 w-[94%] font-khinterference ">
+                        {tab.description}
+                      </pre>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            ))}
+          </div>
         </div>
-      </div>
       </div>
     </>
   );
