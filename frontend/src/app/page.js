@@ -12,6 +12,11 @@ import { Tracks } from "./_components/Tracks/Tracks";
 import Team from "./_components/Team"
 import Core_council from "./_components/Core_council";
 import Chairperson from "./_components/Chairperson";
+import Vice_chair from "./_components/Vice_chair";
+import Sec from "./_components/Sec";
+import Event_lead from "./_components/Event_lead";
+import Dept_lead from "./_components/Dept_lead";
+import Full_team from "./_components/Full_team";
 
 export default function Home() {
   return (
@@ -22,13 +27,13 @@ export default function Home() {
       {/* <div id="tracks" className="relative h-screen"><Tracks/></div>s */}
       <div id="IEEEsection"><AbtIEEE/></div>
       <div ><EventSchedule/></div>
-      <div id="reveal"><Reveal/></div>
-      {/* <div id="tracks" className="relative min-h-screen"><Tracks/></div> */}
+      {/* <div id="reveal"><Reveal/></div> */}
+      <div id="tracks" className="relative min-h-screen"><Tracks/></div>
       {/* Id is given to it's component */}
       <div id="sponsor"><Sponsor/></div>
       <div id="faqs"><FAQ id="faqs"/></div>
-      <div id="team"><Core_council/></div>
-      <div ><Chairperson/></div>
+      <div id="team"><Full_team/></div>
+      
       {/* <Footer/>  */}
       {/* <Footer/>  */}
       <div id="footer"><FooterNew/></div>

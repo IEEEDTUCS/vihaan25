@@ -8,44 +8,54 @@ const teamMembers =
 [
     {
       id: '1',
-      url: './Team/Prashant.jpg',
-      title: 'Prashant',
-      description: 'Secretary',
+      url: './Team/Abhimanyu_Jha.jpg',
+      title: 'Abhimanyu Jha',
+      description: 'Event Lead',
       social: {
-        linkedin: 'https://www.linkedin.com/in/prashant-693591228/',
-        instagram: 'https://www.instagram.com/prashant201103/'
+        linkedin: 'https://www.linkedin.com/in/abhimanyu-kumar-jha/',
+        instagram: 'https://www.instagram.com/abhimanyu_kumar_2210/'
       }
     },
     {
       id: '2',
-      url: './Team/Anuj.jpg',
-      title: 'Anuj Kumar',
-      description: 'Secretary',
+      url: './Team/Spruha_Kar.jpg',
+      title: 'Spruha Kar',
+      description: 'Event Lead',
       social: {
-        linkedin: 'https://www.linkedin.com/in/anuj-kumar-7aa58822b/',
-        instagram: 'https://www.instagram.com/anujkumar0017/'
+        linkedin: 'https://www.linkedin.com/in/spruha-kar-0a577b254/',
+        instagram: 'https://www.instagram.com/spruha_594?igsh=MWZtdzRwZjQwcDA2Nw%3D%3D'
       }
     },
     {
       id: '3',
-      url: './Team/Anshita_GARG.jpg',
-      title: 'Anshita Garg',
-      description: 'Secretary',
+      url: './Team/Aaryan_Agarwal.jpeg',
+      title: 'Aryan Agarwal',
+      description: 'Event Lead',
       social: {
-        linkedin: 'https://www.linkedin.com/in/anshita-garg-8286a5231/',
-        instagram: 'https://www.instagram.com/anshita3_/'
+        linkedin: 'https://www.linkedin.com/in/aaryan-agarwal-488582256?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+        instagram: 'https://www.instagram.com/aaryan_agarwal._?igsh=ajVwa2s1N2d1Mzlz'
       }
     },
     {
       id: '4',
-      url: './Team/Ritik_Gupta.jpg',
-      title: 'Ritik Gupta',
-      description: 'Secretary',
+      url: './Team/Kanav_Pahwa.jpg',
+      title: 'Kanav Pahwa',
+      description: 'Event Lead',
       social: {
-        linkedin: 'https://www.linkedin.com/in/ritik-gupta-amlo/',
-        instagram: 'https://www.instagram.com/ritikk_gupta_/'
+        linkedin: 'https://www.linkedin.com/in/kanavpahwa06/',
+        instagram: 'https://www.instagram.com/pahwa.kanav/'
       }
-    }
+    },
+    {
+        id: '5',
+        url: './Team/Yash_Arora.png',
+        title: 'Yash Arora',
+        description: 'Event Lead',
+        social: {
+          linkedin: 'https://www.linkedin.com/in/yash-arora-yashinpixels/',
+          instagram: 'https://www.instagram.com/iamyash.77/'
+        }
+      }
   ];
 
 // Social media icon component with animation
@@ -98,7 +108,7 @@ const SocialIcons = ({ social, isVisible }) => {
   );
 };
 
-function Sec() {
+function Event_lead() {
   const [hoveredMember, setHoveredMember] = useState(null);
 
   return (
@@ -109,7 +119,7 @@ function Sec() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <h1 className="text-5xl font-[Orbitron] font-extrabold mb-2">CHAPTERS : SECRETORY</h1>
+        <h1 className="text-5xl font-[Orbitron] font-extrabold mb-2">EVENT LEADS</h1>
         {/* <p className="text-lg text-gray-600 max-w-2xl mx-auto">
           Meet the talented individuals behind our success. Each member brings unique skills and perspectives to our work.
         </p> */}
@@ -121,7 +131,7 @@ function Sec() {
         <div className="hidden lg:block col-span-2">
           {[0, 1, 2].map((rowIndex) => (
             <div key={rowIndex} className={`group flex justify-center gap-2 w-full ${rowIndex === 1 ? 'lg:w-3/5' : 'lg:w-4/5'} mx-auto mb-10`}>
-              {teamMembers.slice(rowIndex * 4, rowIndex * 4 + 4).map((member) => (
+              {teamMembers.slice(rowIndex * 5, rowIndex * 5 + 5).map((member) => (
                 <motion.article 
                   key={member.id} 
                   className="group/article relative w-full rounded-xl overflow-hidden 
@@ -212,4 +222,4 @@ function Sec() {
   );
 }
 
-export default Sec;
+export default Event_lead;
