@@ -76,6 +76,24 @@ const GridLayout = ({ closeMenu }) => {
           <ScrollLink name="SPONSOR" />
         </Link>
         <Link
+          to="reveal"
+          smooth={true}
+          duration={1500}
+          offset={-100}
+          onClick={closeMenu}
+        >
+          <ScrollLink name="TRACKS" />
+        </Link>
+        <Link
+          to="team"
+          smooth={true}
+          duration={1500}
+          offset={-100}
+          onClick={closeMenu}
+        >
+          <ScrollLink name="TEAM" />
+        </Link>
+        <Link
           to="faqs"
           smooth={true}
           duration={1500}
