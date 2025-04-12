@@ -10,6 +10,8 @@ import AbtIEEE from "./_components/AboutVihaan/About-IEEE-Nav/IEEE";
 import FooterNew from "./_components/FooterNew/footerNew";
 import { Tracks } from "./_components/Tracks/Tracks";
 import Team from "./_components/Team"
+import Core_council from "./_components/Core_council";
+import Chairperson from "./_components/Chairperson";
 
 export default function Home() {
   return (
@@ -25,7 +27,8 @@ export default function Home() {
       {/* Id is given to it's component */}
       <div id="sponsor"><Sponsor/></div>
       <div id="faqs"><FAQ id="faqs"/></div>
-      {/* <div id="team"><Team/></div> */}
+      <div id="team"><Core_council/></div>
+      <div ><Chairperson/></div>
       {/* <Footer/>  */}
       {/* <Footer/>  */}
       <div id="footer"><FooterNew/></div>
