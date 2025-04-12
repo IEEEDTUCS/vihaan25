@@ -212,7 +212,7 @@ export default function TechTimeline() {
 
           {/* Timeline events */}
           {/* Desktop View */}
-          <div className="lg:flex hidden  items-center justify-between w-full z-10 px-10">
+          <div className="lg:flex hidden items-center justify-between w-full z-10 px-10">
             {timelineEvents.map((event, index) => (
               <div
                 key={event.id}

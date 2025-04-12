@@ -148,11 +148,13 @@ const SocialIcons = ({ social, isVisible }) => {
   );
 };
 
-function Core_council() {
+function Core_council({ visible }) {
   const [hoveredMember, setHoveredMember] = useState(null);
 
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className={`container mx-auto px-4 ${
+      visible ? "" : "hidden"
+  } py-12`}>
       <motion.div 
         className="text-center mb-12"
         initial={{ opacity: 0, y: 20 }}
