@@ -1,104 +1,112 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaLinkedin, FaTwitter, FaGithub, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 // Sample team data with 10 members and social media links
-const teamMembers = [
-  {
-    id: '1',
-    url: './Team/Rishab Dandriyal.jpeg',
-    title: 'Rishab Dandriyal',
-    description: 'Chairperson',
-    tags: ['Floral', 'Highlands', 'Wildflowers', 'Colorful', 'Resilience'],
-    social: {
-      linkedin: 'https://linkedin.com',
-      twitter: 'https://twitter.com',
-      github: 'https://github.com',
-      email: 'mailto:rishab@example.com'
+const teamMembers = 
+[
+    {
+      id: '1',
+      url: './Team/Supratim_Dey_Choudhury.png',
+      title: 'Supratim Dey Choudhury',
+      description: 'Public Relations',
+      social: {
+        linkedin: 'http://www.linkedin.com/in/supratimdeychoudhury',
+        instagram: 'https://www.instagram.com/__.supratim.dey.c.__?igsh=enR2dHgzbzEzMWk0'
+      }
+    },
+    {
+      id: '2',
+      url: './Team/Kinshuok_Munjal.png',
+      title: 'Kinshuok Munjal',
+      description: 'Technical and PR ',
+      social: {
+        linkedin: 'https://www.linkedin.com/in/kinshuok-munjal-54a2b9221/',
+        instagram: 'https://www.instagram.com/kinshuok/'
+      }
+    },
+    {
+      id: '3',
+      url: './Team/Vaishnavi_Saraswat.png',
+      title: 'Vaishnavi Saraswat',
+      description: 'External Affairs',
+      social: {
+        linkedin: 'https://www.linkedin.com/in/vaishnavi-saraswat-44967424b/',
+        instagram: 'https://www.instagram.com/vaishnavii_s04/'
+      }
+    },
+    {
+      id: '4',
+      url: './Team/Arjun_Pandita.png',
+      title: 'Arjun',
+      description: 'Corporate ',
+      social: {
+        linkedin: 'https://www.linkedin.com/in/arjun-pandita-594b5324b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+        instagram: 'https://www.instagram.com/arjun.pandita17?igsh=MW9qaXVwemoxanVoMg=='
+      }
+    },
+    {
+        id: '5',
+        url: './Team/Samarth.png',
+        title: 'Samarth',
+        description: 'Technical ',
+        social: {
+          linkedin: 'https://www.linkedin.com/in/samarthify/',
+          instagram: 'https://www.instagram.com/samarthify/'
+        }
+      
+    },
+    {
+      id: '6',
+      url: './Team/Prashant_Kaushik.png',
+      title: 'Prashant Kaushik',
+      description: 'External Affairs',
+      social: {
+        linkedin: 'https://www.linkedin.com/in/prashant-kaushik-55a6a1256?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
+        instagram: 'https://www.instagram.com/prashant_kaushik_22/'
+      }
+    },
+    {
+      id: '7',
+      url: './Team/Tasneem_Ahmed.png',
+      title: 'Tasneem Ahmed',
+      description: 'Operations & PR ',
+      social: {
+        linkedin: 'https://www.linkedin.com/in/tasneem-a-2b87b61a5',
+        instagram: 'https://www.instagram.com/tasneemahmed_28/'
+      }
+    },
+    {
+      id: '8',
+      url: './Team/Anshul_Agrawal.jpg',
+      title: 'Anshul Agrawal',
+      description: 'Corporate',
+      social: {
+        linkedin: 'https://www.linkedin.com/in/anshul--agrawal?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+        instagram: 'https://www.instagram.com/anshul._.agrawal?igsh=Zm11cmNrc2NiMjE2'
+      }
+    },
+    {
+      id: '9',
+      url: './Team/Ketan_Shankar.jpg',
+      title: 'Ketan Shankar',
+      description: 'Corporate ',
+      social: {
+        linkedin: 'https://www.linkedin.com/in/ketan-shankar-519306258/',
+        instagram: 'https://www.instagram.com/k10.shankar/'
+      }
+    },
+    {
+      id: '10',
+      url: './Team/Jasmeen_Kour.jpg',
+      title: 'Jasmeen Kour',
+      description: 'External Affairs',
+      social: {
+        linkedin: 'https://www.linkedin.com/in/jasmeen-kour-31b624261/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+      }
     }
-  },
-  {
-    id: '2',
-    url: './Team/Arijit Sen.jpg',
-    title: 'Arijit Sen',
-    description: 'Vice-Chairperson',
-    tags: ['Twilight', 'Peaks', 'Silhouette', 'Evening Sky', 'Peaceful'],
-    social: {
-      linkedin: 'https://linkedin.com',
-      twitter: 'https://twitter.com',
-      github: 'https://github.com',
-      email: 'mailto:supra@example.com'
-    }
-  },
-  {
-    id: '3',
-    url: './Team/AreebAhmedkhan.jpg',
-    title: 'Areeb Ahmed Khan',
-    description: 'General Secretary',
-    tags: ['Rocky', 'Ridges', 'Contrast', 'Adventure', 'Clouds'],
-    social: {
-      linkedin: 'https://linkedin.com',
-      twitter: 'https://twitter.com',
-      github: 'https://github.com',
-      email: 'mailto:yash@example.com'
-    }
-  },
-  {
-    id: '4',
-    url: './Team/Kurush Rastogi.jpeg',
-    title: 'Kurush Rastogi',
-    description: 'Joint Secretary',
-    tags: ['Backend', 'Database', 'Architecture', 'Problem Solver'],
-    social: {
-      linkedin: 'https://linkedin.com',
-      twitter: 'https://twitter.com',
-      github: 'https://github.com',
-      email: 'mailto:unnat@example.com'
-    }
-  },
-  {
-    id: '5',
-    url: './Team/Shashank Jha.jpg',
-    title: 'Shashank Jha',
-    description: 'Joint Secretary',
-    tags: ['Creative', 'Innovative', 'Detail-Oriented', 'UI/UX'],
-    social: {
-      linkedin: 'https://linkedin.com',
-      twitter: 'https://twitter.com',
-      github: 'https://github.com',
-      email: 'mailto:aryan@example.com'
-    }
-  },
-  
-  
-  {
-    id: '6',
-    url: './Team/AkarshRai.jpg',
-    title: 'Akarsh Rai',
-    description: 'Treasurer',
-    tags: ['Strategy', 'Analytics', 'Communication', 'Growth'],
-    social: {
-      linkedin: 'https://linkedin.com',
-      twitter: 'https://twitter.com',
-      github: 'https://github.com',
-      email: 'mailto:priya@example.com'
-    }
-  },
-  {
-    id: '7',
-    url: './Team/ashmit.png',
-    title: 'Ashmit Sharma',
-    description: 'Joint Treasurer',
-    tags: ['Roadmap', 'Strategy', 'Leadership', 'User-Focused'],
-    social: {
-      linkedin: 'https://linkedin.com',
-      twitter: 'https://twitter.com',
-      github: 'https://github.com',
-      email: 'mailto:david@example.com'
-    }
-  }
-];
+  ];
 
 // Social media icon component with animation
 const SocialIcons = ({ social, isVisible }) => {
@@ -133,43 +141,24 @@ const SocialIcons = ({ social, isVisible }) => {
         <FaLinkedin size={18} />
       </motion.a>
       <motion.a 
-        href={social.twitter} 
+        href={social.instagram} 
         target="_blank" 
         rel="noopener noreferrer"
         custom={1}
         variants={iconVariants}
         whileHover={{ scale: 1.2 }}
-        className="text-white hover:text-blue-500"
+        className="text-white hover:text-pink-500"
       >
-        <FaTwitter size={18} />
+        <FaInstagram size={18} />
       </motion.a>
-      <motion.a 
-        href={social.github} 
-        target="_blank" 
-        rel="noopener noreferrer"
-        custom={2}
-        variants={iconVariants}
-        whileHover={{ scale: 1.2 }}
-        className="text-white hover:text-gray-400"
-      >
-        <FaGithub size={18} />
-      </motion.a>
-      <motion.a 
-        href={social.email}
-        target="_blank" 
-        rel="noopener noreferrer"
-        custom={3}
-        variants={iconVariants}
-        whileHover={{ scale: 1.2 }}
-        className="text-white hover:text-red-400"
-      >
-        <FaEnvelope size={18} />
-      </motion.a>
+      
+     
+      
     </motion.div>
   );
 };
 
-function Dept_leads() {
+function Dept_lead() {
   const [hoveredMember, setHoveredMember] = useState(null);
 
   return (
@@ -180,7 +169,7 @@ function Dept_leads() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <h1 className="text-4xl font-bold mb-2">IEEE DTU TEAM</h1>
+        <h1 className="text-5xl font-[Orbitron] font-extrabold mb-2">DEPARTMENT LEADS</h1>
         {/* <p className="text-lg text-gray-600 max-w-2xl mx-auto">
           Meet the talented individuals behind our success. Each member brings unique skills and perspectives to our work.
         </p> */}
@@ -191,18 +180,18 @@ function Dept_leads() {
         {/* For large screens, create rows with the expanding/shrinking animation */}
         <div className="hidden lg:block col-span-2">
           {[0, 1, 2].map((rowIndex) => (
-            <div key={rowIndex} className="group flex justify-center gap-2 w-full lg:w-4/5 mx-auto mb-10">
-              {teamMembers.slice(rowIndex * 4, rowIndex * 4 + 4).map((member) => (
+            <div key={rowIndex} className={`group flex justify-center gap-2 w-full ${rowIndex === 1 ? 'lg:w-4/5' : 'lg:w-4/5'} mx-auto mb-10`}>
+              {teamMembers.slice(rowIndex * 5, rowIndex * 5 + 5).map((member) => (
                 <motion.article 
                   key={member.id} 
                   className="group/article relative w-full rounded-xl overflow-hidden 
-                    md:group-hover:[&:not(:hover)]:w-[70%] md:group-focus-within:[&:not(:focus-within):not(:hover)]:w-[20%] 
+                    md:group-hover:[&:not(:hover)]:w-[70%] md:group-focus-within:[&:not(:focus-within):not(:hover)]:w-[70%] 
                     transition-all duration-600 ease-[cubic-bezier(.5,.85,.25,1.15)] 
                     before:absolute before:inset-x-0 before:bottom-0 before:h-1/3 before:bg-gradient-to-t before:from-black/50 before:transition-opacity 
                     md:before:opacity-0 md:hover:before:opacity-100 focus-within:before:opacity-100 
                     after:opacity-0 md:group-hover:[&:not(:hover)]:after:opacity-100 md:group-focus-within:[&:not(:focus-within):not(:hover)]:after:opacity-100 
                     after:absolute after:inset-0 after:bg-black/30 after:backdrop-blur after:rounded-lg after:transition-all 
-                    focus-within:ring focus-within:ring-indigo-300"
+                    focus-within:ring focus-within:ring-[#A59188]"
                   onMouseEnter={() => setHoveredMember(member.id)}
                   onMouseLeave={() => setHoveredMember(null)}
                   whileHover={{ scale: 1 }}
@@ -221,11 +210,11 @@ function Dept_leads() {
                       {member.title}
                     </motion.h2>
                     <motion.span 
-                      className="text-md font-[KHInterference] md:whitespace-nowrap md:truncate md:opacity-0 
+                      className="text-md font-[KHInterference] md: md:truncate md:opacity-0 
                         group-hover/article:opacity-100 group-focus-within/article:opacity-100 md:translate-y-2 
                         group-hover/article:translate-y-0 group-focus-within/article:translate-y-0 
                         transition duration-200 ease-[cubic-bezier(.5,.85,.25,1.8)] 
-                        group-hover/article:delay-500 group-focus-within/article:delay-500"
+                        group-hover/article:delay-500 group-focus-within/article:delay-500  text-wrap"
                     >
                       {member.description}
                     </motion.span>
@@ -260,14 +249,14 @@ function Dept_leads() {
             onMouseLeave={() => setHoveredMember(null)}
           >
             <div
-              className="absolute inset-0 text-white z-10 p-4 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent"
+              className="absolute inset-0 text-white z-4 p-4 flex flex-col  justify-end bg-gradient-to-t from-black/60 to-transparent"
             >
               <h2 className="text-xl font-medium">{member.title}</h2>
               <span className="text-lg">{member.description}</span>
               
               <SocialIcons social={member.social} isVisible={hoveredMember === member.id} />
             </div>
-            <div className="h-64">
+            <div className="h-[450px]">
               <Image
                 className="object-cover h-full w-full"
                 src={member.url}
@@ -283,4 +272,4 @@ function Dept_leads() {
   );
 }
 
-export default Dept_leads;
+export default Dept_lead;

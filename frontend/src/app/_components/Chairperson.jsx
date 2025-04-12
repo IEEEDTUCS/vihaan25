@@ -7,95 +7,48 @@ import { FaLinkedin, FaInstagram } from 'react-icons/fa';
 const teamMembers = [
   {
     id: '1',
-    url: './Team/Rishab Dandriyal.jpeg',
-    title: 'Rishab Dandriyal',
-    description: 'Chairperson',
-    tags: ['Floral', 'Highlands', 'Wildflowers', 'Colorful', 'Resilience'],
+    url: './Team/Nikhil Kumar.jpg',
+    title: 'Nikhil Kumar',
+    description: 'CHAIRPERSON, CS',
     social: {
-      linkedin: 'https://linkedin.com',
-      instagram: 'https://instagram.com'
+      linkedin: 'https://www.linkedin.com/in/nikhilkumar04/',
+      instagram: 'https://www.instagram.com/nikhilkumar_0408/',
     }
   },
+
   {
     id: '2',
-    url: './Team/Arijit Sen.jpg',
-    title: 'Arijit Sen',
-    description: 'Vice-Chairperson',
-    tags: ['Twilight', 'Peaks', 'Silhouette', 'Evening Sky', 'Peaceful'],
+    url: './Team/Sidharth Kapoor.jpeg',
+    title: 'Sidharth Kapoor',
+    description: 'CHAIRPERSON, PES-IAS',
     social: {
-      linkedin: 'https://linkedin.com',
-      instagram: 'https://instagram.com',
-      github: 'https://github.com',
-      email: 'mailto:supra@example.com'
+      linkedin: 'https://www.linkedin.com/in/sidharth085/',
+      instagram: 'https://www.instagram.com/curious_sidharth/',
     }
   },
+
   {
     id: '3',
-    url: './Team/AreebAhmedkhan.jpg',
-    title: 'Areeb Ahmed Khan',
-    description: 'General Secretary',
-    tags: ['Rocky', 'Ridges', 'Contrast', 'Adventure', 'Clouds'],
+    url: './Team/om sahay-resized.jpg',
+    title: 'Om Shanker Sahay',
+    description: 'CHAIRPERSON, WIE',
     social: {
-      linkedin: 'https://linkedin.com',
-      instagram: 'https://instagram.com',
-      github: 'https://github.com',
-      email: 'mailto:yash@example.com'
+      linkedin: 'https://www.linkedin.com/in/om-shanker-sahay-688ab5224/',
+      instagram: 'https://www.instagram.com/omssahay_28/',
     }
   },
+
   {
     id: '4',
-    url: './Team/Kurush Rastogi.jpeg',
-    title: 'Kurush Rastogi',
-    description: 'Joint Secretary',
-    tags: ['Backend', 'Database', 'Architecture', 'Problem Solver'],
+    url: './Team/Rishabh Jain.jpg',
+    title: 'Rishabh Jain',
+    description: 'CHAIRPERSON, CASS',
     social: {
-      linkedin: 'https://linkedin.com',
-      instagram: 'https://instagram.com',
-      github: 'https://github.com',
-      email: 'mailto:unnat@example.com'
-    }
-  },
-  {
-    id: '5',
-    url: './Team/Shashank Jha.jpg',
-    title: 'Shashank Jha',
-    description: 'Joint Secretary',
-    tags: ['Creative', 'Innovative', 'Detail-Oriented', 'UI/UX'],
-    social: {
-      linkedin: 'https://linkedin.com',
-      instagram: 'https://instagram.com',
-      github: 'https://github.com',
-      email: 'mailto:aryan@example.com'
-    }
-  },
-  
-  
-  {
-    id: '6',
-    url: './Team/AkarshRai.jpg',
-    title: 'Akarsh Rai',
-    description: 'Treasurer',
-    tags: ['Strategy', 'Analytics', 'Communication', 'Growth'],
-    social: {
-      linkedin: 'https://linkedin.com',
-      instagram: 'https://instagram.com',
-      github: 'https://github.com',
-      email: 'mailto:priya@example.com'
-    }
-  },
-  {
-    id: '7',
-    url: './Team/ashmit.png',
-    title: 'Ashmit Sharma',
-    description: 'Joint Treasurer',
-    tags: ['Roadmap', 'Strategy', 'Leadership', 'User-Focused'],
-    social: {
-      linkedin: 'https://linkedin.com',
-      instagram: 'https://instagram.com',
-      github: 'https://github.com',
-      email: 'mailto:david@example.com'
+      linkedin: 'https://www.linkedin.com/in/rishabh-jain2601/',
+      instagram: 'https://www.instagram.com/rishabhjain_11/',
     }
   }
+
 ];
 
 // Social media icon component with animation
@@ -148,7 +101,7 @@ const SocialIcons = ({ social, isVisible }) => {
   );
 };
 
-function Core_council({ visible }) {
+function Chairperson({ visible }) {
   const [hoveredMember, setHoveredMember] = useState(null);
 
   return (
@@ -161,7 +114,7 @@ function Core_council({ visible }) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <h1 className="text-4xl font-bold mb-2">IEEE DTU TEAM</h1>
+         <h1 className="text-5xl font-[Orbitron] font-extrabold mb-2">CHAPTERS : CHAIRPERSON</h1>
         {/* <p className="text-lg text-gray-600 max-w-2xl mx-auto">
           Meet the talented individuals behind our success. Each member brings unique skills and perspectives to our work.
         </p> */}
@@ -172,18 +125,18 @@ function Core_council({ visible }) {
         {/* For large screens, create rows with the expanding/shrinking animation */}
         <div className="hidden lg:block col-span-2">
           {[0, 1, 2].map((rowIndex) => (
-            <div key={rowIndex} className="group flex justify-center gap-2 w-full lg:w-4/5 mx-auto mb-10">
+            <div key={rowIndex} className={`group flex justify-center gap-2 w-full ${rowIndex === 1 ? 'lg:w-3/5' : 'lg:w-4/5'} mx-auto mb-10`}>
               {teamMembers.slice(rowIndex * 4, rowIndex * 4 + 4).map((member) => (
                 <motion.article 
                   key={member.id} 
                   className="group/article relative w-full rounded-xl overflow-hidden 
-                    md:group-hover:[&:not(:hover)]:w-[70%] md:group-focus-within:[&:not(:focus-within):not(:hover)]:w-[20%] 
+                    md:group-hover:[&:not(:hover)]:w-[70%] md:group-focus-within:[&:not(:focus-within):not(:hover)]:w-[70%] 
                     transition-all duration-600 ease-[cubic-bezier(.5,.85,.25,1.15)] 
                     before:absolute before:inset-x-0 before:bottom-0 before:h-1/3 before:bg-gradient-to-t before:from-black/50 before:transition-opacity 
                     md:before:opacity-0 md:hover:before:opacity-100 focus-within:before:opacity-100 
                     after:opacity-0 md:group-hover:[&:not(:hover)]:after:opacity-100 md:group-focus-within:[&:not(:focus-within):not(:hover)]:after:opacity-100 
                     after:absolute after:inset-0 after:bg-black/30 after:backdrop-blur after:rounded-lg after:transition-all 
-                    focus-within:ring focus-within:ring-indigo-300"
+                    focus-within:ring focus-within:ring-[#A59188]"
                   onMouseEnter={() => setHoveredMember(member.id)}
                   onMouseLeave={() => setHoveredMember(null)}
                   whileHover={{ scale: 1 }}
@@ -241,14 +194,14 @@ function Core_council({ visible }) {
             onMouseLeave={() => setHoveredMember(null)}
           >
             <div
-              className="absolute inset-0 text-white z-10 p-4 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent"
+              className="absolute inset-0 text-white z-4 p-4 flex flex-col  justify-end bg-gradient-to-t from-black/60 to-transparent"
             >
               <h2 className="text-xl font-medium">{member.title}</h2>
               <span className="text-lg">{member.description}</span>
               
               <SocialIcons social={member.social} isVisible={hoveredMember === member.id} />
             </div>
-            <div className="h-64">
+            <div className="h-[450px]">
               <Image
                 className="object-cover h-full w-full"
                 src={member.url}
@@ -264,4 +217,4 @@ function Core_council({ visible }) {
   );
 }
 
-export default Core_council;
+export default Chairperson;

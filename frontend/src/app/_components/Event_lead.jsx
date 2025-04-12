@@ -4,83 +4,59 @@ import { motion } from 'framer-motion';
 import { FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 // Sample team data with 10 members and social media links
-const teamMembers = [
+const teamMembers = 
+[
     {
-        id: '1',
-        url: './Team/Rishab Dandriyal.jpeg',
-        title: 'Rishab Dandriyal',
-        description: 'Chairperson',
-        social: {
-          linkedin: 'https://www.linkedin.com/in/rishab-dandriyal-45160122a/',
-          instagram: 'https://www.instagram.com/rintaro_rd/',
-        }
-      },
-    
-      {
-        id: '2',
-        url: './Team/Arijit Sen.jpg',
-        title: 'Arijit Sen',
-        description: 'Vice-Chairperson',
-        social: {
-          linkedin: 'https://www.linkedin.com/in/arijit-sen-118083233/',
-          instagram: 'https://www.instagram.com/aj.arijit/',
-        }
-      },
-    
-      {
-        id: '3',
-        url: './Team/AreebAhmedkhan.jpg',
-        title: 'Areeb Ahmed Khan',
-        description: 'General Secretary',
-        social: {
-          linkedin: 'https://www.linkedin.com/in/areeb22/',
-          instagram: 'https://www.instagram.com/khan_areeb22/',
-        }
-      },
-    
-      {
-        id: '4',
-        url: './Team/Kurush Rastogi.jpeg',
-        title: 'Kurush Rastogi',
-        description: 'Joint Secretary',
-        social: {
-          linkedin: 'https://www.linkedin.com/in/kurush-rastogi/',
-          instagram: 'https://www.instagram.com/kurush_rastogi/',
-        }
-      },
-    
-      {
+      id: '1',
+      url: './Team/Abhimanyu_Jha.jpg',
+      title: 'Abhimanyu Jha',
+      description: 'Event Lead',
+      social: {
+        linkedin: 'https://www.linkedin.com/in/abhimanyu-kumar-jha/',
+        instagram: 'https://www.instagram.com/abhimanyu_kumar_2210/'
+      }
+    },
+    {
+      id: '2',
+      url: './Team/Spruha_Kar.jpg',
+      title: 'Spruha Kar',
+      description: 'Event Lead',
+      social: {
+        linkedin: 'https://www.linkedin.com/in/spruha-kar-0a577b254/',
+        instagram: 'https://www.instagram.com/spruha_594?igsh=MWZtdzRwZjQwcDA2Nw%3D%3D'
+      }
+    },
+    {
+      id: '3',
+      url: './Team/Aaryan_Agarwal.jpeg',
+      title: 'Aryan Agarwal',
+      description: 'Event Lead',
+      social: {
+        linkedin: 'https://www.linkedin.com/in/aaryan-agarwal-488582256?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+        instagram: 'https://www.instagram.com/aaryan_agarwal._?igsh=ajVwa2s1N2d1Mzlz'
+      }
+    },
+    {
+      id: '4',
+      url: './Team/Kanav_Pahwa.jpg',
+      title: 'Kanav Pahwa',
+      description: 'Event Lead',
+      social: {
+        linkedin: 'https://www.linkedin.com/in/kanavpahwa06/',
+        instagram: 'https://www.instagram.com/pahwa.kanav/'
+      }
+    },
+    {
         id: '5',
-        url: './Team/Shashank Jha.jpg',
-        title: 'Shashank Jha',
-        description: 'Joint Secretary',
+        url: './Team/Yash_Arora.png',
+        title: 'Yash Arora',
+        description: 'Event Lead',
         social: {
-          linkedin: 'https://www.linkedin.com/in/shashank-jha-7843b01aa/',
-          instagram: 'https://www.instagram.com/meshashankjha/',
-        }
-      },
-      
-      {
-        id: '6',
-        url: './Team/AkarshRai.jpg',
-        title: 'Akarsh Rai',
-        description: 'Treasurer',
-        social: {
-          linkedin: 'https://www.linkedin.com/in/akarsh-rai-452311229/',
-          instagram: 'https://www.instagram.com/i_akarsh_rai/',
-        }
-      },
-    
-      {
-        id: '7',
-        url: './Team/ashmit.png',
-        title: 'Ashmit Sharma',
-        description: 'Joint Treasurer',
-        social: {
-          linkedin: 'https://www.linkedin.com/in/ashmit-sharma-023490227/',
+          linkedin: 'https://www.linkedin.com/in/yash-arora-yashinpixels/',
+          instagram: 'https://www.instagram.com/iamyash.77/'
         }
       }
-];
+  ];
 
 // Social media icon component with animation
 const SocialIcons = ({ social, isVisible }) => {
@@ -132,20 +108,18 @@ const SocialIcons = ({ social, isVisible }) => {
   );
 };
 
-function Core_council({ visible }) {
+function Event_lead() {
   const [hoveredMember, setHoveredMember] = useState(null);
 
   return (
-    <div className={`container mx-auto px-4 ${
-      visible ? "" : "hidden"
-  } py-12`}>
+    <div className="container mx-auto px-4 py-12">
       <motion.div 
         className="text-center mb-12"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-         <h1 className="text-5xl font-[Orbitron] font-extrabold mb-2">CORE COUNCIL</h1>
+        <h1 className="text-5xl font-[Orbitron] font-extrabold mb-2">EVENT LEADS</h1>
         {/* <p className="text-lg text-gray-600 max-w-2xl mx-auto">
           Meet the talented individuals behind our success. Each member brings unique skills and perspectives to our work.
         </p> */}
@@ -157,7 +131,7 @@ function Core_council({ visible }) {
         <div className="hidden lg:block col-span-2">
           {[0, 1, 2].map((rowIndex) => (
             <div key={rowIndex} className={`group flex justify-center gap-2 w-full ${rowIndex === 1 ? 'lg:w-3/5' : 'lg:w-4/5'} mx-auto mb-10`}>
-              {teamMembers.slice(rowIndex * 4, rowIndex * 4 + 4).map((member) => (
+              {teamMembers.slice(rowIndex * 5, rowIndex * 5 + 5).map((member) => (
                 <motion.article 
                   key={member.id} 
                   className="group/article relative w-full rounded-xl overflow-hidden 
@@ -248,4 +222,4 @@ function Core_council({ visible }) {
   );
 }
 
-export default Core_council;
+export default Event_lead;
