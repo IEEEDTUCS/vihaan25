@@ -29,7 +29,7 @@ const teamMembers = [
 
   {
     id: "3",
-    url: "./Team/AreebAhmedkhan.jpg",
+    url: "./Team/Areeb_Ahmed_Khan.jpg",
     title: "Areeb Ahmed Khan",
     description: "General Secretary",
     social: {
