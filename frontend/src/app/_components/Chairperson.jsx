@@ -101,11 +101,13 @@ const SocialIcons = ({ social, isVisible }) => {
   );
 };
 
-function Chairperson() {
+function Chairperson({ visible }) {
   const [hoveredMember, setHoveredMember] = useState(null);
 
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className={` container ${
+      visible ? "" : "hidden"
+  } mx-auto px-4 py-12 hidden`}>
       <motion.div 
         className="text-center mb-12"
         initial={{ opacity: 0, y: 20 }}

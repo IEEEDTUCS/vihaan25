@@ -22,7 +22,7 @@ function useIsMobile(breakpoint = 768) {
   return isMobile;
 }
 
-export const Tracks = () => {
+export const Tracks = ({ visible }) => {
   const flipBookRef = useRef(null);
 
   // const [isMobile, setIsMobile] = useState(false);
@@ -93,7 +93,7 @@ export const Tracks = () => {
 
   return (
     <>
-    <div className="overflow-hidden">
+    <div className={`overflow-hidden `}>
       <p className="md:text-7xl text-4xl tracking-widest font-bold  font-khinterference flex justify-center md:mt-32">
         Tracks
       </p>

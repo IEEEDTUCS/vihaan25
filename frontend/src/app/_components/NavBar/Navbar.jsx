@@ -64,6 +64,12 @@ const Navbar = ({ isHidden }) => {
                 <Link to="schedule" smooth duration={1500} offset={-100}>
                   <ScrollLink name="SCHEDULE" />
                 </Link>
+                <Link to="reveal" smooth duration={1500} offset={-100}>
+                  <ScrollLink name="TRACKS" />
+                </Link>
+                <Link to="team" smooth duration={1500} offset={-100}>
+                  <ScrollLink name="TEAM" />
+                </Link>
                 <Link to="sponsor" smooth duration={1500} offset={-100}>
                   <ScrollLink name="SPONSOR" />
                 </Link>
