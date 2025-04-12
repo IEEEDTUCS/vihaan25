@@ -104,11 +104,18 @@ const Reveal = () => {
         )}
       </div>
 
-      {/* <Tracks visible={footerVisible} /> */}
+      <div id="team">
       <Core_council visible={footerVisible} />
+      </div>
+      <div>
       <Chairperson  visible={footerVisible} />
+      </div>
+      <div id="sponsor">
       <Sponsor visible={footerVisible}></Sponsor>
+      </div> 
+      <div id="faqs">
       <FAQ visible={footerVisible}></FAQ>
+      </div>
       <FooterNew visible={footerVisible} />
       
     </>

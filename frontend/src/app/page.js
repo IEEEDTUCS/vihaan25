@@ -25,10 +25,11 @@ export default function Home() {
       <div id="reveal"><Reveal/></div>
       {/* <div id="tracks" ><Tracks/></div> */}
       {/* Id is given to it's component */}
-      <div id="sponsor"><Sponsor/></div>
-      <div id="faqs"><FAQ id="faqs"/></div>
       <div id="team"><Core_council/></div>
       <div ><Chairperson/></div>
+      <div id="sponsor"><Sponsor/></div>
+      <div id="faqs"><FAQ id="faqs"/></div>
+      
       {/* <Footer/>  */}
       {/* <Footer/>  */}
       <div id="footer"><FooterNew/></div>
