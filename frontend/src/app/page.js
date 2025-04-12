@@ -23,12 +23,13 @@ export default function Home() {
       <div id="IEEEsection"><AbtIEEE/></div>
       <div ><EventSchedule/></div>
       <div id="reveal"><Reveal/></div>
-      {/* <div id="tracks" className="relative min-h-screen"><Tracks/></div> */}
+      {/* <div id="tracks" ><Tracks/></div> */}
       {/* Id is given to it's component */}
-      <div id="sponsor"><Sponsor/></div>
-      <div id="faqs"><FAQ id="faqs"/></div>
       <div id="team"><Core_council/></div>
       <div ><Chairperson/></div>
+      <div id="sponsor"><Sponsor/></div>
+      <div id="faqs"><FAQ id="faqs"/></div>
+      
       {/* <Footer/>  */}
       {/* <Footer/>  */}
       <div id="footer"><FooterNew/></div>

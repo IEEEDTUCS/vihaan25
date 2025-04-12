@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import FooterNew from "@components/FooterNew/footerNew";
 import Sponsor from "@components/Sponsor";
 import FAQ from "@components/FAQ/faq";
+import Core_council from "@components/Core_council";
+import Chairperson from "@components/Chairperson";
 
 const Reveal = () => {
   const secondSectionRef = useRef(null);
@@ -15,7 +17,7 @@ const Reveal = () => {
   const [clockSrc, setClockSrc] = useState("/svg/GlowClock.svg");
 
   const handleReveal = () => {
-    setClockClicked(true); // trigger animation
+    setClockClicked(true); 
 
     // After 3s animation, reveal everything
     setTimeout(() => {
@@ -77,7 +79,7 @@ const Reveal = () => {
               }
               transition={
                 clockClicked && clockSrc === "/svg/GlowClock.svg"
-                  ? { duration: 3.4, ease: "easeInOut", repeat: 0 }
+                  ? { duration: 2.5, ease: "easeInOut", repeat: 0 }
                   : {}
               }
             />
@@ -88,7 +90,7 @@ const Reveal = () => {
         {revealed && (
           <section
             ref={secondSectionRef}
-            className="snap-end h-screen my-[20%] max-[1280px]:my-[35%] max-[500px]:my-[40%] flex items-center justify-center px-4"
+            className="snap-end h-screen my-[20%] max-[1280px]:my-[35%] max-[500px]:my-[40%] max-[400px]:my-[50%] flex items-center justify-center px-4"
           >
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -101,10 +103,21 @@ const Reveal = () => {
           </section>
         )}
       </div>
-      
+
+      <div id="team">
+      <Core_council visible={footerVisible} />
+      </div>
+      <div>
+      <Chairperson  visible={footerVisible} />
+      </div>
+      <div id="sponsor">
       <Sponsor visible={footerVisible}></Sponsor>
+      </div> 
+      <div id="faqs">
       <FAQ visible={footerVisible}></FAQ>
+      </div>
       <FooterNew visible={footerVisible} />
+      
     </>
   );
 };

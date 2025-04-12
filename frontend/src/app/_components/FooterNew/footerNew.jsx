@@ -40,9 +40,9 @@ export default function FooterNew({ visible }) {
                         <p className="text-base">Delhi Technological University</p>
                     </div>
                     <div className="w-full h-[160px] rounded overflow-hidden shadow-md">
-                       {/* <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
+                       <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
                             <CustomMap />
-                        </APIProvider> */}
+                        </APIProvider>
           </div>
         </div>
 
