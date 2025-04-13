@@ -43,11 +43,7 @@ export default function FooterNew({ visible }) {
                             <CustomMap />
                         </APIProvider>
           </div>
-          <div className="w-full h-[160px] rounded overflow-hidden shadow-md">
-            <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
-              <CustomMap />
-            </APIProvider>
-          </div>
+          
         </div>
 
         <div className="flex flex-col w-[320px]">
