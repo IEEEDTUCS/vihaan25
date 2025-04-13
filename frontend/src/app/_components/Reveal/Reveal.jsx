@@ -2,11 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "@/app/globals.css";
 import { Tracks } from "@components/Tracks/Tracks";
 import { motion } from "framer-motion";
-import FooterNew from "@components/FooterNew/footerNew";
-import Sponsor from "@components/Sponsor";
-import FAQ from "@components/FAQ/faq";
-import Core_council from "@components/Core_council";
-import Chairperson from "@components/Chairperson";
+import Prizes from "@components/Prize/Prizes";
 
 const Reveal = () => {
   const secondSectionRef = useRef(null);
@@ -53,7 +49,7 @@ const Reveal = () => {
         {!shouldHideIntro && (
           <section className={`snap-end my-[10%] flex flex-col justify-end items-center transition-all duration-1000`}>
             <h1 className={`font-khinterference text-4xl tracking-widest text-center`}>
-              {revealed ? "Explore the Tracks!" : "Tap to Reveal Tracks!"}
+              {revealed ? "Explore the Tracks!" : "Tap to Reveal Prizes!"}
             </h1>
 
             <motion.img
@@ -90,7 +86,7 @@ const Reveal = () => {
         {revealed && (
           <section
             ref={secondSectionRef}
-            className="snap-end h-screen my-[20%] max-[1280px]:my-[35%] max-[500px]:my-[40%] max-[400px]:my-[50%] flex items-center justify-center px-4"
+            className="snap-end h-screen flex items-center justify-center px-4"
           >
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -98,7 +94,7 @@ const Reveal = () => {
               transition={{ duration: 3 }}
               className=" w-full mx-auto"
             >
-              <Tracks />
+              <Prizes />
             </motion.div>
           </section>
         )}

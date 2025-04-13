@@ -26,7 +26,7 @@ export default function Home() {
       <div id="IEEEsection"><AbtIEEE/></div>
       <div ><EventSchedule/></div>
       <div id="reveal"><Reveal/></div>
-      {/* <div id="tracks" ><Tracks/></div> */}
+      <div id="tracks" ><Tracks/></div>
       <div id="sponsor"><Sponsor/></div>
       <div id="team"><Full_team/></div>
       <div id="faqs"><FAQ /></div>
