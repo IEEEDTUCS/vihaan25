@@ -130,7 +130,7 @@ export const Tracks = ({ visible }) => {
               className={i % 2 === 0 ? "Book-left-page" : "Book-right-page"}
             >
               <div className="p-5 pl-10 w-full h-full flex flex-col justify-start items-start ">
-                <h2 className="text-2xl bg-[url(/svg/Trackhead.svg)] p-9 -rotate-9 bg-cover bg-center font-black mb-4 tracking-widest text-[#38180A] opacity-90 font-khinterference">
+                <h2 className="text-2xl bg-[url(/svg/Trackhead.svg)] p-9 pr-13 -rotate-9 bg-cover bg-center font-black mb-4 tracking-widest text-[#38180A] opacity-90 font-khinterference">
                   {item.title} 
                  
                 </h2>
