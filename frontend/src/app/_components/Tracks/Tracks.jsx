@@ -34,66 +34,65 @@ export const Tracks = ({ visible }) => {
     {
       title: "Esports",
       content:
-        "Dive into the booming world of competitive gaming. From tournament management platforms and real-time stat tracking to AI-powered coaching assistants and virtual arenas, redefine how players and fans experience esports. Think beyond just games—build communities, engagement tools, and monetization platforms for gamers and organizers alike.",
+        "Get ready to dive into the exciting ESports/Game Development Track, where you can unleash your creativity and build your very own 2D or 3D game! With no restrictions on game engines, themes, or genres, the possibilities are endless—whether you want to craft an epic adventure, a thrilling action game, or a visually stunning masterpiece. This is your chance to showcase your innovation and wow the judges with your indie creation.",
     },
     {
       title: "Transportation",
       content:
-        "Rethink how people and goods move. Develop intelligent transport systems, ride-sharing algorithms, traffic flow optimizers, or eco-friendly logistics solutions. Focus on real-time data usage, accessibility, automation, or even futuristic ideas like drone delivery and autonomous vehicles. Make transit faster, safer, and greener.",
+        "Step into the Transportation Track and create cutting-edge solutions to transform how we travel and transport goods. From optimizing urban mobility to enhancing logistics systems, this track is your chance to tackle real-world challenges like traffic congestion, safety, and sustainability. Whether it’s building smart navigation tools, AI-powered transport systems, or eco-friendly logistics solutions, let your innovation drive the future of transportation.",
     },
     {
       title: "Women Safety",
       content:
-        "Empower women through technology by designing innovative safety-focused solutions. Work on emergency alert systems, location tracking with privacy-first approaches, community-driven support apps, AI surveillance for detecting threats, or wearable tech for real-time protection. Let your tech foster freedom and confidence.",
+        "The Women Safety track in Vihaan 8.0 shines as a beacon of innovation, focusing on crucial issues like enhanced security systems, real-time safety alerts, self-defense technology, and reliable emergency response platforms. In today’s world, solutions addressing harassment, stalking, and digital safety are urgently needed to empower and protect women. Together, let’s design breakthroughs that foster independence and make the world safer and brighter for every woman!",
     },
     {
       title: "Sustainability",
       content:
-        "Help build a greener tomorrow with tech-driven sustainability projects. Create solutions that reduce carbon emissions, track environmental impact, promote circular economies, or enhance urban green planning. Explore areas like smart agriculture, eco-friendly products, recycling innovation, and climate change education tools.",
+        "Join the Sustainability Track to tackle pressing environmental challenges and create impactful solutions for a better tomorrow. Whether it’s reducing carbon footprints, improving recycling systems, or developing renewable energy innovations, this track is your opportunity to drive meaningful change. Use technology to address issues like climate change, biodiversity loss, and sustainable resource management. Let your ideas shape a cleaner, greener, and more sustainable world!",
     },
     {
       title: "Healthcare",
       content:
-        "Improve the quality and accessibility of healthcare through smart, scalable innovations. Think telehealth platforms, wearable health monitors, early disease detection with AI, mental wellness solutions, or data-driven hospital resource management. Whether preventive or reactive, tech can save lives—literally.",
+        "The Healthcare track in Vihaan 8.0 focuses on groundbreaking solutions to tackle pressing challenges like modern diagnostics, efficient patient care, telemedicine, mental health support, chronic disease management, and accessible treatment. Combining innovation with empathy, this track empowers participants to revolutionize healthcare systems and redefine standards of well-being. Let’s craft technologies that heal, protect, and pave the way for a healthier tomorrow for individuals and communities!",
     },
     {
       title: "Security",
       content:
-        "In a world that’s more connected than ever, security is everything. Build tools for cybersecurity, digital identity protection, fraud detection, encrypted communications, or physical security systems powered by IoT and AI. Tackle threats before they become crises and keep the digital and real world safe.",
+        "In this world of the internet, the Security track  calls upon innovators to build innovative solutions that safeguard our digital world. This track challenges participants to tackle critical issues such as cyber threat detection, data privacy, secure communication, digital identity protection and physical safety systems. Whether it's protecting data against cyberattacks or protecting critical infrastructure, your ideas can become the shield that keeps our future safe.Let’s create technologies that protect, empower and inspire confidence!",
     },
     {
       title: "Education",
       content:
-        "Reshape the future of learning through engaging, accessible, and adaptive technologies. Create platforms for remote and hybrid education, interactive learning modules using AR/VR, AI tutors, or inclusive tools for students with disabilities. Help close the learning gap and make quality education universal.",
+        "With education evolving in this digital era, the Education track invites young minds to craft impactful solutions that transform how we learn, teach, and grow by solving pressing challenges like accessible learning, personalized education, virtual classrooms, skill-based development and inclusive educational platforms.Whether it’s enhancing digital learning experiences or making education more engaging let’s build technologies that enlighten minds, unlock potential and lead the way for a bright future!",
     },
     {
       title: "Fintech",
       content:
-        "Transform the financial landscape with disruptive innovation. From budgeting apps and micro-investment platforms to decentralized finance (DeFi), fraud analytics, and inclusive banking—create tech that makes managing money smarter, safer, and available to everyone, everywhere.",
+        "Smooth transactions, accessible financial tools are redefining the way we interact with money. The Swift Commerce / Fintech track wants changemakers to solve problems with technology-driven solutions. Whether it's frictionless digital payments, AI-powered financial insights, blockchain-backed security , tools that promote financial inclusion, this is to innovate boldly.Let’s build the next wave of fintech that transforms how the world earns, spends, and saves",
     },
   ];
 
   const goToPage = (targetIndex) => {
     const book = flipBookRef.current.pageFlip();
     const currentPage = book.getCurrentPageIndex();
-    if (targetIndex % 2 != 0) targetIndex = targetIndex - 1;
-
-    if (targetIndex === currentPage) return;
-
-    const flipInterval = setInterval(() => {
-      const newIndex = book.getCurrentPageIndex();
-      if (newIndex === targetIndex) {
-        clearInterval(flipInterval);
-      } else {
-        if (targetIndex > newIndex) book.flipNext();
-        else book.flipPrev();
-      }
-    }, 1000);
+  
+    let pageIndex = targetIndex;
+  
+    if (!isMobile) {
+      //for desktop view
+      pageIndex = targetIndex % 2 === 0 ? targetIndex : targetIndex - 1;
+    }
+    //otherwise js iterate normally 
+    if (pageIndex !== currentPage) {
+      book.flip(pageIndex);
+    }
   };
+  
 
   return (
     <>
-    <div className={`overflow-hidden `}>
+    <div className={"overflow-hidden"}>
       <p className="md:text-7xl text-4xl tracking-widest font-bold  font-khinterference flex justify-center md:mt-32">
         Tracks
       </p>
@@ -119,7 +118,7 @@ export const Tracks = ({ visible }) => {
           drawShadow
           showCover={false}
           className="shadow-2xl bg-none block pl-5"
-          mobileScrollSupport={true}
+          mobileScrollSupport={false}
           ref={flipBookRef}
           autoSize={true}
         >
@@ -170,9 +169,9 @@ const Page = React.forwardRef(({ children, className }, ref) => {
   );
 });
 
-const MyBotton = ({ children }) => {
+const MyBotton = ({ children,  onClick }) => {
   return (
-    <div className="flex cursor-pointer justify-center items-center text-center text-nowrap px-4 py-2 bg-Button text-[#a89a84] font-orbitron font-bold">
+    <div onClick={onClick} className="flex cursor-pointer justify-center items-center text-center text-nowrap px-4 py-2 bg-Button text-[#a89a84] font-orbitron font-bold select-none">
       {children}
     </div>
   );
