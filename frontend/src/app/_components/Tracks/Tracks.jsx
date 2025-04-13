@@ -97,7 +97,7 @@ export const Tracks = ({ visible }) => {
       <p className="md:text-7xl text-4xl tracking-widest font-bold  font-khinterference flex justify-center md:mt-32">
         Tracks
       </p>
-      <div className="flex flex-col items-center justify-center w-full relative gap-4 mt-0 h-fit pb-20 pt-10 md:bg-[url(/Book.png)]  bg-contain bg-no-repeat bg-center">
+      <div className="flex flex-col items-center justify-center w-full relative gap-4 mt-0 h-fit pb-20 pt-10 md:bg-[url(/Book.png)] bg-contain bg-no-repeat bg-center">
         {/* bg-[url(/MobileBook.png)] */}
         {/* <Image
           src="/Book.png"
@@ -129,11 +129,12 @@ export const Tracks = ({ visible }) => {
               number={i + 1}
               className={i % 2 === 0 ? "Book-left-page" : "Book-right-page"}
             >
-              <div className="p-14 w-full h-full flex flex-col justify-start items-start ">
-                <h2 className="text-2xl font-black mb-4 text-blue-900 font-khinterference">
-                  {item.title}
+              <div className="p-5 pl-10 w-full h-full flex flex-col justify-start items-start ">
+                <h2 className="text-2xl bg-[url(/svg/Trackhead.svg)] p-9 -rotate-9 bg-cover bg-center font-black mb-4 tracking-widest text-[#38180A] opacity-90 font-khinterference">
+                  {item.title} 
+                 
                 </h2>
-                <p className="text-sm text-gray-800 font-khinterference">
+                <p className="text-sm w-[75%] bg-[url(/svg/Trackpage.svg)] p-5 pt-25 bg-origin-border bg-cover bg-center text-[#361919] tracking-wide font-khinterference">
                   {item.content}
                 </p>
               </div>

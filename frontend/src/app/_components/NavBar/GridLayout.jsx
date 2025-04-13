@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-scroll";
 import ScrollLink from "./assets/ScrollLink";
+import { motion } from "framer-motion";
 
 const GridLayout = ({ closeMenu }) => {
   return (
@@ -25,7 +26,7 @@ const GridLayout = ({ closeMenu }) => {
         style={{
           gridRow: "1",
           display: "flex",
-          justifyContent: "center",
+          justifyContent: "space-between",
           alignItems: "center",
         }}
       >
@@ -37,6 +38,7 @@ const GridLayout = ({ closeMenu }) => {
             alt=""
           />
         </div>
+              <button onClick={closeMenu}><img src="/svg/faqIcon.svg" alt="Menu toggle" className="rotate-45" /></button>
       </div>
       <div className="flex flex-col space-y-12 mt-20 text-2xl ">
         <Link

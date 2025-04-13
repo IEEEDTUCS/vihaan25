@@ -87,12 +87,14 @@ func HandleGoogleRedirect(c echo.Context) error {
 
 	cookie, err := c.Cookie("oauthstate")
 	if err != nil || cookie.Value != stateObj.State {
+		log.Error(err)
 		return echo.NewHTTPError(http.StatusUnauthorized, "Invalid OAuth state")
 	}
 
 	code := c.QueryParam("code")
 	token, err := ctx.OAuthConfig.Exchange(context.Background(), code)
 	if err != nil {
+		log.Error(err)
 		return echo.NewHTTPError(http.StatusInternalServerError, "Failed to exchange token")
 	}
 

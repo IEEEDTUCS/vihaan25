@@ -7,7 +7,7 @@ import FAQ from "./_components/FAQ/faq";
 
 import Footer from "./_components/FooterNew/footerNew";
 import AbtIEEE from "./_components/AboutVihaan/About-IEEE-Nav/IEEE";
-
+import Reveal from "./_components/Reveal/Reveal"
 import { Tracks } from "./_components/Tracks/Tracks";
 
 import Core_council from "./_components/Core_council";
@@ -25,7 +25,7 @@ export default function Home() {
       <div id="about"><About/></div>
       <div id="IEEEsection"><AbtIEEE/></div>
       <div ><EventSchedule/></div>
-      {/* <div id="reveal"><Reveal/></div> */}
+      <div id="reveal"><Reveal/></div>
       <div id="tracks" ><Tracks/></div>
       <div id="sponsor"><Sponsor/></div>
       <div id="team"><Full_team/></div>

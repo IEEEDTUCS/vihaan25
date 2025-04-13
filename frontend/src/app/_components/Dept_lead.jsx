@@ -105,7 +105,54 @@ const teamMembers =
       social: {
         linkedin: 'https://www.linkedin.com/in/jasmeen-kour-31b624261/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
       }
-    }
+    },
+    {
+        id: '11',
+        url: './Team/Khobaib.jpg',
+        title: 'Khobaib Akmal',
+        description: 'Operations',
+        social: {
+          linkedin: 'https://www.linkedin.com/in/jasmeen-kour-31b624261/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+            instagram: 'https://www.instagram.com/kdotakmal/'
+        }
+      },
+      {
+        id: '12',
+        url: './Team/vg.jpeg',
+        title: 'Vaibhav Gautam',
+        description: 'Logistics',
+        social: {
+          linkedin: 'https://www.linkedin.com/in/vaibhav-gautam-55772721b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+            instagram: 'https://www.instagram.com/vaibhavgautam98?igsh=MWhzZHlrNnluaW5mbw=='
+        }
+      }
+    //   {
+    //     id: '13',
+    //     url: './Team/Jasmeen_Kour.jpg',
+    //     title: 'Jasmeen Kour',
+    //     description: 'External Affairs',
+    //     social: {
+    //       linkedin: 'https://www.linkedin.com/in/jasmeen-kour-31b624261/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    //     }
+    //   },
+    //   {
+    //     id: '14',
+    //     url: './Team/Jasmeen_Kour.jpg',
+    //     title: 'Jasmeen Kour',
+    //     description: 'External Affairs',
+    //     social: {
+    //       linkedin: 'https://www.linkedin.com/in/jasmeen-kour-31b624261/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    //     }
+    //   },
+    //   {
+    //     id: '15',
+    //     url: './Team/Jasmeen_Kour.jpg',
+    //     title: 'Jasmeen Kour',
+    //     description: 'External Affairs',
+    //     social: {
+    //       linkedin: 'https://www.linkedin.com/in/jasmeen-kour-31b624261/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    //     }
+    //   }
   ];
 
 // Social media icon component with animation
@@ -179,61 +226,74 @@ function Dept_lead() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
         {/* For large screens, create rows with the expanding/shrinking animation */}
         <div className="hidden lg:block col-span-2">
-          {[0, 1, 2].map((rowIndex) => (
-            <div key={rowIndex} className={`group flex justify-center gap-2 w-full ${rowIndex === 1 ? 'lg:w-4/5' : 'lg:w-4/5'} mx-auto mb-10`}>
-              {teamMembers.slice(rowIndex * 5, rowIndex * 5 + 5).map((member) => (
-                <motion.article 
-                  key={member.id} 
-                  className="group/article relative w-full rounded-xl overflow-hidden 
-                    md:group-hover:[&:not(:hover)]:w-[70%] md:group-focus-within:[&:not(:focus-within):not(:hover)]:w-[70%] 
-                    transition-all duration-600 ease-[cubic-bezier(.5,.85,.25,1.15)] 
-                    before:absolute before:inset-x-0 before:bottom-0 before:h-1/3 before:bg-gradient-to-t before:from-black/50 before:transition-opacity 
-                    md:before:opacity-0 md:hover:before:opacity-100 focus-within:before:opacity-100 
-                    after:opacity-0 md:group-hover:[&:not(:hover)]:after:opacity-100 md:group-focus-within:[&:not(:focus-within):not(:hover)]:after:opacity-100 
-                    after:absolute after:inset-0 after:bg-black/30 after:backdrop-blur after:rounded-lg after:transition-all 
-                    focus-within:ring focus-within:ring-[#A59188]"
-                  onMouseEnter={() => setHoveredMember(member.id)}
-                  onMouseLeave={() => setHoveredMember(null)}
-                  whileHover={{ scale: 1 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <div
-                    className="absolute inset-0 text-white z-10 p-4 flex flex-col justify-end"
+          {[0, 1, 2].map((rowIndex) => {
+            const imagesInRow = teamMembers.slice(rowIndex * 5, rowIndex * 5 + 5).length;
+            
+            return (
+              <div
+                key={rowIndex}
+                className={`group flex justify-center gap-2 w-full ${
+                  imagesInRow === 5 ? 'lg:w-full' : 
+                  imagesInRow === 4 ? 'lg:w-[85%]' :
+                  imagesInRow === 3 ? 'lg:w-[65%]' :
+                  imagesInRow === 2 ? 'lg:w-[40%]' :
+                  'lg:w-[25%]'
+                } mx-auto mb-10`}
+              >
+                {teamMembers.slice(rowIndex * 5, rowIndex * 5 + 5).map((member) => (
+                  <motion.article 
+                    key={member.id} 
+                    className="group/article relative w-full rounded-xl overflow-hidden 
+                      md:group-hover:[&:not(:hover)]:w-[70%] md:group-focus-within:[&:not(:focus-within):not(:hover)]:w-[70%] 
+                      transition-all duration-600 ease-[cubic-bezier(.5,.85,.25,1.15)] 
+                      before:absolute before:inset-x-0 before:bottom-0 before:h-1/3 before:bg-gradient-to-t before:from-black/50 before:transition-opacity 
+                      md:before:opacity-0 md:hover:before:opacity-100 focus-within:before:opacity-100 
+                      after:opacity-0 md:group-hover:[&:not(:hover)]:after:opacity-100 md:group-focus-within:[&:not(:focus-within):not(:hover)]:after:opacity-100 
+                      after:absolute after:inset-0 after:bg-black/30 after:backdrop-blur after:rounded-lg after:transition-all 
+                      focus-within:ring focus-within:ring-[#A59188]"
+                    onMouseEnter={() => setHoveredMember(member.id)}
+                    onMouseLeave={() => setHoveredMember(null)}
+                    whileHover={{ scale: 1 }}
+                    transition={{ type: "spring", stiffness: 300 }}
                   >
-                    <motion.h2 
-                      className="text-lg   font-orbitron font-bold md:whitespace-nowrap md:truncate md:opacity-0 
-                        group-hover/article:opacity-100 group-focus-within/article:opacity-100 md:translate-y-2 
-                        group-hover/article:translate-y-0 group-focus-within/article:translate-y-0 
-                        transition duration-200 ease-[cubic-bezier(.5,.85,.25,1.8)] 
-                        group-hover/article:delay-300 group-focus-within/article:delay-300"
+                    <div
+                      className="absolute inset-0 text-white z-10 p-4 flex flex-col justify-end"
                     >
-                      {member.title}
-                    </motion.h2>
-                    <motion.span 
-                      className="text-md font-[KHInterference] md: md:truncate md:opacity-0 
-                        group-hover/article:opacity-100 group-focus-within/article:opacity-100 md:translate-y-2 
-                        group-hover/article:translate-y-0 group-focus-within/article:translate-y-0 
-                        transition duration-200 ease-[cubic-bezier(.5,.85,.25,1.8)] 
-                        group-hover/article:delay-500 group-focus-within/article:delay-500  text-wrap"
-                    >
-                      {member.description}
-                    </motion.span>
-                    
-                    <SocialIcons social={member.social} isVisible={hoveredMember === member.id} />
-                  </div>
-                  <div className="h-72">
-                    <Image
-                      className="object-cover h-full w-full"
-                      src={member.url}
-                      width={400}
-                      height={500}
-                      alt={`Photo of ${member.title}`}
-                    />
-                  </div>
-                </motion.article>
-              ))}
-            </div>
-          ))}
+                      <motion.h2 
+                        className="text-lg   font-orbitron font-bold md:whitespace-nowrap md:truncate md:opacity-0 
+                          group-hover/article:opacity-100 group-focus-within/article:opacity-100 md:translate-y-2 
+                          group-hover/article:translate-y-0 group-focus-within/article:translate-y-0 
+                          transition duration-200 ease-[cubic-bezier(.5,.85,.25,1.8)] 
+                          group-hover/article:delay-300 group-focus-within/article:delay-300"
+                      >
+                        {member.title}
+                      </motion.h2>
+                      <motion.span 
+                        className="text-md font-[KHInterference] md: md:truncate md:opacity-0 
+                          group-hover/article:opacity-100 group-focus-within/article:opacity-100 md:translate-y-2 
+                          group-hover/article:translate-y-0 group-focus-within/article:translate-y-0 
+                          transition duration-200 ease-[cubic-bezier(.5,.85,.25,1.8)] 
+                          group-hover/article:delay-500 group-focus-within/article:delay-500  text-wrap"
+                      >
+                        {member.description}
+                      </motion.span>
+                      
+                      <SocialIcons social={member.social} isVisible={hoveredMember === member.id} />
+                    </div>
+                    <div className="h-72">
+                      <Image
+                        className="object-cover h-full w-full"
+                        src={member.url}
+                        width={400}
+                        height={500}
+                        alt={`Photo of ${member.title}`}
+                      />
+                    </div>
+                  </motion.article>
+                ))}
+              </div>
+            );
+          })}
         </div>
 
         {/* For smaller screens, use a regular grid layout */}

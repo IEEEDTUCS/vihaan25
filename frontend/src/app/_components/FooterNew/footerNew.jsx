@@ -12,10 +12,11 @@ import { FaDiscord } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-export default function FooterNew() {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+export default function FooterNew({ visible }) {
+    const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
 
   return (
     <motion.footer
@@ -31,17 +32,19 @@ export default function FooterNew() {
           <img src="/svg/Logo.svg" alt="logo" className="w-[90%] h-[75%]" />
         </div>
 
-        <div className="flex flex-col w-[240px]">
-          <h2 className="text-xl font-extrabold text-[#A59188] mb-4">Venue</h2>
-          <div className="flex items-start gap-2 mb-4">
-            <IoLocation size={20} />
-            <p className="text-base">Delhi Technological University</p>
+               
+                <div className="flex flex-col w-[240px]">
+                    <h2 className="text-xl font-extrabold text-[#A59188] mb-4">Venue</h2>
+                    <div className="flex items-start gap-2 mb-4">
+                        <IoLocation size={20} />
+                        <p className="text-base">Delhi Technological University</p>
+                    </div>
+                    <div className="w-full h-[160px] rounded overflow-hidden shadow-md">
+                        <APIProvider apiKey={apiKey}>
+                            <CustomMap />
+                        </APIProvider>
           </div>
-          <div className="w-full h-[160px] rounded overflow-hidden shadow-md">
-            <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
-              <CustomMap />
-            </APIProvider>
-          </div>
+          
         </div>
 
         <div className="flex flex-col w-[320px]">

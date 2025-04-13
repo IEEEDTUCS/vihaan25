@@ -122,7 +122,7 @@ export default function TechTimeline() {
         <motion.div className="flex flex-col space-y-4 justify-center items-center text-center font-khinterference text-[#A59188] w-full">
           <h2 className="text-4xl">Event Brochure</h2>
           <p className="text-md">
-            Will Information about on the schedule, speakers, timings, location,
+            Will Inform about the schedule, speakers, timings, location,
             and other important details about the event. It serves as a guide
             for attendees to help them plan and prepare for the event.
           </p>
@@ -138,9 +138,8 @@ export default function TechTimeline() {
         <motion.div className="flex flex-col space-y-4 justify-center items-center text-center font-khinterference text-[#A59188] w-full">
           <h2 className="text-4xl">Vihaan Begins</h2>
           <p className="text-md">
-            Welcome to the thundered of ideas flowing through the servers of
-            Vihaan. With great participants, insightful judges and awesome
-            webinars, have one of the greatest 24 Hours experience etched in
+            Welcome the hundered of ideas flowing through the servers of
+            Vihaan. With great participants, insightful judges and BRAINSTORMING, have one of the greatest 24 Hours experience etched in
             your geeky life.
           </p>
         </motion.div>
@@ -155,6 +154,7 @@ export default function TechTimeline() {
         <motion.div className="flex flex-col space-y-4 justify-center items-center text-center font-khinterference text-[#A59188] w-full">
           <h2 className="text-4xl">Vihaan Ends</h2>
           <p className="text-md">
+            Winners announced!
             Thank you for attending Vihaan 8.0 Looking forward to seeing you in
             the next season of Vihaan!
           </p>

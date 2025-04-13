@@ -1,0 +1,13 @@
+services:
+  backend_blue:
+    container_name: vihaan-blue-test
+    build:
+        context: ../../backend/
+        dockerfile: Dockerfile
+    restart: unless-stopped
+    env_file:
+        - testing.env
+    volumes:
+      - ./testing.env:/server/.env:ro
+    ports:
+      - "8080:8080"
