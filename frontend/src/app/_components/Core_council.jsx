@@ -152,26 +152,32 @@ function Core_council() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
         {/* For large screens, create rows with the expanding/shrinking animation */}
         <div className="hidden lg:block col-span-2">
-          {[0, 1, 2].map((rowIndex) => (
-            <div
-              key={rowIndex}
-              className={`group flex justify-center gap-2 w-full ${
-                rowIndex === 1 ? "lg:w-3/5" : "lg:w-4/5"
-              } mx-auto mb-10`}
-            >
-              {teamMembers
-                .slice(rowIndex * 4, rowIndex * 4 + 4)
-                .map((member) => (
+          {[0, 1, 2].map((rowIndex) => {
+            // Calculate number of images in this row
+            const imagesInRow = teamMembers.slice(rowIndex * 4, rowIndex * 4 + 4).length;
+            
+            return (
+              <div
+                key={rowIndex}
+                className={`group flex justify-center gap-2  ${
+                  // Adjust width based on number of images
+                  imagesInRow === 4 ? 'lg:w-4/5' : 
+                  imagesInRow === 3 ? 'lg:w-3/4' :
+                  imagesInRow === 2 ? 'lg:w-3/5' :
+                  'lg:w-1/3'
+                } mx-auto mb-10`}
+              >
+                {teamMembers.slice(rowIndex * 4, rowIndex * 4 + 4).map((member) => (
                   <motion.article
                     key={member.id}
                     className="group/article relative w-full rounded-xl overflow-hidden 
-                    md:group-hover:[&:not(:hover)]:w-[70%] md:group-focus-within:[&:not(:focus-within):not(:hover)]:w-[70%] 
-                    transition-all duration-600 ease-[cubic-bezier(.5,.85,.25,1.15)] 
-                    before:absolute before:inset-x-0 before:bottom-0 before:h-1/3 before:bg-gradient-to-t before:from-black/50 before:transition-opacity 
-                    md:before:opacity-0 md:hover:before:opacity-100 focus-within:before:opacity-100 
-                    after:opacity-0 md:group-hover:[&:not(:hover)]:after:opacity-100 md:group-focus-within:[&:not(:focus-within):not(:hover)]:after:opacity-100 
-                    after:absolute after:inset-0 after:bg-black/30 after:backdrop-blur after:rounded-lg after:transition-all 
-                    focus-within:ring focus-within:ring-[#A59188]"
+                      md:group-hover:[&:not(:hover)]:w-[70%] md:group-focus-within:[&:not(:focus-within):not(:hover)]:w-[70%] 
+                      transition-all duration-600 ease-[cubic-bezier(.5,.85,.25,1.15)] 
+                      before:absolute before:inset-x-0 before:bottom-0 before:h-1/3 before:bg-gradient-to-t before:from-black/50 before:transition-opacity 
+                      md:before:opacity-0 md:hover:before:opacity-100 focus-within:before:opacity-100 
+                      after:opacity-0 md:group-hover:[&:not(:hover)]:after:opacity-100 md:group-focus-within:[&:not(:focus-within):not(:hover)]:after:opacity-100 
+                      after:absolute after:inset-0 after:bg-black/30 after:backdrop-blur after:rounded-lg after:transition-all 
+                      focus-within:ring focus-within:ring-[#A59188]"
                     onMouseEnter={() => setHoveredMember(member.id)}
                     onMouseLeave={() => setHoveredMember(null)}
                     whileHover={{ scale: 1 }}
@@ -213,8 +219,9 @@ function Core_council() {
                     </div>
                   </motion.article>
                 ))}
-            </div>
-          ))}
+              </div>
+            );
+          })}
         </div>
 
         {/* For smaller screens, use a regular grid layout */}
