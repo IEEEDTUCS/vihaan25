@@ -93,6 +93,8 @@ func SubmitQuizAnswer(c echo.Context) error {
 		SelectedOptionID:   req.OptionID,
 		IsCorrect:  isCorrect,
 	}
+
+	var user models.User
 	if isCorrect {
 		// Get how many users have already answered correctly
 		var count int64
@@ -113,7 +115,7 @@ func SubmitQuizAnswer(c echo.Context) error {
 		}
 		
 		if err := db.Model(&models.User{}).Where("id = ?", userID).UpdateColumn("quiz_score", gorm.Expr("quiz_score + ?", score)).Error; err != nil {
-			return echo.NewHTTPError(http.StatusInternalServerError, "Failed to update user score")
+			return echo.NewHTTPError(http.StatusInternalServerError, "Failed to fetch user score")
 		}
 	} else {
 		// Just save the incorrect answer
@@ -121,10 +123,14 @@ func SubmitQuizAnswer(c echo.Context) error {
 			return echo.NewHTTPError(http.StatusInternalServerError, "Failed to save answer")
 		}
 	}
+	if err := db.Select("quiz_score").Where("id = ?", userID).First(&user).Error; err != nil {
+		return echo.NewHTTPError(http.StatusInternalServerError, "Failed to update user score")
+	}
 
 	return c.JSON(http.StatusOK, echo.Map{
 		"message":   "Answer submitted successfully",
 		"isCorrect": isCorrect,
+		"score": user.QuizScore,
 	})
 }
 

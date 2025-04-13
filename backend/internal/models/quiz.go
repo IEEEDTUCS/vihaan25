@@ -64,40 +64,76 @@ func (ua *UserAnswer) BeforeCreate(tx *gorm.DB) (err error) {
 
 func SeedQuestions(db *gorm.DB) error {
 	questions := []string{
-		"What is the capital of France?",
-		"Which planet is known as the Red Planet?",
-		"What is the chemical symbol for Gold?",
-		"Who wrote 'Romeo and Juliet'?",
-		"What is the fastest land animal?",
+		"Sample test question for April 11. What is 2 + 2?",
+		`What does the “undefined” in "undefined behavior" in C actually mean?`,
+		`What does IEEE actually stand for?`,
+		`You’re running late. Which of the following is the fastest way to reach your lecture hall?`,
+		`What’s the speed of light in vacuum?`,
+		`What’s the output of console.log(typeof NaN) in JavaScript?`,
+		`What’s the worst time to find a bug?`,
 	}
 
 	options := [][]string{
-		{"Paris", "Berlin", "Madrid", "Rome"},
-		{"Earth", "Venus", "Mars", "Jupiter"},
-		{"Au", "Ag", "Gd", "Go"},
-		{"Charles Dickens", "William Shakespeare", "Jane Austen", "Mark Twain"},
-		{"Cheetah", "Leopard", "Lion", "Tiger"},
+		{"3", "4", "5", "22"}, // sample
+		{
+			"Your code is just mysterious",
+			"The compiler decides to play dice",
+			"It’s a feature, not a bug",
+			"Anything can happen—including summoning demons",
+		},
+		{
+			"International Engineering Elite Empire",
+			"Institute of Electrical and Electronics Engineers",
+			"I Eat Extra Energy",
+			"Intergalactic Engineers’ Extraordinary Enterprise",
+		},
+		{
+			"Teleportation",
+			"Borrowing a cycle",
+			"Thinking fast",
+			"“Bhai, attendance lagwa dena.”",
+		},
+		{
+			"Fast enough to escape DTU queues",
+			"3 x 10^9 m/s",
+			"Same as Wi-Fi",
+			"Slower than JEE results",
+		},
+		{
+			"NaN",
+			"\"number\"",
+			"\"undefined\"",
+			"JS broke again",
+		},
+		{
+			"During compile",
+			"During deployment",
+			"During a demo",
+			"While sleeping",
+		},
 	}
 
-	correctIndices := []int{0, 2, 0, 1, 0}
+	correctIndices := []int{1, 3, 1, 3, 2, 1, 2}
 
-	for i := 0; i < 5; i++ {
+	startDate := time.Date(2025, 4, 11, 0, 0, 0, 0, time.Local).Truncate(24 * time.Hour)
+
+	for i := 0; i < len(questions); i++ {
 		question := QuizQuestion{
-			Date:          time.Now().AddDate(0, 0, i).Truncate(24 * time.Hour),
+			Date:          startDate.AddDate(0, 0, i),
 			QuestionTitle: questions[i],
 		}
-
-		if err := db.First(&question).Error; err == nil {
-			continue;
+		
+		var existing QuizQuestion
+		if err := db.Where("date = ?", question.Date).First(&existing).Error; err == nil {
+			// Question already exists for this date
+			continue
 		}
 
-		// Add placeholder ID for now, set actual CorrectOptionID after options are added
 		if err := db.Create(&question).Error; err != nil {
 			log.Printf("Error creating question %d: %v", i, err)
 			return err
 		}
 
-		var createdOptions []QuizOption
 		for j, optText := range options[i] {
 			option := QuizOption{
 				ID:         uuid.New(),
@@ -108,21 +144,18 @@ func SeedQuestions(db *gorm.DB) error {
 				log.Printf("Error creating option: %v", err)
 				return err
 			}
-			createdOptions = append(createdOptions, option)
 
-			// Assign correct option if index matches
 			if j == correctIndices[i] {
 				question.CorrectOptionID = option.ID
 			}
 		}
 
-		// Update question with correct option ID
 		if err := db.Model(&question).Update("CorrectOptionID", question.CorrectOptionID).Error; err != nil {
 			log.Printf("Error updating CorrectOptionID: %v", err)
 			return err
 		}
 	}
 
-	log.Println("✅ Quiz questions seeded successfully.")
+	log.Println("✅ All quiz questions (including April 11 test) seeded successfully.")
 	return nil
 }

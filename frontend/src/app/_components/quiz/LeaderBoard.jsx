@@ -2,7 +2,7 @@
 import React from "react";
 import "@/app/globals.css";
 
-export default function LeaderBoard() {
+export default function LeaderBoard({rank1, rank2, rank3}) {
   return (
     <div className="w-full h-screen relative overflow-hidden flex flex-col">
      
@@ -27,21 +27,27 @@ export default function LeaderBoard() {
         {/* isse truncate ko use krna vrna text will overflow from the images and thia way people will also see the rankings */}
         {/* add dynamic winners ke naam */}
 
-            <div className="flex flex-wrap justify-start relative bordernew bg-contain bg-no-repeat bg-center w-[80%] h-[100%] pl-5 z-10">
-                <div className="bg-[url('/Quiz/1st-pos.svg')] bg-contain bg-no-repeat w-full h-[50%] flex items-center justify-center mt-4">
-                <p className="text-xl font-bold absolute left-100 max-[920px]:relative max-[920px]:left-20 border border-amber-950 text-[#4e3124] font-khinterference tracking-normal text-center max-w-[10%] truncate">
-                Team-Crazy-as-Fuck(Winner-1)
+            <div className="flex flex-wrap justify-start relative bordernew bg-contain bg-no-repeat bg-center w-[80%] h-[100%] pl-5 z-10" name="leaderboard">
+                <div className="bg-[url('/Quiz/1st-pos.svg')] bg-contain bg-no-repeat w-full h-[50%]  mt-4">
+              <div className="flex flex-row w-full justify-center items-center">
+                <p className="text-3xl font-bold text-[#4e3124] font-khinterference tracking-tighter text-center max-w-[20%] mt-36 -ml-100">
+                { rank1 ? rank1.name : "Waiting for player..." }
                 </p>
                 </div>
-                <div className="bg-[url('/Quiz/2nd-pos.svg')] bg-contain bg-no-repeat w-[35%] h-[50%] max-[920px]:w-[55%] max-[1200px]:w-[45%] max-[920px]:h-[35%] flex items-center justify-center mt-4">
-                <p className="text-xl font-bold absolute bottom-28 border text-[#4e3124] border-amber-950 font-khinterference tracking-tight text-center max-w-[10%] truncate">
-                Team-Crazy-as-Fuck(Winner-2)
+                </div>
+                <div className="bg-[url('/Quiz/2nd-pos.svg')] bg-contain bg-no-repeat w-[35%] h-[50%] max-[920px]:w-[55%] max-[1200px]:w-[45%] max-[920px]:h-[35%] mt-4">
+            <div className="flex flex-row w-full justify-center items-center">
+                <p className="text-lg font-bold text-[#4e3124] font-khinterference tracking-tighter text-center max-w-[40%] mt-28">
+                { rank2 ? rank2.name : "Waiting for player..." }
                 </p>
                 </div>
-                <div className="bg-[url('/Quiz/3rd-pos.svg')] bg-contain bg-no-repeat w-[30%] h-[50%] max-[920px]:w-[45%] max-[1200px]:w-[40%] max-[920px]:h-[35%] flex items-center justify-center mt-4">
-                <p className="text-xl font-bold absolute bottom-28 text-[#4e3124] border border-amber-950 font-khinterference tracking-tighter text-center max-w-[10%] truncate">
-                Team-Crazy-as-Fuck(Winner-3)
+                </div>
+                <div className="bg-[url('/Quiz/3rd-pos.svg')] bg-contain bg-no-repeat w-[30%] h-[50%] max-[920px]:w-[45%] max-[1200px]:w-[40%] max-[920px]:h-[35%] mt-4">
+            <div className="flex flex-row w-full justify-center items-center">
+                <p className="text-lg font-bold text-[#4e3124] font-khinterference tracking-tighter text-center max-w-[40%] mt-26 ml-4">
+                { rank3 ? rank3.name : "Waiting for player..." }
                 </p>
+                </div>
                 </div>
             </div>
               </div>
@@ -65,21 +71,21 @@ export default function LeaderBoard() {
         <div className="p-[3px] rounded-xl border-12 border-[#916d4c57] bg-gradient-to-r from-[#c69f7000] via-[#b88a4a1d] to-[#a97b3a1a]">
   <div className=" rounded-xl p-4 space-y-4">
     <div className="relative bg-[url('/Quiz/1st-pos.svg')] bg-contain bg-no-repeat bg-center h-40 w-full flex items-center justify-center">
-      <div className="text-[#4e3124] font-khinterference tracking-normal text-base font-bold ml-23 max-w-[15%] truncate">
-        Winnddddddddddddddddddddddddddddddddddddder 1
-      </div> 
+      <p className="text-[#4e3124] text-xs font-khinterference tracking-normal text-base font-bold ml-23 max-w-[35%] truncate mr-4">
+                { rank1 ? rank1.name : "Waiting..." }
+      </p> 
     </div>
 
     <div className="relative bg-[url('/Quiz/2nd-pos.svg')] bg-contain bg-no-repeat bg-center h-40 w-full flex items-center justify-center">
-      <div className="text-[#4e3124] font-khinterference tracking-tight text-base font-bold max-w-[15%] truncate">
-        Winnffffffffffffffffffffffffffffffffffffffffffer 2
-      </div>
+      <p className="text-[#4e3124] text-xs font-khinterference tracking-tight text-base font-bold max-w-[30%] truncate mr-5">
+                { rank2 ? rank2.name : "Waiting..." }
+      </p>
     </div>
 
     <div className="relative bg-[url('/Quiz/3rd-pos.svg')] bg-contain bg-no-repeat bg-center h-40 w-full flex items-center justify-center">
-      <div className="text-[#4e3124] font-khinterference tracking-tight text-base font-bold max-w-[15%] truncate">
-        Winner 3
-      </div>
+      <p className="text-[#4e3124] text-xs font-khinterference tracking-tight text-base font-bold max-w-[30%] truncate mr-3">
+                { rank3 ? rank3.name : "Waiting..." }
+      </p>
     </div>
   </div>
 </div>

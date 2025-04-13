@@ -17,14 +17,16 @@ type EnvVars struct {
 }
 
 func LoadVars() EnvVars {
-	err := godotenv.Load()
-	if err != nil {
-		panic("Failed to load env variables.")
+	if os.Getenv("ENV") != "production" {
+		err := godotenv.Load()
+		if err != nil {
+			panic("Failed to load env variables.")
+		}
 	}
 	
 	port := os.Getenv("PORT")
 	if port == "" {
-		panic("Missing variable: PORT") 
+		port = "1323"
 	}
 
 	googleClientId := os.Getenv("GOOGLE_CLIENT_ID")
