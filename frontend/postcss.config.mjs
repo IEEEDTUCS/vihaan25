@@ -1,6 +1,6 @@
-export default {
+const config = {
   plugins: {
-    tailwindcss: { oxide: false },
-    autoprefixer: {},
+    "@tailwindcss/postcss": {},
   },
 };
+export default config;
