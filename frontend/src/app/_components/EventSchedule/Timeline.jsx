@@ -238,7 +238,9 @@ export default function TechTimeline() {
                       setCurrentSelection(index);
                     }}
                   >
-                    <DotButton>{event.title}</DotButton>
+                    <div className="px-4 py-2 flex cursor-pointer text-center bg-Button whitespace-nowrap text-[#a89a84] font-orbitron font-bold text-sm lg:text-md hover:bg-[#D9D9D938]/90">
+                      {event.title}
+                    </div>
                   </button>
                   {event.position === "bottom" && (
                     <p className="text-[#a89a84] font-khinterference text-2xl tracking-wider mt-2">
