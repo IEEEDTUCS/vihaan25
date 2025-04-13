@@ -10,6 +10,7 @@ import { RxInstagramLogo } from "react-icons/rx";
 import { FaLinkedin } from "react-icons/fa";
 import { FaDiscord } from "react-icons/fa6";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function FooterNew() {
   const scrollToTop = () => {
@@ -97,6 +98,13 @@ export default function FooterNew() {
               <FaDiscord className="hover:text-white transition duration-300" />
             </a>
           </div>
+          <Link
+            className="flex cursor-pointer justify-center items-center text-center text-nowrap px-4 py-2 bg-Button text-[#a89a84] font-orbitron font-bold mt-3"
+            href="/Quiz"
+          >
+            {" "}
+            Quiz Link
+          </Link>
         </div>
 
         <div className="flex items-center justify-center w-[80px]">
