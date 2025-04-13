@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const Sponsor = ({ visible }) => {
+const Sponsor = () => {
   const titleSponsor = {
     title: "Title Sponsor",
     image: "/images/sponsor/TitleSponsor.png",
@@ -14,7 +14,7 @@ const Sponsor = ({ visible }) => {
       title: "DEVFOLIO LOGO",
       image: "/images/sponsor/Devfolio_Logo-Colored.svg",
     },
-    { title: "GitHub", image: "/images/sponsor/GitHub.png" },
+    { title: "GitHub", image: "/images/sponsor/Github.png" },
     { title: "ETHINDIA LOGO", image: "/images/sponsor/ethindia-light.png" },
     { title: "Wolfram", image: "/images/sponsor/Wolfram.png" },
     { title: "NoticeBard", image: "/images/sponsor/NoticeBard.png" },
@@ -38,9 +38,9 @@ const Sponsor = ({ visible }) => {
   ];
 
   return (
-    <div className={`relative ${
-                visible ? "" : "hidden"
-            } flex flex-col items-center justify-start overflow-hidden lg:mx-20 md:mx-16 sm:mx-8 mx-4 max-sm:-top-10 font-orbitron`}>
+    <div
+      className={`relative flex flex-col items-center justify-start overflow-hidden lg:mx-20 md:mx-16 sm:mx-8 mx-4 max-sm:-top-10 font-orbitron`}
+    >
       <motion.p
         whileInView={{ x: 0, opacity: 1 }}
         initial={{ opacity: 0, x: -100 }}
