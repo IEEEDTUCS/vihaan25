@@ -69,16 +69,16 @@ const GridLayout = ({ closeMenu }) => {
           <ScrollLink name="SCHEDULE" />
         </Link>
         <Link
-          to="sponsor"
+          to="reveal"
           smooth={true}
           duration={1500}
           offset={-100}
           onClick={closeMenu}
         >
-          <ScrollLink name="SPONSOR" />
+          <ScrollLink name="PRIZES" />
         </Link>
         <Link
-          to="reveal"
+          to="tracks"
           smooth={true}
           duration={1500}
           offset={-100}
@@ -94,6 +94,15 @@ const GridLayout = ({ closeMenu }) => {
           onClick={closeMenu}
         >
           <ScrollLink name="TEAM" />
+        </Link>
+        <Link
+          to="sponsor"
+          smooth={true}
+          duration={1500}
+          offset={-100}
+          onClick={closeMenu}
+        >
+          <ScrollLink name="SPONSOR" />
         </Link>
         <Link
           to="faqs"
