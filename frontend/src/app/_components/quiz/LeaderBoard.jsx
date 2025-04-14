@@ -30,21 +30,21 @@ export default function LeaderBoard({rank1, rank2, rank3}) {
             <div className="flex flex-wrap justify-start relative bordernew bg-contain bg-no-repeat bg-center w-[80%] h-[100%] pl-5 z-10" name="leaderboard">
                 <div className="bg-[url('/Quiz/1st-pos.svg')] bg-contain bg-no-repeat w-full h-[50%]  mt-4">
               <div className="flex flex-row w-full justify-center items-center">
-                <p className="text-3xl font-bold text-[#4e3124] font-khinterference tracking-tighter text-center max-w-[20%] mt-36 -ml-100">
+                <p className="text-3xl font-bold text-[#4e3124] font-khinterference tracking-tighter text-center max-w-[20%] mt-36 -ml-100 truncate">
                 { rank1 ? rank1.name : "Waiting for player..." }
                 </p>
                 </div>
                 </div>
                 <div className="bg-[url('/Quiz/2nd-pos.svg')] bg-contain bg-no-repeat w-[35%] h-[50%] max-[920px]:w-[55%] max-[1200px]:w-[45%] max-[920px]:h-[35%] mt-4">
             <div className="flex flex-row w-full justify-center items-center">
-                <p className="text-lg font-bold text-[#4e3124] font-khinterference tracking-tighter text-center max-w-[40%] mt-28">
+                <p className="text-lg font-bold text-[#4e3124] font-khinterference tracking-tighter text-center max-w-[40%] mt-28 truncate">
                 { rank2 ? rank2.name : "Waiting for player..." }
                 </p>
                 </div>
                 </div>
                 <div className="bg-[url('/Quiz/3rd-pos.svg')] bg-contain bg-no-repeat w-[30%] h-[50%] max-[920px]:w-[45%] max-[1200px]:w-[40%] max-[920px]:h-[35%] mt-4">
             <div className="flex flex-row w-full justify-center items-center">
-                <p className="text-lg font-bold text-[#4e3124] font-khinterference tracking-tighter text-center max-w-[40%] mt-26 ml-4">
+                <p className="text-lg font-bold text-[#4e3124] font-khinterference tracking-tighter text-center max-w-[40%] mt-26 ml-4 truncate">
                 { rank3 ? rank3.name : "Waiting for player..." }
                 </p>
                 </div>

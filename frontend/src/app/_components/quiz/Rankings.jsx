@@ -17,7 +17,7 @@ const Rankings = ({ loading, data }) => {
       <p className="font-orbitron text-2xl">Fetching Leaderboard...</p>
       ) : (
         <>
-        <div className='mt-10' name="leaderboard"> 
+        <div className='mt-20' name="leaderboard"> 
     <Leaderboard rank1={data[0]} rank2={data[1]} rank3={data[2]} />
     </div>
     <div className='flex justify-center items-center mt-50 '>
