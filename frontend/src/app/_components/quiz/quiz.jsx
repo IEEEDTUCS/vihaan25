@@ -260,14 +260,14 @@ const Quiz = () => {
         updateUser.quizScore = data.score;
         setUser(updateUser);
         console.log(data);
+        if (data.isCorrect) {
+          setSubmitStatus("Great work detective!");
+        } else {
+          setSubmitStatus("Looks like you missed a clue, detective.");
+        }
       }
 
       setSubmitted(true);
-      if (data.isCorrect) {
-        setSubmitStatus("Great work detective!");
-      } else {
-        setSubmitStatus("Looks like you missed a clue, detective.");
-      }
     } catch (err) {
       console.error("Error submitting answer:", err);
       setSubmitStatus("error");
@@ -296,7 +296,7 @@ const Quiz = () => {
     <div>
       <img
         src="/svg/quiz-ui/vector1.svg"
-        className="absolute size-[400px] md:size-[600px] top-10"
+        className="absolute size-[400px] md:size-[600px] top-10 hidden md:block"
       />
       <img
         src="/svg/quiz-ui/vector2.svg"
@@ -319,7 +319,7 @@ const Quiz = () => {
               className="rotate-180 pl-4 md:block hidden"
             />
           </div>
-          <img src="/logo.png" className="h-14 w-14 mx-auto" />
+          <img src="/Logo.png" className="h-14 w-14 mx-auto" />
           <div className="w-full flex flex-row justify-center items-center px-2 py-4 mt-8">
             {loading ? (
               <p>Loading...</p>
@@ -382,28 +382,28 @@ const Quiz = () => {
                 ) : submitted ? (
                   <div className="flex flex-col justify-center items-center space-y-16">
                     <motion.p
-                      whileInView={{ opacity: 1, y: 0 }}
-                      initial={{ opacity: 0, y: -50 }}
-                      transition={{ duration: 1.5 }}
-                      viewport={{ once: true }}
+                      // whileInView={{ opacity: 1, y: 0 }}
+                      // initial={{ opacity: 0, y: -50 }}
+                      // transition={{ duration: 1.5 }}
+                      // viewport={{ once: true, amount: 0 }}
                       className="font-khinterference text-4xl md:text-6xl"
                     >
                       {submitStatus}
                     </motion.p>
                     <motion.p
-                      whileInView={{ opacity: 1, y: 0 }}
-                      initial={{ opacity: 0, y: -50 }}
-                      transition={{ duration: 2 }}
-                      viewport={{ once: true }}
+                      // whileInView={{ opacity: 1, y: 0 }}
+                      // initial={{ opacity: 0, y: -50 }}
+                      // transition={{ duration: 2 }}
+                      // viewport={{ once: true }}
                       className="text-white font-orbitron text-center text-xl"
                     >
                       Your Current Score: {user.quizScore}
                     </motion.p>
                     <motion.div
-                      whileInView={{ opacity: 1, x: 0 }}
-                      initial={{ opacity: 0, x: -50 }}
-                      transition={{ duration: 1.5 }}
-                      viewport={{ once: true }}
+                      // whileInView={{ opacity: 1, x: 0 }}
+                      // initial={{ opacity: 0, x: -50 }}
+                      // transition={{ duration: 1.5 }}
+                      // viewport={{ once: true }}
                     >
                       <Link
                         to="leaderboard"
