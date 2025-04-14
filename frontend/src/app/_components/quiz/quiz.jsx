@@ -469,7 +469,7 @@ const Quiz = () => {
           </div>
         </div>
         <div className="w-screen">
-          <Rankings loading={leaderboardLoading} data={leaderboard} />
+          <Rankings loading={leaderboardLoading} data={leaderboard != null ? leaderboard : []} />
         </div>
       </div>
     </div>
