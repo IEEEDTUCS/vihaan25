@@ -12,6 +12,8 @@ RUN go build -o build/server .
 
 FROM debian:bullseye
 
+RUN apt-get update && apt-get install -y ca-certificates
+
 WORKDIR /server
 
 COPY --from=builder /app/build/server .
