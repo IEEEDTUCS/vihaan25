@@ -101,7 +101,7 @@ export default function FooterNew({ visible }) {
           </div>
           <Link
             className="flex cursor-pointer justify-center items-center text-center text-nowrap px-4 py-2 bg-Button text-[#a89a84] font-orbitron font-bold mt-3"
-            href="/Quiz"
+            href="/quiz"
           >
             {" "}
             Quiz Link
