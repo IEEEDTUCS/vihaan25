@@ -12,7 +12,7 @@ const teamMembers = [
     description: "CHAIRPERSON, CS",
     social: {
       linkedin: "https://www.linkedin.com/in/nikhilkumar04/",
-      instagram: "https://www.instagram.com/nikhilkumar_0408/",
+      instagram: "https://www.instagram.com/niikhiil48/",
     },
   },
 
