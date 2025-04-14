@@ -220,7 +220,7 @@ function Dept_lead() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <h1 className="text-5xl font-[Orbitron] font-extrabold mb-2">DEPARTMENT LEADS</h1>
+        <h1 className="lg:text-5xl md:text-4xl text-3xl font-[Orbitron] font-extrabold mb-2">DEPARTMENT LEADS</h1>
         {/* <p className="text-lg text-gray-600 max-w-2xl mx-auto">
           Meet the talented individuals behind our success. Each member brings unique skills and perspectives to our work.
         </p> */}
@@ -315,8 +315,8 @@ function Dept_lead() {
             <div
               className="absolute inset-0 text-white z-4 p-4 flex flex-col  justify-end bg-gradient-to-t from-black/60 to-transparent"
             >
-              <h2 className="text-xl font-medium">{member.title}</h2>
-              <span className="text-lg">{member.description}</span>
+              <h2 className="text-xl font-orbitron font-bold">{member.title}</h2>
+              <span className="text-lg font-[KHInterference]">{member.description}</span>
               
               <SocialIcons social={member.social} isVisible={hoveredMember === member.id} />
             </div>
