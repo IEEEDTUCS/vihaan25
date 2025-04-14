@@ -25,7 +25,7 @@ func GetTodaysQuiz(c echo.Context) error {
 	}
 	loc, _ := time.LoadLocation("Asia/Kolkata")
 	now := time.Now().In(loc)
-	today := time.Date(now.Year(), now.Month(), now.Day(), 0, 0, 0, 0, time.Local)
+	today := time.Date(now.Year(), now.Month(), now.Day(), 0, 0, 0, 0, loc)
 	fmt.Println(today)
 
 	var question models.QuizQuestion
