@@ -45,7 +45,6 @@ const Rankings = ({ loading, data }) => {
             <tr className="text-black text-xl ">
               <th className=" py-2 text-left border-[#82270034] border-r-8">RANK</th>
               <th className="px-4 py-2">NAME</th>
-              <th className="px-4 py-2">EMAIL</th>
               <th className="px-4 py-2">SCORE</th>
             </tr>
           </thead>
@@ -55,7 +54,6 @@ const Rankings = ({ loading, data }) => {
               <tr key={idx} className="text-black text-lg ">
                 <td className="px-4 py-1 text-left border-[#82270048] border-r-8">{row.rank}</td>
                 <td className="px-4 py-1">{row.name}</td>
-                <td className="px-4 py-1">{row.email}</td>
                 <td className="px-4 py-1">{row.score}</td>
               </tr>
             ))}

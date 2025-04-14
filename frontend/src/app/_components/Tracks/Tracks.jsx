@@ -59,7 +59,7 @@ export const Tracks = ({ visible }) => {
     {
       title: "Security",
       content:
-        "In a world that’s more connected than ever, security is everything. Build tools for cybersecurity, digital identity protection, fraud detection, encrypted communications, or physical security systems powered by IoT and AI. Tackle threats before they become crises and keep the digital and real world safe.",
+        "In a world that's more connected than ever, security is everything. Build tools for cybersecurity, digital identity protection, fraud detection, encrypted communications, or physical security systems powered by IoT and AI. Tackle threats before they become crises and keep the digital and real world safe.",
     },
     {
       title: "Education",
@@ -76,24 +76,23 @@ export const Tracks = ({ visible }) => {
   const goToPage = (targetIndex) => {
     const book = flipBookRef.current.pageFlip();
     const currentPage = book.getCurrentPageIndex();
-    if (targetIndex % 2 != 0) targetIndex = targetIndex - 1;
-
-    if (targetIndex === currentPage) return;
-
-    const flipInterval = setInterval(() => {
-      const newIndex = book.getCurrentPageIndex();
-      if (newIndex === targetIndex) {
-        clearInterval(flipInterval);
-      } else {
-        if (targetIndex > newIndex) book.flipNext();
-        else book.flipPrev();
-      }
-    }, 1000);
+  
+    let pageIndex = targetIndex;
+  
+    if (!isMobile) {
+      //for desktop view
+      pageIndex = targetIndex % 2 === 0 ? targetIndex : targetIndex - 1;
+    }
+    //otherwise js iterate normally 
+    if (pageIndex !== currentPage) {
+      book.flip(pageIndex);
+    }
   };
+  
 
   return (
     <>
-    <div className={`overflow-hidden `}>
+    <div className={"overflow-hidden"}>
       <p className="md:text-7xl text-4xl tracking-widest font-bold  font-khinterference flex justify-center md:mt-32">
         Tracks
       </p>
@@ -119,7 +118,7 @@ export const Tracks = ({ visible }) => {
           drawShadow
           showCover={false}
           className="shadow-2xl bg-none block pl-5"
-          mobileScrollSupport={true}
+          mobileScrollSupport={false}
           ref={flipBookRef}
           autoSize={true}
         >
@@ -170,9 +169,9 @@ const Page = React.forwardRef(({ children, className }, ref) => {
   );
 });
 
-const MyBotton = ({ children }) => {
+const MyBotton = ({ children,  onClick }) => {
   return (
-    <div className="flex cursor-pointer justify-center items-center text-center text-nowrap px-4 py-2 bg-Button text-[#a89a84] font-orbitron font-bold">
+    <div onClick={onClick} className="flex cursor-pointer justify-center items-center text-center text-nowrap px-4 py-2 bg-Button text-[#a89a84] font-orbitron font-bold select-none">
       {children}
     </div>
   );
