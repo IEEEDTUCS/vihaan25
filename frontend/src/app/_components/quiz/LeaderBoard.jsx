@@ -28,9 +28,9 @@ export default function LeaderBoard({rank1, rank2, rank3}) {
         {/* add dynamic winners ke naam */}
 
             <div className="flex flex-wrap justify-start relative bordernew bg-contain bg-no-repeat bg-center w-[80%] h-[100%] pl-5 z-10" name="leaderboard">
-                <div className="bg-[url('/Quiz/1st-pos.svg')] bg-contain bg-no-repeat w-full h-[50%]  mt-4">
-              <div className="flex flex-row w-full justify-center items-center">
-                <p className="text-3xl font-bold text-[#4e3124] font-khinterference tracking-tighter text-center max-w-[20%] mt-36 -ml-100 truncate">
+                <div className="bg-[url('/Quiz/1st-pos.svg')] bg-contain bg-no-repeat w-full h-[50%] mt-4">
+              <div className="flex flex-row justify-start items-center h-full">
+                <p className="text-3xl font-bold text-[#4e3124] font-khinterference tracking-tighter text-center max-w-[15%] truncate ml-[28%]">
                 { rank1 ? rank1.name : "Waiting for player..." }
                 </p>
                 </div>
