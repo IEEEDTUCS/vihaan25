@@ -1,6 +1,7 @@
 package handlers
 
 import (
+	"fmt"
 	"math"
 	"net/http"
 	"time"
@@ -23,10 +24,12 @@ func GetTodaysQuiz(c echo.Context) error {
 		return echo.NewHTTPError(http.StatusInternalServerError, "Invalid user ID")
 	}
 
-	today := time.Now().Truncate(24 * time.Hour)
+	now := time.Now();
+	today := time.Date(now.Year(), now.Month(), now.Day(), 0, 0, 0, 0, time.Local)
+	fmt.Println(today)
 
 	var question models.QuizQuestion
-	err = db.Preload("Options").Where("date = ?", today).First(&question).Error
+	err = db.Preload("Options").Where("Date(date) = ?", today.Format("2006-01-02")).First(&question).Error
 
 	if err != nil {
 		if err == gorm.ErrRecordNotFound {
