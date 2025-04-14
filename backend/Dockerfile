@@ -10,7 +10,7 @@ COPY . .
 
 RUN go build -o build/server .
 
-FROM alpine:latest
+FROM debian:bullseye
 
 WORKDIR /server
 
