@@ -28,7 +28,7 @@ const teamMembers =
     },
     {
       id: '3',
-      url: './Team/Aaryan_Agarwal.jpeg',
+      url: './Team/aryan.jpeg',
       title: 'Aryan Agarwal',
       description: 'Event Lead',
       social: {

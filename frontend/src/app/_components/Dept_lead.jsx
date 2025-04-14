@@ -8,7 +8,7 @@ const teamMembers =
 [
     {
       id: '1',
-      url: './Team/Supratim_Dey_Choudhury.png',
+      url: './Team/sdc.jpeg',
       title: 'Supratim Dey Choudhury',
       description: 'Public Relations',
       social: {
@@ -48,24 +48,27 @@ const teamMembers =
     },
     {
         id: '5',
-        url: './Team/Samarth.png',
-        title: 'Samarth',
-        description: 'Technical ',
-        social: {
-          linkedin: 'https://www.linkedin.com/in/samarthify/',
-          instagram: 'https://www.instagram.com/samarthify/'
-        }
+        
+        url: './Team/Anshul_Agrawal.jpg',
+      title: 'Anshul Agrawal',
+      description: 'Corporate',
+      social: {
+        linkedin: 'https://www.linkedin.com/in/anshul--agrawal?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+        instagram: 'https://www.instagram.com/anshul._.agrawal?igsh=Zm11cmNrc2NiMjE2'
+      }
       
     },
     {
       id: '6',
-      url: './Team/Prashant_Kaushik.png',
-      title: 'Prashant Kaushik',
-      description: 'External Affairs',
-      social: {
-        linkedin: 'https://www.linkedin.com/in/prashant-kaushik-55a6a1256?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
-        instagram: 'https://www.instagram.com/prashant_kaushik_22/'
-      }
+      
+      url: './Team/Khobaib.jpg',
+        title: 'Khobaib Akmal',
+        description: 'Operations',
+        social: {
+          linkedin: 'https://www.linkedin.com/in/jasmeen-kour-31b624261/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+            instagram: 'https://www.instagram.com/kdotakmal/'
+        }
+      
     },
     {
       id: '7',
@@ -79,12 +82,13 @@ const teamMembers =
     },
     {
       id: '8',
-      url: './Team/Anshul_Agrawal.jpg',
-      title: 'Anshul Agrawal',
-      description: 'Corporate',
+      
+      url: './Team/vg.jpeg',
+      title: 'Vaibhav Gautam',
+      description: 'Logistics and Corporate',
       social: {
-        linkedin: 'https://www.linkedin.com/in/anshul--agrawal?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-        instagram: 'https://www.instagram.com/anshul._.agrawal?igsh=Zm11cmNrc2NiMjE2'
+        linkedin: 'https://www.linkedin.com/in/vaibhav-gautam-55772721b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+          instagram: 'https://www.instagram.com/vaibhavgautam98?igsh=MWhzZHlrNnluaW5mbw=='
       }
     },
     {
@@ -108,22 +112,22 @@ const teamMembers =
     },
     {
         id: '11',
-        url: './Team/Khobaib.jpg',
-        title: 'Khobaib Akmal',
-        description: 'Operations',
-        social: {
-          linkedin: 'https://www.linkedin.com/in/jasmeen-kour-31b624261/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-            instagram: 'https://www.instagram.com/kdotakmal/'
-        }
+        url: './Team/Prashant_Kaushik.png',
+      title: 'Prashant Kaushik',
+      description: 'External Affairs',
+      social: {
+        linkedin: 'https://www.linkedin.com/in/prashant-kaushik-55a6a1256?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
+        instagram: 'https://www.instagram.com/prashant_kaushik_22/'
+      }
       },
       {
         id: '12',
-        url: './Team/vg.jpeg',
-        title: 'Vaibhav Gautam',
-        description: 'Logistics',
+        url: './Team/Samarth.png',
+        title: 'Samarth',
+        description: 'Technical ',
         social: {
-          linkedin: 'https://www.linkedin.com/in/vaibhav-gautam-55772721b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-            instagram: 'https://www.instagram.com/vaibhavgautam98?igsh=MWhzZHlrNnluaW5mbw=='
+          linkedin: 'https://www.linkedin.com/in/samarthify/',
+          instagram: 'https://www.instagram.com/samarthify/'
         }
       }
     //   {
