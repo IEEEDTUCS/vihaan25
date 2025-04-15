@@ -14,34 +14,47 @@ const Sponsor = () => {
     //   title: "DEVFOLIO LOGO",
     //   image: "/images/sponsor/Devfolio_Logo-Colored.svg",
     // },
+    {
+      title: "DEVFOLIO LOGO",
+      image: "/images/sponsor/Devfolio_Logo-Colored.svg",
+    },
+
     { title: "Interview Buddy", image: "/images/sponsor/interviewbuddy.png" },
     { title: "Codecrafters", image: "/images/sponsor/codecrafters.webp" },
     { title: "Wolfram", image: "/images/sponsor/Wolfram.png" },
-    { title: "Collabratec. Consulting", image: "/images/sponsor/collabratec.png" },
+    {
+      title: "Collabratec. Consulting",
+      image: "/images/sponsor/collabratec.png",
+    },
     { title: "SecOps Solution", image: "/images/sponsor/secops.png" },
     { title: "SYBGEN", image: "/images/sponsor/sbygen.png" },
     { title: "Stock Edge", image: "/images/sponsor/stockedge.png" },
     { title: "GoFr", image: "/images/sponsor/gofr.png" },
     { title: "Warp", image: "/images/sponsor/warp.svg" },
     { title: ".xyz", image: "/images/sponsor/xyz.png" },
-    { title: "ETHIndia", image: "/images/sponsor/ethindia-light.png" },
+    // { title: "ETHIndia", image: "/images/sponsor/ethindia-light.png" },
+    { title: "ETHINDIA LOGO", image: "/images/sponsor/ethindia-light.png" },
   ];
 
   const technologyPartners = [
     { title: "Logitech", image: "/images/sponsor/Logitech.png" },
   ];
-  
+
   const educationPartners = [
     { title: "CloudyML", image: "/images/sponsor/cloudyml.png" },
   ];
 
-  const coursePartners = [
-    { title: "Interview Buddy", image: "/images/sponsor/interviewbuddy.png" },
+  const web3Partners = [
+    { title: "Lokachakra", image: "/images/sponsor/lokachakra.jpg" },
   ];
 
   const communityPartners = [
-    { title: "Styava.dev", image: "/images/sponsor/StyavaDev.png" },
-    { title: "Fresources", image: "/images/sponsor/Fresources.png" },
+    {
+      title: "SarvagaNirakar",
+      image: "/images/sponsor/SarvagaNirakar.jpg",
+      url: "http://sarvagyanirakarcommunity.co.in",
+    },
+    // { title: "Fresources", image: "/images/sponsor/Fresources.png" },
   ];
 
   return (
@@ -77,6 +90,62 @@ const Sponsor = () => {
       />*/}
 
       {/* Sponsor List */}
+      {/* web3 Partners */}
+      <motion.p
+        whileInView={{ x: 0, opacity: 1 }}
+        initial={{ opacity: 0, x: -100 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="text-4xl text-center mb-4"
+      >
+        Web3 Partners
+      </motion.p>
+      <motion.div
+        whileInView={{ x: 0, opacity: 1 }}
+        initial={{ opacity: 0, x: -100 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="grid grid-cols-1 gap-6 mb-10"
+      >
+        {web3Partners.map((sponsor, index) => (
+          <Image
+            key={index}
+            src={sponsor.image}
+            alt={sponsor.title}
+            width={240}
+            height={120}
+          />
+        ))}
+      </motion.div>
+
+      {/* Technology Partners */}
+      <motion.p
+        whileInView={{ x: 0, opacity: 1 }}
+        initial={{ opacity: 0, x: -100 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="text-4xl text-center mb-4"
+      >
+        Technology Partners
+      </motion.p>
+      <motion.div
+        whileInView={{ x: 0, opacity: 1 }}
+        initial={{ opacity: 0, x: -100 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="grid grid-cols-1 gap-6 mb-10 items-center"
+      >
+        {technologyPartners.map((sponsor, index) => (
+          <Image
+            key={index}
+            src={sponsor.image}
+            alt={sponsor.title}
+            width={300}
+            height={300}
+          />
+        ))}
+      </motion.div>
+
       <motion.p
         whileInView={{ x: 0, opacity: 1 }}
         initial={{ opacity: 0, x: -100 }}
@@ -111,7 +180,7 @@ const Sponsor = () => {
           </div>
         ))}
       </motion.div>
-      
+
       <motion.p
         whileInView={{ x: 0, opacity: 1 }}
         initial={{ opacity: 0, x: -100 }}
@@ -139,34 +208,6 @@ const Sponsor = () => {
         ))}
       </motion.div>
 
-      {/* Technology Partners */}
-      <motion.p
-        whileInView={{ x: 0, opacity: 1 }}
-        initial={{ opacity: 0, x: -100 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-        className="text-4xl text-center mb-4"
-      >
-        Technology Partners
-      </motion.p>
-      <motion.div
-        whileInView={{ x: 0, opacity: 1 }}
-        initial={{ opacity: 0, x: -100 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-        className="grid grid-cols-1 gap-6 mb-10 items-center"
-      >
-        {technologyPartners.map((sponsor, index) => (
-          <Image
-            key={index}
-            src={sponsor.image}
-            alt={sponsor.title}
-            width={300}
-            height={300}
-          />
-        ))}
-      </motion.div>
-
       {/* Community Partners */}
       <motion.p
         whileInView={{ x: 0, opacity: 1 }}
@@ -182,44 +223,18 @@ const Sponsor = () => {
         initial={{ opacity: 0, x: -100 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
-        className="grid grid-cols-2 sm:gap-12 gap-6 mb-10 items-center"
+        className="grid grid-cols-1 sm:gap-12 gap-6 mb-10 items-center"
       >
         {communityPartners.map((sponsor, index) => (
-          <Image
-            key={index}
-            src={sponsor.image}
-            alt={sponsor.title}
-            width={160}
-            height={120}
-          />
-        ))}
-      </motion.div>
-
-      {/* Course Partners */}
-      <motion.p
-        whileInView={{ x: 0, opacity: 1 }}
-        initial={{ opacity: 0, x: -100 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-        className="text-4xl text-center mb-4"
-      >
-        Course Partners
-      </motion.p>
-      <motion.div
-        whileInView={{ x: 0, opacity: 1 }}
-        initial={{ opacity: 0, x: -100 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-        className="grid grid-cols-1 gap-6 mb-10"
-      >
-        {coursePartners.map((sponsor, index) => (
-          <Image
-            key={index}
-            src={sponsor.image}
-            alt={sponsor.title}
-            width={160}
-            height={120}
-          />
+          <a href={sponsor.url}>
+            <Image
+              key={index}
+              src={sponsor.image}
+              alt={sponsor.title}
+              width={160}
+              height={120}
+            />
+          </a>
         ))}
       </motion.div>
     </div>
