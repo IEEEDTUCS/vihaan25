@@ -129,16 +129,17 @@ const teamMembers =
           linkedin: 'https://www.linkedin.com/in/samarthify/',
           instagram: 'https://www.instagram.com/samarthify/'
         }
+      },
+      {
+        id: '13',
+        url: './Team/tanishq.jpeg',
+        title: 'Tanishq Bhatia',
+        description: 'Logistics',
+        social: {
+          linkedin: 'https://www.linkedin.com/in/tanishq-bhatia-371641244',
+          instagram: 'https://www.linkedin.com/in/tanishq-bhatia-371641244?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'
+        }
       }
-    //   {
-    //     id: '13',
-    //     url: './Team/Jasmeen_Kour.jpg',
-    //     title: 'Jasmeen Kour',
-    //     description: 'External Affairs',
-    //     social: {
-    //       linkedin: 'https://www.linkedin.com/in/jasmeen-kour-31b624261/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    //     }
-    //   },
     //   {
     //     id: '14',
     //     url: './Team/Jasmeen_Kour.jpg',

@@ -20,7 +20,7 @@ const Sponsor = () => {
     },
 
     { title: "Interview Buddy", image: "/images/sponsor/interviewbuddy.png" },
-    { title: "Codecrafters", image: "/images/sponsor/codecrafters.webp" },
+    { title: "Codecrafters", image: "/images/sponsor/CodeCrafters.io full logo full text (White text).png", url: "https://codecrafters.io/", },
     { title: "Wolfram", image: "/images/sponsor/Wolfram.png" },
     {
       title: "Collabratec. Consulting",
@@ -29,7 +29,7 @@ const Sponsor = () => {
     { title: "SecOps Solution", image: "/images/sponsor/secops.png" },
     { title: "SYBGEN", image: "/images/sponsor/sbygen.png" },
     { title: "Stock Edge", image: "/images/sponsor/stockedge.png" },
-    { title: "GoFr", image: "/images/sponsor/gofr.png" },
+    { title: "GoFr", image: "/images/sponsor/gofr.png", url:"https://gofr.dev/" },
     { title: "Warp", image: "/images/sponsor/warp.svg" },
     { title: ".xyz", image: "/images/sponsor/xyz.png" },
     // { title: "ETHIndia", image: "/images/sponsor/ethindia-light.png" },
@@ -108,13 +108,24 @@ const Sponsor = () => {
         className="grid grid-cols-1 gap-6 mb-10"
       >
         {web3Partners.map((sponsor, index) => (
-          <Image
-            key={index}
-            src={sponsor.image}
-            alt={sponsor.title}
-            width={240}
-            height={120}
-          />
+          sponsor.url ? (
+            <a key={index} href={sponsor.url} target="_blank" rel="noopener noreferrer">
+              <Image
+                src={sponsor.image}
+                alt={sponsor.title}
+                width={240}
+                height={120}
+              />
+            </a>
+          ) : (
+            <Image
+              key={index}
+              src={sponsor.image}
+              alt={sponsor.title}
+              width={240}
+              height={120}
+            />
+          )
         ))}
       </motion.div>
 
@@ -136,13 +147,24 @@ const Sponsor = () => {
         className="grid grid-cols-1 gap-6 mb-10 items-center"
       >
         {technologyPartners.map((sponsor, index) => (
-          <Image
-            key={index}
-            src={sponsor.image}
-            alt={sponsor.title}
-            width={300}
-            height={300}
-          />
+          sponsor.url ? (
+            <a key={index} href={sponsor.url} target="_blank" rel="noopener noreferrer">
+              <Image
+                src={sponsor.image}
+                alt={sponsor.title}
+                width={300}
+                height={300}
+              />
+            </a>
+          ) : (
+            <Image
+              key={index}
+              src={sponsor.image}
+              alt={sponsor.title}
+              width={300}
+              height={300}
+            />
+          )
         ))}
       </motion.div>
 
@@ -171,12 +193,23 @@ const Sponsor = () => {
                 : ""
             }`}
           >
-            <Image
-              src={sponsor.image}
-              alt={sponsor.title}
-              width={160}
-              height={120}
-            />
+            {sponsor.url ? (
+              <a href={sponsor.url} target="_blank" rel="noopener noreferrer">
+                <Image
+                  src={sponsor.image}
+                  alt={sponsor.title}
+                  width={160}
+                  height={120}
+                />
+              </a>
+            ) : (
+              <Image
+                src={sponsor.image}
+                alt={sponsor.title}
+                width={160}
+                height={120}
+              />
+            )}
           </div>
         ))}
       </motion.div>
