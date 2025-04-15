@@ -10,26 +10,33 @@ const Sponsor = () => {
   };
 
   const sponsorList = [
-    {
-      title: "DEVFOLIO LOGO",
-      image: "/images/sponsor/Devfolio_Logo-Colored.svg",
-    },
-    { title: "GitHub", image: "/images/sponsor/Github.png" },
-    { title: "ETHINDIA LOGO", image: "/images/sponsor/ethindia-light.png" },
+    // {
+    //   title: "DEVFOLIO LOGO",
+    //   image: "/images/sponsor/Devfolio_Logo-Colored.svg",
+    // },
+    { title: "Interview Buddy", image: "/images/sponsor/interviewbuddy.png" },
+    { title: "Codecrafters", image: "/images/sponsor/codecrafters.webp" },
     { title: "Wolfram", image: "/images/sponsor/Wolfram.png" },
-    { title: "NoticeBard", image: "/images/sponsor/NoticeBard.png" },
-    { title: "Fanstore", image: "/images/sponsor/Fanstore.png" },
-    { title: "ASPECTA", image: "/images/sponsor/ASPECTA.png" },
+    { title: "Collabratec. Consulting", image: "/images/sponsor/collabratec.png" },
+    { title: "SecOps Solution", image: "/images/sponsor/secops.png" },
+    { title: "SYBGEN", image: "/images/sponsor/sbygen.png" },
+    { title: "Stock Edge", image: "/images/sponsor/stockedge.png" },
+    { title: "GoFr", image: "/images/sponsor/gofr.png" },
+    { title: "Warp", image: "/images/sponsor/warp.svg" },
     { title: ".xyz", image: "/images/sponsor/xyz.png" },
-    { title: "PSOCKETS", image: "/images/sponsor/PSOCKETS.png" },
+    { title: "ETHIndia", image: "/images/sponsor/ethindia-light.png" },
   ];
 
   const technologyPartners = [
     { title: "Logitech", image: "/images/sponsor/Logitech.png" },
   ];
+  
+  const educationPartners = [
+    { title: "CloudyML", image: "/images/sponsor/cloudyml.png" },
+  ];
 
   const coursePartners = [
-    { title: "Interview Buddy", image: "/images/sponsor/InterviewBuddy.png" },
+    { title: "Interview Buddy", image: "/images/sponsor/interviewbuddy.png" },
   ];
 
   const communityPartners = [
@@ -48,11 +55,11 @@ const Sponsor = () => {
         viewport={{ once: true }}
         className="font-khinterference md:text-7xl text-4xl tracking-widest mb-6 text-center"
       >
-        Our Past Sponsors
+        Our Sponsors
       </motion.p>
 
       {/* Title Sponsor */}
-      <motion.p
+      {/*<motion.p
         whileInView={{ x: 0, opacity: 1 }}
         initial={{ opacity: 0, x: -100 }}
         transition={{ duration: 1 }}
@@ -67,7 +74,7 @@ const Sponsor = () => {
         width={150}
         height={150}
         className="mb-6"
-      />
+      />*/}
 
       {/* Sponsor List */}
       <motion.p
@@ -102,6 +109,33 @@ const Sponsor = () => {
               height={120}
             />
           </div>
+        ))}
+      </motion.div>
+      
+      <motion.p
+        whileInView={{ x: 0, opacity: 1 }}
+        initial={{ opacity: 0, x: -100 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="text-4xl text-center mb-4"
+      >
+        Education Partner
+      </motion.p>
+      <motion.div
+        whileInView={{ x: 0, opacity: 1 }}
+        initial={{ opacity: 0, x: -100 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="grid grid-cols-1 gap-6 mb-10 items-center"
+      >
+        {educationPartners.map((sponsor, index) => (
+          <Image
+            key={index}
+            src={sponsor.image}
+            alt={sponsor.title}
+            width={300}
+            height={300}
+          />
         ))}
       </motion.div>
 
