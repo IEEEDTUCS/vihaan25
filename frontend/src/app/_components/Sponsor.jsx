@@ -32,6 +32,7 @@ const Sponsor = () => {
     { title: "GoFr", image: "/images/sponsor/gofr.png", url:"https://gofr.dev/" },
     { title: "Warp", image: "/images/sponsor/warp.svg" },
     { title: ".xyz", image: "/images/sponsor/xyz.png" },
+    { title: "Rabbitt AI", image: "/images/sponsor/rabbitt.svg" },
     // { title: "ETHIndia", image: "/images/sponsor/ethindia-light.png" },
     { title: "ETHINDIA LOGO", image: "/images/sponsor/ethindia-light.png" },
   ];
@@ -144,7 +145,7 @@ const Sponsor = () => {
         initial={{ opacity: 0, x: -100 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
-        className="grid grid-cols-1 gap-6 mb-10 items-center"
+        className="grid grid-cols-1 gap-6 mb-10  items-center"
       >
         {technologyPartners.map((sponsor, index) => (
           sponsor.url ? (
