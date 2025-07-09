@@ -27,6 +27,7 @@ Website for **Vihaan 2025**, IEEE DTU's flagship 24-hour student-run hackathon.
 ![image](https://github.com/user-attachments/assets/896f2a29-dd9f-49a1-839d-29fc0bb9b4ab)
 
 ![image](https://github.com/user-attachments/assets/005bcfa6-fac7-4b4c-a536-7c6c23d75d21)
+![image](https://github.com/user-attachments/assets/a52b4f68-4301-468b-8cc2-6381032de8bf)
 
 
 
