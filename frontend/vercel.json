@@ -1,5 +1,5 @@
 {
-  "installCommand": "npm install --allow-scripts",
+  "installCommand": "npm install",
   "buildCommand": "npm run build",
   "framework": "nextjs"
 }
